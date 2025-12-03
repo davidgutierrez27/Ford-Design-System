@@ -1,0 +1,39 @@
+// -------------------------------------------------------------
+// GLOBAL STYLES
+// -------------------------------------------------------------
+// Define tipografías, colores de texto, tamaños básicos
+// Estos estilos se aplican una vez y afectan a todo el sistema
+//
+// Importante: Acá usamos tokens.
+// Nunca escribas valores hardcodeados en este archivo.
+// -------------------------------------------------------------
+
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+// Textos generales
+p {
+    color: var(--text-color);
+}
+
+// Links
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// Imágenes siempre adaptables
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}

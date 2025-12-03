@@ -1,0 +1,337 @@
+// IMPORTS (solo lo necesario)
+@use "../tokens/colors" as colors;
+@use "../tokens/spacing" as space;
+@use "../tokens/radius" as radius;
+@use "../tokens/typography" as font;
+@use "../mixins/flex" as flex;
+@use "../mixins/focus" as focus;
+@use "../mixins/media" as media;
+
+
+
+
+/* Botones */
+button {
+  background: transparent;
+}
+
+/* Inputs y textareas */
+input,
+textarea,
+select {
+  all: unset;
+  background: transparent;
+}
+
+/* Imágenes 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ Tablas 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}*/
+
+
+
+
+
+.btn {
+  transition: color 0.3s ease, border-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: space.$spacing-xs-8px;
+  border: none;
+  border-radius: radius.$radius-32;
+  cursor: pointer;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  &--icon {
+    width: 16px;
+    height: 16px;
+    stroke: colors.$white;
+  }
+
+  &--small {
+    min-height: space.$spacing-3xl-40px;
+    padding: space.$spacing-sm-12px space.$spacing-md-16px;
+    @include button-14;
+  }
+
+  &--medium {
+    min-width: 125px;
+    min-height: space.$spacing-3xl-40px;
+    padding: space.$spacing-sm-12px space.$spacing-md-16px;
+    @include button-14;
+  }
+
+  &--large {
+    min-width: 195px;
+    min-height: space.$spacing-3xl-40px;
+    padding: space.$spacing-sm-12px space.$spacing-md-16px;
+    @include button-14;
+  }
+
+
+
+
+  &--primary {
+    background-color: colors.$skyview-500;
+    color: colors.$white;
+
+    &:hover {
+      background-color: colors.$grabber-700;
+    }
+
+    &:active {
+      background-color: colors.$grabber-800;
+    }
+
+    &:disabled {
+      background-color: colors.$grey-50;
+      color: colors.$grey-100;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      background-color: colors.$twilight-500;
+      outline-offset: 2px;
+    }
+  }
+
+  &--secondary {
+    height: 42px;
+    border: 2px solid colors.$white;
+    background-color: transparent;
+    color: colors.$white;
+
+    &:hover {
+      background-color: colors.$skyview-500;
+      color: colors.$white;
+      border: 2px solid colors.$skyview-500;
+    }
+
+    &:active {
+      background-color: colors.$skyview-600;
+      color: colors.$white;
+      border: 2px solid colors.$skyview-600;
+    }
+
+    &:disabled {
+      background-color: colors.$grey-50;
+      color: colors.$grey-100;
+      border: 2px solid colors.$grey-50;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      background-color: colors.$skyview-900;
+      color: colors.$white;
+      outline-offset: 2px;
+      border: 2px solid colors.$skyview-900;
+    }
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    color: colors.$white;
+
+    &:hover {
+      color: colors.$skyview-500;
+    }
+
+    &:active {
+      color: $skyview-600;
+    }
+
+    &:disabled {
+      color: colors.$grey-100;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      color: colors.$white;
+      outline-offset: 2px;
+    }
+  }
+}
+
+
+
+
+.next--previus--button {
+  transition: color 0.3s ease, border-color 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  color: colors.$white;
+  border: none;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  path {
+    transition: stroke 0.2s ease, stroke-width 0.2s ease;
+  }
+
+  // Estados
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  &:hover path {
+    stroke-width: 4; // aumenta el grosor en hover
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.nav--icon--button {
+  flex-shrink: 0;
+  background-color: transparent;
+  color: colors.$white;
+  border: none;
+  fill: colors.$white;
+  height: 60px;
+
+  &--logo {
+    min-width: 94px;
+    min-height: 37px;
+  }
+
+  &--search--user {
+    width: 60px;
+    height: 60px;
+
+    &--container {
+      justify-content: center;
+      align-items: center;
+
+    }
+  }
+
+
+  &:hover {
+    flex-shrink: 0;
+    color: colors.$skyview-500;
+    fill: colors.$skyview-500;
+  }
+}
+
+
+
+.link--button {
+  border: none;
+  background-color: transparent;
+  display: inline-flex;
+  min-width: 120px;
+  min-height: 60px; // reducido para compensar
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  color: colors.$white;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  border-bottom: 4px solid transparent; // reserva espacio
+
+  @include link-16; // 112.5%
+
+  transition: color 0.3s ease, border-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: colors.$skyview-500;
+    border-bottom-color: colors.$skyview-500; // solo cambia color
+  }
+}
+
+
+.nav--dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+
+  .pill {
+    width: 110px;
+    height: 10px;
+    border-radius: 50px;
+
+    &.blue {
+      background: colors.$skyview-500;
+      width: 50px;
+    }
+
+    &.white {
+      background: colors.$white;
+      width: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+//TEXTS
+.text {
+  display: flex;
+  width: 515px;
+  min-height: 84px;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  color: colors.$blue-500;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  &--small {
+    /* Subtitles/Subtitle 20 Regular */
+    @include subtitle-20-regular;
+  }
+
+  &--medium {
+    /* Heading/Title 32 Regular */
+    @include heading-title-32-regular;
+
+    &--bold {
+      @include heading-title-32-bold;
+    }
+  }
+
+  &--large {
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: flex-end;
+    @include heading-title-54-regular;
+  }
+
+  &--text {
+    width: 515px;
+    align-self: stretch;
+    padding-bottom: 15px;
+    flex-shrink: 0;
+    @include subtitle-20-regular;
+  }
+
+}

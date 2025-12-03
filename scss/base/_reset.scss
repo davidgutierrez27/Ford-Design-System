@@ -1,0 +1,26 @@
+// -------------------------------------------------------------
+// RESET
+// -------------------------------------------------------------
+// Elimina estilos por defecto de los navegadores
+// Asegura un punto de partida limpio y consistente
+// Antes de aplicar tipografía, colores o layout
+// -------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Comportamiento suave del scroll
+html {
+    scroll-behavior: smooth;
+}
+
+// El body no define tipografía ni color aquí.
+// Esos van en _globals.scss
+body {
+    min-height: 100vh;
+}

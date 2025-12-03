@@ -1,0 +1,49 @@
+// ======================================================================
+// SISTEMA DE GRID PRINCIPAL — optimizado
+// ======================================================================
+
+$columns: 12;
+$gutter: 24px;
+
+// Márgenes escalables
+$margin-desktop: 24px; // >=1440px
+$margin-tablet: 24px; // 1200–1439px
+$margin-mobile: 16px; // <1200px
+
+// -----------------------------
+// Grid Container
+// -----------------------------
+
+.container {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  column-gap: $gutter;
+
+  // Desktop (>=1440)
+  margin-inline: $margin-desktop;
+
+  // Tablet (1200–1439)
+  @media (max-width: 1439px) and (min-width: 1200px) {
+    margin-inline: $margin-tablet;
+  }
+
+  // Mobile (<1200)
+  @media (max-width: 1199px) {
+    margin-inline: $margin-mobile;
+  }
+}
+
+// -----------------------------
+// Columnas .col-x
+// -----------------------------
+
+.col {
+  grid-column: span 1;
+
+  // genera .col-1 ... .col-12
+  @for $i from 1 through $columns {
+    &-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}

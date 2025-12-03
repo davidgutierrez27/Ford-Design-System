@@ -1,0 +1,142 @@
+@use "../tokens/colors" as colors;
+@use "../tokens/spacing" as space;
+@use "../tokens/radius" as radius;
+@use "../tokens/typography" as font;
+
+
+
+app-sidebar {
+    display: block;
+    width: 35vh;
+    /* o el ancho real de tu sidebar */
+    min-height: 100vh;
+    /* para que no colapse */
+    transition: opacity 0.15s ease;
+}
+
+app-sidebar.ready {
+    opacity: 1;
+}
+
+.sidebar {
+    width: 35vh;
+    background-color: colors.$white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: space.$spacing-2xl-32px space.$spacing-xl-24px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    // overflow-y: auto; // REMOVED: Scroll moved to menu
+    transition: transform 0.3s ease;
+    z-index: 100;
+    gap: auto;
+
+
+    .sidebar--content {
+        display: flex;
+        flex-direction: column;
+        gap: space.$spacing-2xl-32px;
+        width: 100%;
+        flex: 1; // Ocupa el espacio disponible
+        min-height: 0; // Permite que el hijo haga scroll
+        padding-bottom: space.$spacing-2xl-32px;
+
+        .sidebar--logo {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .logo {
+                width: 72px;
+                height: 30px;
+                color: colors.$blue-500;
+                stroke: colors.$blue-500;
+                fill: colors.$blue-500;
+                transition: all 0.25s ease;
+            }
+
+            &:hover .logo {
+                color: colors.$skyview-500;
+                stroke: colors.$skyview-500;
+                fill: colors.$skyview-500;
+            }
+        }
+
+        .sidebar--line {
+            width: 100%;
+            height: 4px;
+            border-radius: radius.$radius-2;
+            background-color: colors.$grey-50;
+        }
+
+        .sidebar--menu {
+            display: flex;
+            flex-direction: column;
+            gap: space.$spacing-sm-12px;
+            width: auto;
+            height: 100%; // Dejar que crezca
+            padding-right: space.$spacing-xs-8px; // Espacio para scrollbar si se desea
+            overflow-y: auto;
+            scrollbar-gutter: stable;
+
+            /* Firefox */
+            scrollbar-width: thin;
+            scrollbar-color: colors.$grey-50 transparent;
+        }
+
+        /* Chrome, Edge, Safari */
+        .sidebar--menu::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar--menu::-webkit-scrollbar-thumb {
+            background: colors.$grey-50;
+            border-radius: radius.$radius-8;
+        }
+
+        .sidebar--menu::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    }
+
+    .sidebar--footer {
+        width: 100%;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        gap: space.$spacing-sm-12px;
+        color: colors.$blue-500;
+
+        .img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        h3 {
+            @include body-14-regular;
+        }
+
+        p {
+            @include body-16-bold;
+        }
+    }
+
+
+    // Responsive
+    @media (max-width: 768px) {
+        .sidebar {
+            position: fixed;
+            transform: translateX(-100%);
+
+            &.open {
+                transform: translateX(0);
+            }
+        }
+    }
+}

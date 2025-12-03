@@ -1,0 +1,24 @@
+// ======================================================================
+// MIXINS DE BREAKPOINTS
+// ======================================================================
+
+// mobile (hasta 478px)
+@mixin sm {
+  @media (max-width: 478px) {
+    @content;
+  }
+}
+
+// tablet (hasta 991px)
+@mixin md {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+// desktop (hasta 1440px)
+@mixin lg {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}

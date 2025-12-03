@@ -1,0 +1,110 @@
+// IMPORTS (solo lo necesario)
+@use "../tokens/colors" as colors;
+@use "../tokens/spacing" as space;
+@use "../tokens/radius" as radius;
+@use "../tokens/typography" as font;
+@use "../mixins/flex" as flex;
+@use "../mixins/focus" as focus;
+@use "../mixins/media" as media;
+
+
+/* ===========================
+   DROPDOWN COMPONENT (BEM)
+   =========================== */
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  background: colors.$white;
+
+  /* -------------------------
+     ELEMENTOS INTERNOS
+     ------------------------- */
+  &__btn {
+    color: colors.$blue-500;
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: space.$spacing-sm-12px;
+    border-radius: radius.$radius-12;
+    cursor: pointer;
+    transition: all 0.30s ease;
+    padding: space.$spacing-sm-12px space.$spacing-xl-24px;
+    @include font.subtitle-18-regular;
+
+    /* icono 24x24 */
+    .icon {
+      width: space.$spacing-xl-24px;
+      height: space.$spacing-xl-24px;
+    }
+
+    .label {
+      display: flex;
+      align-items: center;
+      height: auto;
+
+    }
+
+    /* caret 16x16 */
+    .caret {
+      width: space.$spacing-md-16px;
+      height: space.$spacing-md-16px;
+      background: none;
+      margin-left: auto;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: colors.$grey-50;
+    }
+
+    &--active {
+      background: colors.$skyview-500;
+      color: colors.$white;
+
+      .caret {
+        fill: colors.$white;
+      }
+
+      &:hover {
+        background: colors.$skyview-600;
+      }
+    }
+
+    &--open-active {
+      .caret {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  /* Tamaños pequeños dando por sentado que el btn es grande por defecto----------------- */
+
+
+  &--small {
+    .dropdown__btn {
+      height: space.$spacing-2xl-32px;
+      border-radius: radius.$radius-8;
+    }
+  }
+
+  /* -------------------------
+     CONTENIDO DESPLEGABLE
+     ------------------------- */
+  &__content {
+    display: none;
+    flex-direction: column;
+    gap: space.$spacing-xs-8px;
+    margin-left: space.$spacing-xl-24px; // sangría para niveles
+    padding: space.$spacing-sm-12px 0;
+
+    &--open {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

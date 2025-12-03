@@ -1,0 +1,167 @@
+@use "../tokens/colors" as colors;
+@use "../tokens/spacing" as space;
+@use "../tokens/radius" as radius;
+@use "../tokens/typography" as font;
+
+.doc-page {
+    padding-bottom: 80px;
+
+    &__header {
+        margin-bottom: space.$spacing-3xl-40px;
+
+        h1 {
+            @include font.heading-title-54-regular;
+            color: colors.$blue-500;
+            margin-bottom: space.$spacing-md-16px;
+        }
+
+        p {
+            @include font.subtitle-20-regular;
+            color: colors.$grey-300;
+            max-width: 800px;
+        }
+    }
+
+    &__section {
+        margin-bottom: 60px;
+
+        h2 {
+            @include font.heading-title-32-bold;
+            color: colors.$blue-400;
+            margin-bottom: space.$spacing-xl-24px;
+            padding-bottom: space.$spacing-xs-8px;
+            border-bottom: 1px solid colors.$grey-100;
+        }
+    }
+}
+
+/* Color Cards */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: space.$spacing-xl-24px;
+}
+
+.color-card {
+    border-radius: radius.$radius-12;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background: colors.$white;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    &__preview {
+        height: 120px;
+        width: 100%;
+    }
+
+    &__info {
+        padding: space.$spacing-md-16px;
+
+        h4 {
+            @include font.body-16-bold;
+            color: colors.$blue-500;
+            margin-bottom: 4px;
+        }
+
+        p {
+            @include font.body-14-regular;
+            color: colors.$grey-300;
+            font-family: monospace;
+        }
+    }
+}
+
+/* Typography Showcase */
+.type-scale {
+    display: flex;
+    flex-direction: column;
+    gap: space.$spacing-xl-24px;
+
+    &__item {
+        padding: space.$spacing-xl-24px;
+        background: colors.$white;
+        border-radius: radius.$radius-8;
+        border: 1px solid colors.$grey-50;
+
+        .label {
+            display: block;
+            @include font.body-12-bold;
+            color: colors.$grey-200;
+            margin-bottom: space.$spacing-sm-12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+/* Spacing Showcase */
+.spacing-list {
+    display: flex;
+    flex-direction: column;
+    gap: space.$spacing-md-16px;
+}
+
+.spacing-item {
+    display: flex;
+    align-items: center;
+    gap: space.$spacing-xl-24px;
+
+    &__preview {
+        background-color: colors.$skyview-200;
+        height: 24px;
+        border-radius: 2px;
+    }
+
+    &__label {
+        @include font.body-16-bold;
+        color: colors.$blue-400;
+        width: 150px;
+    }
+
+    &__value {
+        @include font.body-14-regular;
+        color: colors.$grey-300;
+        font-family: monospace;
+    }
+}
+
+/* Radius Showcase */
+.radius-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: space.$spacing-xl-24px;
+}
+
+.radius-box {
+    width: 100px;
+    height: 100px;
+    background-color: colors.$skyview-500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: colors.$white;
+    @include font.body-14-bold;
+    box-shadow: 0 4px 10px rgba(6, 111, 239, 0.2);
+}
+
+/* Buttons Showcase */
+.button-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: space.$spacing-2xl-32px;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: space.$spacing-xl-24px;
+        flex-wrap: wrap;
+        padding: space.$spacing-xl-24px;
+        background: colors.$white;
+        border-radius: radius.$radius-12;
+        border: 1px solid colors.$grey-50;
+    }
+}

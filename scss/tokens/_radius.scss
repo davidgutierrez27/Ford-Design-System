@@ -1,0 +1,20 @@
+// ======================================================================
+// TOKENS DE RADIUS
+// ======================================================================
+
+$unit: 2px !default;
+
+@function radius($multiplier) {
+  @return $multiplier * $unit;
+}
+
+$radius-2: radius(1); // 2px
+$radius-4: radius(2); // 4px
+$radius-8: radius(4); // 8px
+$radius-10: radius(5); // 10px
+$radius-12: radius(6); // 12px
+$radius-14: radius(7); // 14px
+$radius-16: radius(8); // 16px
+$radius-24: radius(12); // 24px
+$radius-32: radius(16); // 32px (el tuyo)
+$radius-full: 9999px;

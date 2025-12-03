@@ -1,0 +1,95 @@
+// _colors.scss
+
+// ==== blue ===
+$blue-50: #e6e8ea; // rgb(230, 232, 234)
+$blue-100: #b0b6be; // rgb(176, 182, 190)
+$blue-200: #8a939f; // rgb(138, 147, 159)
+$blue-300: #546273; // rgb(84, 98, 115)
+$blue-400: #334358; // rgb(51, 67, 88)
+$blue-500: #00142e; // rgb(0, 20, 46)
+$blue-600: #00122a; // rgb(0, 18, 42)
+$blue-700: #000e21; // rgb(0, 14, 33)
+$blue-800: #000b19; // rgb(0, 11, 25)
+$blue-900: #000813; // rgb(0, 8, 19)
+
+// ==== grabber ===
+$grabber-50: #e8e6fe; // rgb(232, 230, 254)
+$grabber-100: #b7b0fc; // rgb(183, 176, 252)
+$grabber-200: #948afa; // rgb(148, 138, 250)
+$grabber-300: #6454f8; // rgb(100, 84, 248)
+$grabber-400: #4533f6; // rgb(69, 51, 246)
+$grabber-500: #1700f4; // rgb(23, 0, 244)
+$grabber-600: #1500de; // rgb(21, 0, 222)
+$grabber-700: #1000ad; // rgb(16, 0, 173)
+$grabber-800: #0d0086; // rgb(13, 0, 134)
+$grabber-900: #0a0066; // rgb(10, 0, 102)
+
+// ==== skyview ===
+$skyview-50: #e6f1fd; // rgb(230, 241, 253)
+$skyview-100: #b2d2fa; // rgb(178, 210, 250)
+$skyview-200: #8cbdf8; // rgb(140, 189, 248)
+$skyview-300: #589ff4; // rgb(88, 159, 244)
+$skyview-400: #388cf2; // rgb(56, 140, 242)
+$skyview-500: #066fef; // rgb(6, 111, 239)
+$skyview-600: #0565d9; // rgb(5, 101, 217)
+$skyview-700: #044faa; // rgb(4, 79, 170)
+$skyview-800: #033d83; // rgb(3, 61, 131)
+$skyview-900: #032f64; // rgb(3, 47, 100)
+
+// ==== twilight ===
+$twilight-50: #e6e6ef; // rgb(230, 230, 239)
+$twilight-100: #b0b3cc; // rgb(176, 179, 204)
+$twilight-200: #8a8eb4; // rgb(138, 142, 180)
+$twilight-300: #545a91; // rgb(84, 90, 145)
+$twilight-400: #333a7c; // rgb(51, 58, 124)
+$twilight-500: #00095b; // rgb(0, 9, 91)
+$twilight-600: #000853; // rgb(0, 8, 83)
+$twilight-700: #000641; // rgb(0, 6, 65)
+$twilight-800: #000532; // rgb(0, 5, 50)
+$twilight-900: #000426; // rgb(0, 4, 38)
+
+// ==== neutral ===
+$white: #fefefe; // rgb(254, 254, 254)
+$grey-50: #e7e7e7; // rgb(231, 231, 231)
+$grey-100: #b5b5b5; // rgb(181, 181, 181)
+$grey-200: #919191; // rgb(145, 145, 145)
+$grey-300: #5e5e5e; // rgb(94, 94, 94)
+$black-400: #3f3f3f; // rgb(63, 63, 63)
+$black-500: #262626; // rgb(38, 38, 38)
+$black-900: #1a1a1a; // rgb(26, 26, 26)
+
+
+// -------------------------------------------------------------
+// COLOR TOKENS
+// -------------------------------------------------------------
+// Variables raíz que definen la identidad de marca.
+// Todos los componentes consumen estos valores.
+// -------------------------------------------------------------
+
+:root {
+    // Brand
+    --primary-color: #066fef;
+    --primary-color-dark: #000426;
+    --primary-color-light: #75B8F7;
+
+    --secondary-color: #0C1A23;
+
+    // Text colors
+    --text-color-white1: #e7e7e7;
+    --text-color-white2: #b5b5b5;
+    --text-color-darck1: #1a1a1a;
+    --text-color-darck2: #262626;
+    --text-muted: #666;
+
+    // Backgrounds
+    --background-color: #e7e7e7;
+    --surface-color: #FFFFFF;
+
+    // Feedback
+    --success-color: #38A169;
+    --warning-color: #DD6B20;
+    --danger-color: #E53E3E;
+
+    // Borders
+    --border-color: #E2E8F0;
+}

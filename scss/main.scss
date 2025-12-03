@@ -1,0 +1,29 @@
+// =====================================================
+// IMPORTADOR PRINCIPAL
+// =====================================================
+
+// ----- tokens -----
+@import "tokens/colors";
+@import "tokens/typography";
+@import "tokens/spacing";
+@import "tokens/radius";
+
+// ----- base -----
+@import "base/reset";
+@import "base/globals";
+
+// ----- layout -----
+@import "layout/grid";
+@import "layout/body";
+@import "layout/sidebar";
+
+// ----- mixins -----
+@import "mixins/flex";
+@import "mixins/focus";
+@import "mixins/media";
+
+// ----- utils -----
+@import "utils/helpers";
+@import "pages/foundations";
+@import "atoms/buttons";
+@import "atoms/dropdown";

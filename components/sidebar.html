@@ -1,0 +1,305 @@
+<template id="sidebar-template">
+    <aside class="sidebar">
+        <section class="sidebar--content">
+            <!-- LOGO -->
+            <a href="../index.html" class="sidebar--logo">
+                <span class="logo">
+                    <svg viewBox="0 0 94 37">
+                        <path fill="currentColor" stroke="currentColor"
+                            d="M92.9778 11.1114C93.083 10.9308 92.9728 10.7954 92.7424 10.7954C91.5451 10.7954 89.9772 10.8004 88.7348 10.8004C88.4393 10.8004 88.284 10.8355 88.1437 11.1114C87.6829 11.9941 82.0773 20.405 81.0354 22.0351C80.86 22.2858 80.6446 22.2507 80.6196 21.9648C80.5144 20.9969 79.6778 19.8784 78.3603 19.3468C77.3585 18.9405 76.3716 18.8653 75.3547 19.0007C73.5112 19.2465 71.8681 20.2245 70.4254 21.3179C68.2513 22.973 66.3728 25.1196 63.9482 26.7095C62.6258 27.5721 60.8123 28.3245 59.6001 27.201C58.503 26.1829 58.6282 23.9209 60.3064 22.1705C60.4817 21.9849 60.6971 22.1404 60.6621 22.3059C60.5018 23.0983 60.6971 23.8858 61.2983 24.4375C62.0296 25.0945 63.0766 25.1697 63.9733 24.7284C65.0303 24.2017 65.6514 23.1886 65.8368 22.0401C66.1173 20.2546 64.7447 18.6797 63.0265 18.5543C61.6289 18.454 60.2914 18.9405 58.9889 20.0188C58.3377 20.5605 57.962 20.9618 57.4009 21.7692C57.2657 21.9649 57.0503 21.9849 57.0603 21.694C57.1254 19.407 56.1836 18.123 54.2951 18.0779C52.8323 18.0428 51.2644 18.8402 50.0471 19.8132C48.7096 20.8865 47.5424 22.3159 46.29 23.6551C46.1347 23.8206 45.9995 23.8105 45.9544 23.4896C45.9143 21.9749 45.5386 20.5104 44.8373 19.4671C44.5918 19.106 44.0709 18.9255 43.63 19.1712C43.4297 19.2816 42.7233 19.6076 42.2124 20.0188C41.9569 20.2295 41.8617 20.5304 41.9719 20.9216C42.6482 23.1836 42.4979 25.7565 41.5812 27.9282C40.7396 29.9194 39.1015 31.7149 37.1779 32.3218C35.9105 32.723 34.593 32.5274 33.7765 31.404C32.6594 29.8542 33.1103 27.1508 34.7784 24.9139C36.2512 22.9429 38.3802 21.689 40.5042 20.8815C40.7546 20.7862 40.8047 20.6257 40.7346 20.4101C40.6194 20.059 40.434 19.5825 40.3589 19.3668C40.1635 18.8502 39.6175 18.765 38.9512 18.8352C37.4083 19.0158 36.0157 19.5424 34.6381 20.2797C31.0364 22.2106 29.233 25.9471 28.4415 27.9483C28.0608 28.9113 27.7351 29.5081 27.3144 30.0397C26.7483 30.7519 26.0319 31.404 24.7295 32.5525C24.6093 32.6578 24.5241 32.8785 24.6243 33.0791C24.7595 33.355 25.4358 34.3129 25.6262 34.3982C25.8366 34.5035 26.087 34.3581 26.1822 34.2878C27.0939 33.6709 28.186 32.6879 28.722 32.0209C28.9073 31.7952 29.1027 31.8905 29.2029 32.2365C29.7038 34.017 31.0063 35.4715 32.8097 36.0784C36.1109 37.1918 39.5373 35.5768 42.1222 32.7682C43.7653 30.9827 44.3564 29.8341 44.9876 29.0517C46.0546 27.7276 48.1585 24.7635 50.6683 22.8626C51.59 22.1605 52.677 21.6288 53.2231 21.9799C53.6639 22.2658 53.8042 22.9278 53.0978 24.2118C50.543 28.8862 46.781 34.3781 46.0897 35.7122C45.9644 35.9429 46.0746 36.1235 46.3151 36.1235C47.6526 36.1185 48.9801 36.1185 50.1924 36.1185C50.3928 36.1085 50.4829 36.0182 50.5881 35.8727C52.5518 32.7983 54.3953 29.8692 56.374 26.8449C56.4842 26.6643 56.5844 26.8048 56.5894 26.885C56.6295 27.5872 56.8048 28.5502 57.2206 29.1771C57.967 30.3407 59.029 30.8422 60.2062 30.8523C61.143 30.8623 61.6138 30.7218 62.6258 30.3457C63.4473 30.0397 64.1085 29.6385 64.6095 29.2774C64.905 29.0718 64.9551 29.4178 64.9501 29.468C64.4943 31.9105 65.0553 34.7994 67.4799 36.0031C70.3803 37.4325 73.5663 35.4213 75.3998 33.6057C75.5801 33.4302 75.7705 33.4503 75.7905 33.8264C75.8306 34.5186 76.1412 35.3411 76.7173 35.9179C78.2551 37.4626 81.351 36.8507 84.4618 34.4383C86.4606 32.8935 88.5495 30.7118 90.4381 28.4047C90.5082 28.3144 90.5583 28.174 90.423 28.0285C90.1375 27.7276 89.7217 27.3815 89.4362 27.1157C89.3059 27.0054 89.1156 27.0355 89.0054 27.1207C87.0717 28.9614 85.3284 31.0629 82.8087 32.8033C81.9621 33.3951 80.6046 33.8766 79.9984 33.054C79.763 32.7331 79.788 32.2917 80.0235 31.7099C80.7498 29.8742 92.3767 12.1596 92.9778 11.1114ZM77.6139 25.9672C77.639 26.1026 77.8143 26.233 77.9896 26.2982C78.0498 26.3183 78.0848 26.3634 78.0147 26.5089C77.5188 27.5671 77.0679 28.179 76.4467 29.1019C75.8757 29.9545 75.2345 30.6165 74.458 31.2535C73.2858 32.2265 71.6577 33.2797 70.3102 32.5726C69.7141 32.2616 69.4536 31.424 69.4636 30.7469C69.4937 28.8411 70.3403 26.88 71.9032 24.9591C73.8118 22.6068 75.9208 21.3881 77.3034 22.0551C78.736 22.7372 78.2802 24.3973 77.639 25.7014C77.5939 25.8017 77.5889 25.8869 77.6139 25.9672Z">
+                        </path>
+                        <path fill="currentColor" stroke="currentColor"
+                            d="M8.67416 36.0531C4.34101 36.0832 0.52383 33.405 0.0880102 28.7606C-0.157451 26.1877 0.568915 23.8956 2.02666 22.0098C3.31408 20.3296 5.49818 18.9303 7.34666 18.5893C7.94779 18.4789 8.75431 18.5491 9.08994 18.9454C9.61593 19.5573 9.46064 20.2243 8.93966 20.4951C7.53201 21.2174 5.83382 22.4512 4.99724 24.1314C4.31596 25.5056 4.18071 27.1657 5.21766 28.7406C6.95592 31.3737 11.8101 31.4439 16.3185 27.246C17.4356 26.2178 18.4325 25.2348 19.4494 24.0662C21.4382 21.7942 22.0944 20.9616 24.7394 17.2953C24.7694 17.2552 24.7794 17.195 24.7644 17.1699C24.7444 17.1248 24.7043 17.1097 24.6292 17.1047C22.8658 17.1548 21.328 17.6815 19.8351 18.7999C19.4043 19.1159 18.7882 19.0708 18.5127 18.6545C18.2121 18.188 18.4275 17.5761 18.9234 17.2351C21.328 15.5599 23.9529 15.259 26.6329 14.8076C26.6329 14.8076 26.8183 14.8176 26.9736 14.612C28.0756 13.1976 28.9072 11.9237 30.0794 10.4943C31.2616 9.04484 32.7895 7.71073 33.9567 6.71265C35.5848 5.30832 36.6267 4.83687 37.6887 4.26009C37.9692 4.11464 37.6536 3.9391 37.5685 3.9391C31.6423 2.82567 25.4858 1.38121 19.5997 3.56294C15.527 5.08764 13.7387 8.32262 14.6003 10.4843C15.2114 12.019 17.2252 12.2648 19.1138 11.3419C20.6817 10.5746 22.1295 9.33574 23.1564 7.74082C23.7325 6.8581 24.9448 7.49506 24.2885 9.0298C22.5653 13.0823 19.2741 16.2972 15.2666 16.4326C11.8551 16.543 9.656 14.0302 9.66101 10.9307C9.67604 4.81681 16.4738 0.794404 23.6122 0.187533C32.2134 -0.524663 40.3587 1.7674 48.8998 2.80561C55.4421 3.59805 61.7189 3.61811 68.2913 2.10344C69.0677 1.93291 69.6137 2.42945 69.5637 3.21687C69.4985 4.35538 68.6219 5.44876 66.4528 6.63241C63.9882 7.98658 61.4133 8.39283 58.7183 8.41791C52.211 8.47308 46.1446 5.93024 39.8728 4.56603C39.8828 4.84188 39.953 5.16789 39.7225 5.34343C36.251 7.91135 33.1101 10.5194 31.0061 14.1807C30.936 14.2659 30.9761 14.3462 31.0963 14.3362C32.9248 14.2409 34.5678 14.1907 36.271 14.0553C36.5666 14.0302 36.5816 13.955 36.5516 13.7393C36.4013 12.4754 36.767 11.041 37.8791 10.4943C39.0112 9.0298 40.4339 8.91444 41.3757 9.6467C42.4477 10.4843 42.3525 11.9839 41.7664 13.1124C41.1703 14.2559 40.1884 14.8678 39.2416 15.1637C39.2416 15.1637 39.0463 15.2088 39.0713 15.3894C39.1114 15.6803 40.3988 16.3925 40.509 16.5831C40.6142 16.7636 40.5591 17.0445 40.3637 17.2602C40.2285 17.4157 40.0131 17.5611 39.7426 17.5561C39.5222 17.5511 39.3869 17.4758 39.1064 17.3204C38.5303 17.0044 37.8089 16.4928 37.323 15.8859C37.1577 15.6803 37.0776 15.6753 36.6668 15.7004C34.8233 15.8057 31.9429 16.0866 29.9942 16.3273C29.5234 16.3875 29.4532 16.4727 29.353 16.6383C26.2422 21.7691 22.926 27.3061 19.2841 31.0076C15.3768 34.9798 12.1256 36.028 8.67416 36.0531ZM38.2999 13.2478C38.35 13.5136 38.4501 13.5638 38.5704 13.5387C39.1615 13.4183 39.8127 12.9318 40.1934 12.3701C40.5441 11.8585 40.7094 11.1162 40.3587 10.8203C40.0482 10.5545 39.5472 10.6297 39.1715 10.9607C38.4301 11.6178 38.1997 12.5557 38.2999 13.2478Z">
+                        </path>
+                    </svg>
+                </span>
+            </a>
+
+            <div class="sidebar--line"></div>
+
+            <div class="sidebar--menu">
+                <!-- DROPDOWN - SECCION 1 (simple) -->
+                <div class="dropdown dropdown--primary">
+                    <a href="../index.html" class="dropdown__btn dropdown-toggle" data-target="drop1">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="label">Home</span>
+                    </a>
+                </div>
+
+                <!-- DROPDOWN - SECCION 2 (desplegable nivel 1)-->
+                <div class="dropdown dropdown--primary">
+                    <button class="dropdown__btn dropdown-toggle" data-target="drop2">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M10.5 5.5H5.5C4.39543 5.5 3.5 6.39543 3.5 7.5V18.5C3.5 19.6046 4.39543 20.5 5.5 20.5H16.5C17.6046 20.5 18.5 19.6046 18.5 18.5V13.5M17.0858 4.08579C17.8668 3.30474 19.1332 3.30474 19.9142 4.08579C20.6953 4.86683 20.6953 6.13316 19.9142 6.91421L11.3284 15.5H8.5L8.5 12.6716L17.0858 4.08579Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="label">Fundations</span>
+                        <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <g transform="rotate(90 8 8)">
+                                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="dropdown__content" id="drop2">
+                        <div class="dropdown dropdown--small nested">
+                            <a href="../pages/foundations/colors.html" class="dropdown__btn dropdown-toggle">
+                                <span class="label">Colors</span>
+                            </a>
+                        </div>
+
+                        <div class="dropdown dropdown--small nested">
+                            <a href="../pages/foundations/typography.html" class="dropdown__btn dropdown-toggle">
+                                <span class="label">Typography</span>
+                            </a>
+                        </div>
+
+                        <div class="dropdown dropdown--small nested">
+                            <a href="../pages/foundations/radius.html" class="dropdown__btn dropdown-toggle">
+                                <span class="label">Radius</span>
+                            </a>
+                        </div>
+
+                        <div class="dropdown dropdown--small nested">
+                            <a href="../pages/foundations/spacing.html" class="dropdown__btn dropdown-toggle">
+                                <span class="label">Spacing</span>
+                            </a>
+                        </div>
+
+                        <div class="dropdown dropdown--small nested">
+                            <a href="../pages/foundations/icons.html" class="dropdown__btn dropdown-toggle">
+                                <span class="label">Icons</span>
+                            </a>
+                        </div>
+
+                        <div class="dropdown dropdown--small nested">
+                            <a href="../pages/foundations/layout.html" class="dropdown__btn dropdown-toggle">
+                                <span class="label">Layout</span>
+                            </a>
+                        </div>
+
+                        <div class="dropdown dropdown--small nested">
+                            <a href="../pages/foundations/grid.html" class="dropdown__btn dropdown-toggle">
+                                <span class="label">Grid</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- DROPDOWN - SECCION 3 (3 niveles) -->
+                <!-- NIVEL 0 -->
+                <div class="dropdown dropdown--primary">
+                    <button class="dropdown__btn dropdown-toggle" data-target="drop3">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M4 6C4 4.89543 4.89543 4 6 4H8C9.10457 4 10 4.89543 10 6V8C10 9.10457 9.10457 10 8 10H6C4.89543 10 4 9.10457 4 8V6Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M14 6C14 4.89543 14.8954 4 16 4H18C19.1046 4 20 4.89543 20 6V8C20 9.10457 19.1046 10 18 10H16C14.8954 10 14 9.10457 14 8V6Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M4 16C4 14.8954 4.89543 14 6 14H8C9.10457 14 10 14.8954 10 16V18C10 19.1046 9.10457 20 8 20H6C4.89543 20 4 19.1046 4 18V16Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M14 16C14 14.8954 14.8954 14 16 14H18C19.1046 14 20 14.8954 20 16V18C20 19.1046 19.1046 20 18 20H16C14.8954 20 14 19.1046 14 18V16Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="label">Components</span>
+                        <span class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <g transform="rotate(90 8 8)">
+                                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="dropdown__content" id="drop3">
+
+                        <!-- NIVEL 1 -->
+                        <div class="dropdown dropdown--small nested">
+                            <button class="dropdown__btn dropdown-toggle" data-target="drop3-2">
+                                <span class="label">Atoms</span>
+                                <span class="caret">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                        <g transform="rotate(90 8 8)">
+                                            <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <div class="dropdown__content" id="drop3-2">
+
+                                <!-- NIVEL 2 -->
+                                <a href="pages/components/atoms/buttons.html" class="dropdown__btn dropdown--small">
+                                    <span class="label">Buttons</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">Inputs</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">Dropdown</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">navigation dots</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">Inputs</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">text</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- NIVEL 1.2 -->
+                        <div class="dropdown dropdown--small nested">
+                            <button class="dropdown__btn dropdown-toggle" data-target="drop3-3">
+                                <span class="label">Molecules</span>
+                                <span class="caret">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                        <g transform="rotate(90 8 8)">
+                                            <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <div class="dropdown__content" id="drop3-3">
+
+                                <!-- NIVEL 2 -->
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">Cards</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">links</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">navigation</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- NIVEL 1.3 -->
+                        <div class="dropdown dropdown--small nested">
+                            <button class="dropdown__btn dropdown-toggle" data-target="drop3-4">
+                                <span class="label">Organisms</span>
+                                <span class="caret">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                        <g transform="rotate(90 8 8)">
+                                            <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <div class="dropdown__content" id="drop3-4">
+
+                                <!-- NIVEL 2 -->
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">carousel</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">footer</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">navbar</span>
+                                </a>
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">sidebar</span>
+                                </a>
+
+                                <a class="dropdown__btn dropdown--small">
+                                    <span class="label">cards group</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- NIVEL 1.4 -->
+                        <div class="dropdown dropdown--small nested">
+                            <a class="dropdown__btn dropdown-toggle" data-target="drop1">
+                                <span class="label">Templates</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DROPDOWN - SECCION 4 (simple) -->
+                <div class="dropdown dropdown--primary">
+                    <a class="dropdown__btn dropdown-toggle" data-target="drop1">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 6.12632V19.1263M12 6.12632C10.8321 5.3504 9.24649 4.87354 7.5 4.87354C5.75351 4.87354 4.16789 5.3504 3 6.12632V19.1263C4.16789 18.3504 5.75351 17.8735 7.5 17.8735C9.24649 17.8735 10.8321 18.3504 12 19.1263M12 6.12632C13.1679 5.3504 14.7535 4.87354 16.5 4.87354C18.2465 4.87354 19.8321 5.3504 21 6.12632V19.1263C19.8321 18.3504 18.2465 17.8735 16.5 17.8735C14.7535 17.8735 13.1679 18.3504 12 19.1263"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="label">Patrones de diseño</span>
+                    </a>
+                </div>
+
+                <!-- DROPDOWN - SECCION 5 (simple) -->
+                <div class="dropdown dropdown--primary">
+                    <a class="dropdown__btn dropdown-toggle" data-target="drop1">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M7 21H17C18.1046 21 19 20.1046 19 19V9.41421C19 9.149 18.8946 8.89464 18.7071 8.70711L13.2929 3.29289C13.1054 3.10536 12.851 3 12.5858 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="label">Documentación</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar--line"></div>
+
+        </section>
+        <section class="sidebar--footer">
+            <img class="img" src="../assets/img/user.png" alt="user">
+            <div>
+                <h3>BY</h3>
+                <p>David Gutierrez</p>
+            </div>
+        </section>
+    </aside>
+</template>
