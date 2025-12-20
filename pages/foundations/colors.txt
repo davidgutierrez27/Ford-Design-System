@@ -1,0 +1,290 @@
+Hermoso. Ahora sí: **manos a la obra**, criterio UX/UI + espíritu Ford, sin humo y con dirección clara.
+Voy a darte **el contenido completo de la página Colors**, con **encabezados, secciones y texto**, y entre **( )** te indico **qué tipo de ejemplo visual deberías acompañar**, como si esto después fuera a Storybook o Docs.
+
+Pensalo como **la versión 1.0 profesional** de tu DS.
+
+---
+
+# Colors
+
+## Color system overview
+
+El sistema de color establece la base visual del diseño y define cómo la marca se expresa en producto digital.
+En Ford, el color cumple un rol funcional y emocional a la vez: transmite confianza, precisión e innovación, mientras guía al usuario a través de acciones, jerarquía y estados del sistema.
+
+El uso del color prioriza claridad, consistencia y accesibilidad, evitando decisiones arbitrarias y reforzando una experiencia reconocible en todos los puntos de contacto.
+
+*(Acompañar con: una vista general tipo “mapa” del sistema de color, no paletas sueltas. Algo conceptual.)*
+
+---
+
+## Color principles
+
+El sistema se rige por los siguientes principios:
+
+* **Función antes que decoración**
+  El color se utiliza para comunicar significado, jerarquía y estado, no como ornamento visual.
+
+* **Identidad sólida y controlada**
+  La identidad de marca se concentra en pocos colores clave, usados de forma consistente y deliberada.
+
+* **Escalabilidad y consistencia**
+  Las escalas cromáticas permiten adaptarse a distintos contextos (componentes, estados, modos) sin romper la coherencia visual.
+
+*(Acompañar con: 3 pequeñas cards con íconos conceptuales, no colores.)*
+
+---
+
+## Color system structure
+
+El sistema de color se organiza en capas funcionales, cada una con un propósito específico dentro de la interfaz:
+
+* **Brand colors**: expresan identidad y marca.
+* **Structural colors**: sostienen contenido y superficies.
+* **Accent colors**: destacan acciones o información puntual.
+* **Semantic colors**: comunican estados del sistema.
+* **Transparency**: permite construir capas y profundidad.
+
+Este enfoque reduce errores de uso y facilita decisiones de diseño y desarrollo.
+
+*(Acompañar con: diagrama de capas, tipo stack o pirámide.)*
+
+---
+
+## Brand and core colors
+
+### Skyview — Primary
+
+Skyview es el color primario del sistema y el principal portador de la identidad Ford en interfaz digital.
+Se utiliza para acciones principales, elementos interactivos clave y puntos de alto foco visual.
+
+Los tonos intermedios de la escala se priorizan para estados activos e interactivos, mientras que los tonos claros y oscuros se reservan para superficies, contrastes y jerarquía.
+
+*(Acompañar con:
+– botones primarios
+– links
+– highlights sobre cards)*
+
+---
+
+## Structural colors
+
+### Blue
+
+La escala Blue actúa como base estructural del sistema.
+Se emplea para fondos, superficies, divisores y tipografía secundaria, aportando estabilidad visual sin competir con el color de marca.
+
+Su función es sostener la interfaz y permitir que los colores primarios destaquen con claridad.
+
+*(Acompañar con:
+– layout base
+– cards sobre fondos
+– texto secundario)*
+
+---
+
+### Twilight
+
+Twilight introduce profundidad visual y contraste controlado.
+Está pensada para encabezados, secciones de énfasis, contextos técnicos o escenarios de baja luminosidad, manteniendo una estética sobria y precisa.
+
+*(Acompañar con:
+– headers
+– secciones destacadas
+– dark surfaces)*
+
+---
+
+## Accent colors
+
+### Grabber
+
+Grabber es un color de alto impacto visual diseñado para captar atención inmediata.
+Se utiliza en llamados a la acción, estados activos específicos o indicadores destacados.
+
+Debe emplearse de forma medida para preservar su fuerza expresiva y evitar saturación visual.
+
+*(Acompañar con:
+– CTA puntual
+– badges
+– indicadores activos)*
+
+---
+
+## Neutral colors
+
+La paleta neutral constituye la base de legibilidad del sistema.
+Se utiliza para texto, fondos, separadores y estados deshabilitados, garantizando contraste adecuado y comodidad visual en interfaces de uso continuo.
+
+Un uso equilibrado de los neutrales permite que los colores de marca se expresen sin comprometer la experiencia de lectura.
+
+*(Acompañar con:
+– textos sobre fondo
+– estados disabled
+– separators)*
+
+---
+
+## Transparency and layering
+
+Los valores de transparencia permiten construir capas, overlays y estados interactivos sin introducir nuevos colores al sistema.
+
+Esta escala asegura consistencia visual en efectos de superposición, foco y profundidad, respetando la jerarquía de las superficies.
+
+*(Acompañar con:
+– overlay modal
+– hover states
+– superficies elevadas)*
+
+---
+
+## Interaction states
+
+El sistema define comportamientos consistentes de color para estados interactivos:
+
+* Default
+* Hover
+* Active
+* Focus
+* Disabled
+
+Cada transición mantiene la coherencia visual y refuerza la percepción de respuesta del sistema.
+
+*(Acompañar con:
+– botón con todos los estados
+– input interactivo)*
+
+---
+
+## Light and dark mode
+
+El sistema de color está preparado para adaptarse a distintos contextos de luminosidad mediante un modelo de capas.
+
+Los roles de color se mantienen, ajustando valores de superficie y contraste para preservar jerarquía, legibilidad y comodidad visual tanto en modo claro como oscuro.
+
+*(Acompañar con:
+– misma pantalla en light y dark
+– comparación de superficies y texto)*
+
+---
+
+## Accessibility and contrast
+
+El uso del color respeta principios de accesibilidad y contraste para garantizar una experiencia inclusiva.
+
+* El color nunca es el único medio para comunicar información.
+* Se mantienen niveles adecuados de contraste entre texto y fondo.
+* Los estados de foco son siempre visibles.
+
+*(Acompañar con:
+– ejemplo correcto / incorrecto de contraste
+– foco visible en componentes)*
+
+---
+
+## Usage guidelines
+
+### Do
+
+* Usar colores de marca para acciones clave.
+* Respetar la jerarquía de escalas.
+* Priorizar neutrales para contenido extenso.
+
+### Don’t
+
+* Usar accent colors como color base.
+* Combinar colores sin respetar roles.
+* Forzar contraste insuficiente por estética.
+
+*(Acompañar con:
+– comparativas visuales ✅ / ❌)*
+
+---
+
+## Closing note
+
+El sistema de color no está diseñado para ofrecer libertad total, sino para reducir decisiones innecesarias y proteger la experiencia del usuario a gran escala.
+
+Cuando el color se utiliza de forma consistente y consciente, la interfaz se vuelve más clara, confiable y reconocible.
+
+---
+IMPORTANTE
+las secciones que ya tenemos <section class="doc-page__section">
+Dónde SÍ van esos bloques
+En cada sección de color (Blue, Skyview, Grabber, etc.)
+
+después de explicar:
+
+Qué rol cumple ese color
+
+Para qué se usa
+
+Qué tonos se priorizan y por qué
+
+Recién ahí, entra el bloque que mostrás.
+
+Ejemplo correcto de orden:
+
+Blue
+Purpose
+
+Blue actúa como color estructural del sistema. Se utiliza para superficies, fondos, jerarquía visual y tipografía secundaria, aportando estabilidad y sobriedad a la interfaz.
+
+Usage
+
+Fondos principales y secundarios
+
+Superficies de cards
+
+Bordes y divisores
+
+Texto no primario
+
+Scale
+
+⬇️ acá va tu bloque de Blue 50–900
+(el que mostraste en la imagen)
+
+❌ Dónde NO debería ir solo
+
+Como sección aislada tipo:
+“Blue colors” → y listo
+
+Como paleta sin contexto
+
+Sin aclarar qué tonos se usan y cuáles no
+
+Eso es catálogo, no Design System.
+
+🔎 El plus que lo vuelve PRO (te lo recomiendo fuerte)
+
+Debajo del bloque visual, agregá guidelines explícitas:
+
+Recommended usage
+
+Blue 50–100: fondos de página
+
+Blue 200–300: cards, secciones
+
+Blue 400–500: texto secundario, íconos
+
+Blue 600–900: headers, dark surfaces
+
+(Esto hace feliz a UX, UI y devs. Win-win-win.)
+
+🧠 Mentalidad UX correcta
+
+Pensalo así:
+
+El bloque de colores responde a “qué existe”
+El texto responde a “cómo se usa” y “por qué”
+
+Un DS serio nunca deja al lector con la pregunta:
+
+“¿Y ahora cuál agarro?”
+
+✅ Conclusión corta y honesta
+
+✔️ Sí, esos bloques van en cada sección de color
+✔️ Pero siempre acompañado de propósito + uso + reglas
+❌ Nunca solo como paleta decorativa

@@ -1,87 +1,141 @@
-<div class="content-wrapper">
-    <div class="doc-page">
-        <header class="doc-page__header">
-            <h1>Buttons</h1>
-            <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
-        </header>
+<div class="hero-banner">
+    <img src="../../assets/img/pageColors/TypographyFoundations.png" alt="Color Foundations" class="hero-banner__image">
 
-        <section class="doc-page__section">
-            <h2>Primary Button</h2>
-            <div class="button-showcase">
-                <div class="button-showcase__row">
-                    <button class="btn btn--primary btn--large">
-                        Button Large
-                    </button>
-                    <button class="btn btn--primary btn--medium">
-                        Button Medium
-                    </button>
-                    <button class="btn btn--primary btn--small">
-                        Button Small
-                    </button>
-                </div>
-                <div class="button-showcase__row">
-                    <button class="btn btn--primary btn--medium" disabled>
-                        Disabled
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="doc-page__section">
-            <h2>Secondary Button</h2>
-            <div class="button-showcase">
-                <div class="button-showcase__row" style="background-color: #000426;">
-                    <button class="btn btn--secondary btn--large">
-                        Button Large
-                    </button>
-                    <button class="btn btn--secondary btn--medium">
-                        Button Medium
-                    </button>
-                    <button class="btn btn--secondary btn--small">
-                        Button Small
-                    </button>
-                </div>
-                <div class="button-showcase__row" style="background-color: #000426;">
-                    <button class="btn btn--secondary btn--medium" disabled>
-                        Disabled
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="doc-page__section">
-            <h2>Tertiary Button</h2>
-            <div class="button-showcase">
-                <div class="button-showcase__row" style="background-color: #000426;">
-                    <button class="btn btn--tertiary btn--large">
-                        Button Large
-                    </button>
-                    <button class="btn btn--tertiary btn--medium">
-                        Button Medium
-                    </button>
-                    <button class="btn btn--tertiary btn--small">
-                        Button Small
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="doc-page__section">
-            <h2>Icon Buttons</h2>
-            <div class="button-showcase">
-                <div class="button-showcase__row" style="background-color: #000426;">
-                    <button class="next--previus--button">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M15 18l-6-6 6-6" />
-                        </svg>
-                    </button>
-                    <button class="next--previus--button">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 18l6-6-6-6" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </section>
+    <div class="hero-banner__overlay"></div>
+    <div class="hero-banner__content">
+        <h1>Buttons</h1>
+        <p>La tipografía define el tono, la jerarquía y la claridad en la comunicación visual del producto. Este sistema
+            establece estilos consistentes para títulos, subtítulos, párrafos y acciones.</p>
     </div>
+</div>
+<!-- NAVIGATION2 -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#principles" data-target="principles">Principios</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#scale" data-target="scale">Escala tipográfica</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#roles" data-target="roles">Roles tipográficos</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="content-page">
+
+
+
+    <!-- ================================================================================= -->
+    <!-- PRINCIPLES -->
+    <!-- ================================================================================= -->
+    <section id="principles" class="doc-section">
+        <h2>Principios Tipográficos</h2>
+        <p>La tipografía debe ser accesible, coherente y clara. Su propósito es transmitir información con
+            eficiencia, respetando el tono de la marca y manteniendo una experiencia visual uniforme.</p>
+
+        <ul class="doc-list">
+            <li><strong>Consistencia:</strong> mantener patrones reconocibles a través de todas las interfaces.
+            </li>
+            <li><strong>Jerarquía:</strong> permitir distinguir títulos, subtítulos y cuerpo de forma inmediata.
+            </li>
+            <li><strong>Escaneo rápido:</strong> mejorar cómo los usuarios consumen texto en pantallas.</li>
+            <li><strong>Flexibilidad:</strong> adaptarse a distintos tamaños de dispositivos.</li>
+        </ul>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="doc-section" style="background-color: var(--color-white);">
+        <h2>Anatomía de la tipografía</h2>
+        <p>Cada estilo tipográfico tiene atributos definidos: tamaño, peso, interlineado y familia. Estos
+            parámetros garantizan lecturabilidad y consistencia en la interfaz.</p>
+
+        <h4>Por Color</h4>
+        <ul class="doc-list ">
+            <button class="btn btn--small theme--skyview-palette--primary">
+                skyview primary
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="btn btn--medium theme--skyview-palette--primary">
+                skyview secondary
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="btn btn--large theme--skyview-palette--primary">
+                skyview tertiary
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </ul>
+        <h4>Por Tamaño</h4>
+        <ul class="doc-list">
+            <button class="btn btn--small btn--primary">
+                Small
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="btn btn--medium btn--primary">
+                Medium
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="btn btn--large btn--primary">
+                Large
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </ul>
+        <h4>Por jerarquía</h4>
+        <ul class="doc-list">
+            <button class="btn btn--medium btn--primary">
+                Primary
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="btn btn--medium btn--secondary">
+                Secondary
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="btn btn--medium btn--tertiary">
+                Tertiary
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </ul>
+    </section>
+
+
 </div>

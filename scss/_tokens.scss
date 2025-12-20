@@ -1,0 +1,535 @@
+/* =========================================
+   DESIGN TOKENS / TOKENS HÍBRIDOS (SASS + CSS CUSTOM PROPERTIES)
+   ========================================= */
+/**
+ * 🎯 OBJETIVO: Separar el VALOR base (Sass) del ROL semántico (CSS Variable).
+ * * Este sistema de tokenización en capas garantiza flexibilidad en Runtime (Temas, 
+ * JS, Media Queries) sin sacrificar la potencia de la compilación de Sass (Mixins, Cálculos).
+ * * -----------------------------------------------------------------------------
+ * 1. CAPA DE VALORES CRUDOS (SASS: $variable):
+ * - Archivo: _tokens-raw.scss (O similar)
+ * - Propósito: Almacenar el valor literal (e.g., #007bff, 16px). Solo usados para cálculos 
+ * y para generar la capa 2. NO deben usarse en selectores finales.
+ * * 2. CAPA DE TOKENS SEMÁNTICOS (CSS: --variable):
+ * - Archivo: _tokens.scss (Dentro del bloque :root)
+ * - Propósito: Asignar un rol al valor (e.g., --color-primary, --font-size-body-lg).
+ * - Regla: Los Tokens Semánticos pueden anidarse (e.g., --color-primary: var(--skyview-500)).
+ * - FLEXIBILIDAD: Estos son los tokens que se deben sobreescribir para temas.
+ * * 3. CAPA DE ABSTRACCIÓN (SASS: @mixin):
+ * - Archivo: _mixins.scss
+ * - Propósito: Agrupar y aplicar estilos complejos (e.g., @include body-16-regular).
+ * - REGLA DE ORO: Los Mixins DEBEN usar las referencias CSS (var(--...)) para mantener 
+ * la conectividad con el sistema de temas dinámicos.
+ * -----------------------------------------------------------------------------
+ * * USO CORRECTO EN COMPONENTES:
+ * - Para estilos: Usar @include mixin-name.
+ * - Para valores directos: Usar var(--token-semantico).
+ */
+
+
+/*==================================================
+   COLORS PALETTE (Sass)
+   ===================================================*/
+// ====blue===
+$blue-50: #e6e8ea; // rgb(230, 232, 234)
+$blue-100: #b0b6be; // rgb(176, 182, 190)
+$blue-200: #8a939f; // rgb(138, 147, 159)
+$blue-300: #546273; // rgb(84, 98, 115)
+$blue-400: #334358; // rgb(51, 67, 88)
+$blue-500: #00142e; // rgb(0, 20, 46)
+$blue-600: #00122a; // rgb(0, 18, 42)
+$blue-700: #000e21; // rgb(0, 14, 33)
+$blue-800: #000b19; // rgb(0, 11, 25)
+$blue-900: #000813; // rgb(0, 8, 19)
+
+// ==== grabber ===
+$grabber-50: #e8e6fe; // rgb(232, 230, 254)
+$grabber-100: #b7b0fc; // rgb(183, 176, 252)
+$grabber-200: #948afa; // rgb(148, 138, 250)
+$grabber-300: #6454f8; // rgb(100, 84, 248)
+$grabber-400: #4533f6; // rgb(69, 51, 246)
+$grabber-500: #1700f4; // rgb(23, 0, 244)
+$grabber-600: #1500de; // rgb(21, 0, 222)
+$grabber-700: #1000ad; // rgb(16, 0, 173)
+$grabber-800: #0d0086; // rgb(13, 0, 134)
+$grabber-900: #0a0066; // rgb(10, 0, 102)
+
+// ==== skyview ===
+$skyview-50: #e6f1fd; // rgb(230, 241, 253)
+$skyview-100: #b2d2fa; // rgb(178, 210, 250)
+$skyview-200: #8cbdf8; // rgb(140, 189, 248)
+$skyview-300: #589ff4; // rgb(88, 159, 244)
+$skyview-400: #388cf2; // rgb(56, 140, 242)
+$skyview-500: #066fef; // rgb(6, 111, 239)
+$skyview-600: #0565d9; // rgb(5, 101, 217)
+$skyview-700: #044faa; // rgb(4, 79, 170)
+$skyview-800: #033d83; // rgb(3, 61, 131)
+$skyview-900: #032f64; // rgb(3, 47, 100)
+
+// ==== twilight ===
+$twilight-50: #e6e6ef; // rgb(230, 230, 239)
+$twilight-100: #b0b3cc; // rgb(176, 179, 204)
+$twilight-200: #8a8eb4; // rgb(138, 142, 180)
+$twilight-300: #545a91; // rgb(84, 90, 145)
+$twilight-400: #333a7c; // rgb(51, 58, 124)
+$twilight-500: #00095b; // rgb(0, 9, 91)
+$twilight-600: #000853; // rgb(0, 8, 83)
+$twilight-700: #000641; // rgb(0, 6, 65)
+$twilight-800: #000532; // rgb(0, 5, 50)
+$twilight-900: #000426; // rgb(0, 4, 38)
+
+
+// ==== neutral NUEVOS ===
+$white: #fefefe; // rgb(238, 238, 238)
+$neutral-50: #eaeaea; // rgb(234, 234, 234)
+$neutral-100: #bfbfbf; // rgb(191, 191, 191)
+$neutral-200: #a0a0a0; // rgb(160, 160, 160)
+$neutral-300: #747474; // rgb(116, 116, 116)
+$neutral-400: #595959; // rgb(89, 89, 89)
+$neutral-500: #303030; // rgb(48, 48, 48)
+$neutral-600: #2c2c2c; // rgb(44, 44, 44)
+$neutral-700: #222222; // rgb(34, 34, 34)
+$neutral-800: #1a1a1a; // rgb(26, 26, 26)
+$neutral-900: #141414; // rgb(20, 20, 20)
+
+
+
+// ==== functional ===
+$green: #38A169; // rgb(56, 161, 105)
+$green2: #C6F6D5;
+$orange: #DD6B20; // rgb(221, 107, 32)
+$orange2: #FEEBC8;
+$red: #E53E3E; // rgb(229, 62, 62)
+$red2: #FED7D7;
+$blue: #3182CE;
+$blue2: #BEE3F8;
+
+//==== transparent ===
+$transparent-20: rgba(255, 255, 255, 0.02);
+$transparent-30: rgba(255, 255, 255, 0.04);
+$transparent-40: rgba(255, 255, 255, 0.06);
+$transparent-50: rgba(255, 255, 255, 0.08);
+$transparent-100: rgba(255, 255, 255, 0.12);
+$transparent-200: rgba(255, 255, 255, 0.16);
+$transparent-300: rgba(255, 255, 255, 0.20);
+$transparent-400: rgba(255, 255, 255, 0.24);
+$transparent-500: rgba(255, 255, 255, 0.28);
+$transparent-600: rgba(255, 255, 255, 0.32);
+$transparent-700: rgba(255, 255, 255, 0.36);
+$transparent-800: rgba(255, 255, 255, 0.40);
+$transparent-900: rgba(255, 255, 255, 0.44);
+
+
+/*==================================================
+   TYPOGRAPHY (CSS)
+   ===================================================*/
+// ============================================================================
+// YOUR ORIGINAL MIXINS — REFACTORED WITH TOKENS (NO SE ROMPE NADA)
+// ============================================================================
+// Font sizes
+$font-size-54: 3.375rem;
+/* 54px */
+$font-size-48: 3.0rem;
+/* 48px */
+$font-size-40: 2.5rem;
+/* 40px */
+$font-size-32: 2.0rem;
+/* 32px */
+$font-size-28: 1.75rem;
+/* 28px */
+$font-size-24: 1.5rem;
+/* 24px */
+$font-size-20: 1.25rem;
+/* 20px */
+$font-size-16: 1rem;
+/* 16px */
+$font-size-14: 0.875rem;
+/* 14px */
+$font-size-12: 0.75rem;
+/* 12px */
+
+// Font weights
+$weight-regular: 400;
+/* Regular */
+$weight-medium: 500;
+/* Medium */
+$weight-bold: 700;
+/* Bold */
+
+// Line heights
+$lh-tight: 1.1;
+/* Tight */
+$lh-normal: 1.3;
+/* Normal */
+$lh-relaxed: 1.5;
+/* Relaxed */
+
+// ===== Headings =====
+@mixin heading-title-54-regular {
+  // (heading)
+  @include text-style($font-size-54, $weight-regular, $lh-tight);
+}
+
+@mixin heading-title-54-bold {
+  // (heading)
+  @include text-style($font-size-54, $weight-bold, $lh-tight);
+}
+
+@mixin heading-title-48-bold {
+  // (H1)
+  @include text-style($font-size-48, $weight-bold, $lh-tight);
+}
+
+@mixin heading-title-48-regular {
+  // (H1)
+  @include text-style($font-size-48, $weight-regular, $lh-tight);
+}
+
+@mixin heading-title-42-bold {
+  // (H2)
+  @include text-style($font-size-40, $weight-bold, $lh-tight);
+}
+
+@mixin heading-title-42-regular {
+  // (H2)
+  @include text-style($font-size-40, $weight-regular, $lh-tight);
+}
+
+@mixin heading-title-32-bold {
+  // (H3)
+  @include text-style($font-size-32, $weight-bold, $lh-tight);
+}
+
+@mixin heading-title-32-regular {
+  // (H3)
+  @include text-style($font-size-32, $weight-regular, $lh-tight);
+}
+
+@mixin heading-title-28-bold {
+  // (H4)
+  @include text-style($font-size-28, $weight-bold, $lh-tight);
+}
+
+@mixin heading-title-28-regular {
+  // (H4)
+  @include text-style($font-size-28, $weight-regular, $lh-tight);
+}
+
+@mixin heading-title-24-bold {
+  // (H5)
+  @include text-style($font-size-24, $weight-bold, $lh-normal);
+}
+
+@mixin heading-title-24-regular {
+  // (H5)
+  @include text-style($font-size-24, $weight-regular, $lh-normal);
+}
+
+
+
+// ===== Subtitles =====
+@mixin body-20-bold {
+  @include text-style($font-size-20, $weight-bold, $lh-normal);
+}
+
+@mixin body-20-regular {
+  @include text-style($font-size-20, $weight-regular, $lh-normal);
+}
+
+// Subtitle 18 removed as per instructions
+
+
+// ===== Body =====
+@mixin body-16-bold {
+  // body / (P)
+  @include text-style($font-size-16, $weight-bold, $lh-relaxed);
+}
+
+@mixin body-16-regular {
+  // body / (P)
+  @include text-style($font-size-16, $weight-regular, $lh-relaxed);
+}
+
+@mixin body-14-bold {
+  // body small / (P)
+  @include text-style($font-size-14, $weight-bold, $lh-normal);
+}
+
+@mixin body-14-regular {
+  // body small / (P)
+  @include text-style($font-size-14, $weight-regular, $lh-normal);
+}
+
+@mixin body-12-bold {
+  @include text-style($font-size-12, $weight-bold, $lh-normal);
+}
+
+@mixin body-12-regular {
+  @include text-style($font-size-12, $weight-regular, $lh-normal);
+}
+
+
+// ===== Actions =====
+@mixin button-20 {
+  @include text-style($font-size-20, $weight-bold, $lh-tight);
+}
+
+@mixin button-16 {
+  @include text-style($font-size-16, $weight-bold, $lh-tight);
+}
+
+@mixin button-14 {
+  @include text-style($font-size-14, $weight-bold, $lh-tight);
+}
+
+@mixin button-12 {
+  @include text-style($font-size-12, $weight-bold, $lh-tight);
+}
+
+
+
+
+:root {
+
+  /*==================================================
+   COLORS
+   ===================================================*/
+  --color-desabled: #{$neutral-100};
+
+  /* Colors - Brand */
+  --color-primary-50: #{$skyview-50};
+  --color-primary-100: #{$skyview-100};
+  --color-primary-200: #{$skyview-200};
+  --color-primary-300: #{$skyview-300};
+  --color-primary-400: #{$skyview-400};
+  --color-primary-500: #{$skyview-500};
+  --color-primary-600: #{$skyview-600};
+  --color-primary-700: #{$skyview-700};
+  --color-primary-800: #{$skyview-800};
+  --color-primary-900: #{$skyview-900};
+
+  --color-primary-default: #{$skyview-500};
+  --color-primary-hover: #{$skyview-600};
+  --color-primary-active: #{$skyview-700};
+  --color-primary-focus: #{$skyview-800};
+
+  /*colors - accent*/
+  --color-accent-100: #{$grabber-100};
+  --color-accent-200: #{$grabber-200};
+  --color-accent-300: #{$grabber-300};
+  --color-accent-400: #{$grabber-400};
+  --color-accent-500: #{$grabber-500};
+  --color-accent-600: #{$grabber-600};
+  --color-accent-700: #{$grabber-700};
+  --color-accent-800: #{$grabber-800};
+  --color-accent-900: #{$grabber-900};
+
+  --color-accent-default: #{$skyview-500};
+  --color-accent-hover: #{$grabber-600};
+  --color-accent-active: #{$grabber-700};
+  --color-accent-focus: #{$grabber-800};
+
+  /* Colors - Neutrals */
+  --color-neutral-white: #{$white};
+  --color-neutral-50: #{$neutral-50};
+  --color-neutral-100: #{$neutral-100};
+  --color-neutral-200: #{$neutral-200};
+  --color-neutral-300: #{$neutral-300};
+  --color-neutral-400: #{$neutral-400};
+  --color-neutral-500: #{$neutral-500};
+  --color-neutral-600: #{$neutral-600};
+  --color-neutral-700: #{$neutral-700};
+  --color-neutral-800: #{$neutral-800};
+  --color-neutral-900: #{$neutral-900};
+
+  --color-neutral-default: #{$white};
+  --color-neutral-hover: #{$neutral-50};
+  --color-neutral-active: #{$neutral-100};
+  --color-neutral-focus: #{$neutral-300};
+
+  /* Colors - Structure */
+  --color-secondary-blue-50: #{$blue-50};
+  --color-secondary-blue-100: #{$blue-100};
+  --color-secondary-blue-200: #{$blue-200};
+  --color-secondary-blue-300: #{$blue-300};
+  --color-secondary-blue-400: #{$blue-400};
+  --color-secondary-blue-500: #{$blue-500};
+  --color-secondary-blue-600: #{$blue-600};
+  --color-secondary-blue-700: #{$blue-700};
+  --color-secondary-blue-800: #{$blue-800};
+  --color-secondary-blue-900: #{$blue-900};
+
+  --color-tertary-twilight-50: #{$twilight-50};
+  --color-tertary-twilight-100: #{$twilight-100};
+  --color-tertary-twilight-200: #{$twilight-200};
+  --color-tertary-twilight-300: #{$twilight-300};
+  --color-tertary-twilight-400: #{$twilight-400};
+  --color-tertary-twilight-500: #{$twilight-500};
+  --color-tertary-twilight-600: #{$twilight-600};
+  --color-tertary-twilight-700: #{$twilight-700};
+  --color-tertary-twilight-800: #{$twilight-800};
+  --color-tertary-twilight-900: #{$twilight-900};
+
+
+  /* Colors - Text */
+  --color-text-900: #{$neutral-900};
+  --color-text-800: #{$neutral-800};
+  --color-text-700: #{$neutral-700};
+  --color-text-600: #{$neutral-600};
+  --color-text-500: #{$neutral-500};
+  --color-text-400: #{$neutral-400};
+  --color-text-300: #{$neutral-300};
+  --color-text-200: #{$neutral-200};
+  --color-text-100: #{$neutral-100};
+  --color-text-50: #{$neutral-50};
+  --color-text-white: #{$white};
+
+
+
+
+  /* Colors - background */
+  --color-background-white: #{$white};
+  --color-background-50: #{$neutral-50};
+  --color-background-100: #{$neutral-100};
+  --color-background-200: #{$neutral-200};
+  --color-background-300: #{$neutral-300};
+  --color-background-400: #{$neutral-400};
+  --color-background-500: #{$neutral-500};
+  --color-background-600: #{$neutral-600};
+  --color-background-700: #{$neutral-700};
+  --color-background-800: #{$neutral-800};
+  --color-background-900: #{$neutral-900};
+
+  --color-status-success-1: #{$green};
+  --color-status-success-2: #{$green2};
+  --color-status-warning-1: #{$orange};
+  --color-status-warning-2: #{$orange2};
+  --color-status-danger-1: #{$red};
+  --color-status-danger-2: #{$red2};
+  --color-status-info-1: #{$blue};
+  --color-status-info-2: #{$blue2};
+
+
+
+
+
+
+  /*==================================================
+   TYPOGRAPHY
+   ===================================================*/
+  --font-family-base: "Roboto", sans-serif;
+
+  // Mapeo de TAMAÑOS (usamos los valores SCSS para definir los CSS)
+  --font-size-h1: #{$font-size-48};
+  --font-size-h2: #{$font-size-40};
+  --font-size-h3: #{$font-size-32};
+  --font-size-h4: #{$font-size-28};
+  --font-size-h5: #{$font-size-24};
+  --font-size-h6: #{$font-size-20};
+  --font-size-body-lg: #{$font-size-16};
+  --font-size-body-sm: #{$font-size-14};
+
+  // Mapeo de PESOS
+  --font-weight-regular: #{$weight-regular};
+  --font-weight-medium: #{$weight-medium};
+  --font-weight-bold: #{$weight-bold};
+
+
+
+  /*==================================================
+   SPACING
+   ===================================================*/
+  // Spacing (Tus variables de espaciado del primer bloque)
+  --space-4px: 4px;
+  --space-6px: 6px;
+  --space-8px: 8px;
+  --space-10px: 10px;
+  --space-12px: 12px;
+  --space-14px: 14px;
+  --space-16px: 16px;
+  --space-20px: 20px;
+  --space-24px: 24px;
+  --space-28px: 28px;
+  --space-32px: 32px;
+  --space-36px: 36px;
+  --space-40px: 40px;
+  --space-48px: 48px;
+  --space-52px: 52px;
+  --space-60px: 60px;
+  --space-64px: 64px;
+  --space-72px: 72px;
+  --space-80px: 80px;
+  --space-96px: 96px;
+
+
+
+
+  /*==================================================
+    RADIUS
+   ===================================================*/
+  --radius-2: 2px; // 2px
+  --radius-4: 4px; // 4px
+  --radius-8: 8px; // 8px
+  --radius-10: 10px; // 10px
+  --radius-12: 12px; // 12px
+  --radius-14: 14px; // 14px
+  --radius-16: 16px; // 16px
+  --radius-24: 24px; // 24px
+  --radius-32: 32px; // 32px (el tuyo)
+
+
+
+
+  /* Layout */
+  --nav-height: 60px;
+  --sidebar-width: 260px;
+  --header-height: 60px;
+  --border-radius: 3px;
+
+  // si uso shadow-card no tiene sentido usar border-card OK
+  //simpre en card importantes o grandes usemos shadow-card
+  //siempre en card pequeñas o menores usemos border-card
+  --border-card: 1px solid var(--color-neutral-50);
+  --shadow-card: 0 1px 1px rgba(9, 30, 66, 0.25),
+    0 0 1px rgba(9, 30, 66, 0.31);
+  --shadow-card-hover: 0 12px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+
+
+// ============================================================================
+// UNIVERSAL MIXIN
+// ============================================================================
+@mixin text-style($size, $weight, $lh) {
+  font-family: var(--font-family-base);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+
+
+//IMPORANTE FINAL 
+//ASI QUEDA LA ESCALA FINAL
+
+//Heading 54px (su rem correspondiente)
+//how vexingly quick daft zebras jump 
+//h1	48px (su rem correspondiente)	
+//How vexingly quick daft zebras jump
+//h2	38px (su rem correspondiente)	
+//How vexingly quick daft zebras jump
+//h3	32px (su rem correspondiente)	
+//How vexingly quick daft zebras jump
+//h4	28px (su rem correspondiente)	
+//How vexingly quick daft zebras jump
+//h5	24px (su rem correspondiente)	
+//How vexingly quick daft zebras jump
+//h6	20px (su rem correspondiente)
+//How vexingly quick daft zebras jump
+//p	16px	(su rem correspondiente)
+//How vexingly quick daft zebras jump
+//small	14px	(su rem correspondiente)
+//How vexingly quick daft zebras jump
+//12px	(su rem correspondiente)
+//How vexingly quick daft zebras jump

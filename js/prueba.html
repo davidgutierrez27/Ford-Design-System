@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page con Nav Interactiva (JS)</title>
+    <style>
+        /* Estilos CSS */
+        :root {
+            --color-principal: #3498db;
+            --color-secundario: #2ecc71;
+            /* Nuevo color para el estado activo */
+            --color-fondo-claro: #f4f4f9;
+            --color-texto: #333;
+            --color-texto-claro: #fff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 60px;
+            color: var(--color-texto);
+            background-color: var(--color-fondo-claro);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            /* Opcional: Hace el scroll más suave */
+        }
+
+        /* --- Estilos de la Barra de Navegación (Nav) --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-principal);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: var(--color-texto-claro);
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* ESTADO HOVER */
+        .nav-item a:hover {
+            background-color: #2980b9;
+        }
+
+        /* ESTADO ACTIVE (Gestionado por JS) */
+        .nav-item a.active {
+            background-color: var(--color-secundario);
+            /* Verde brillante */
+            color: var(--color-texto-claro);
+            pointer-events: none;
+            /* Opcional: Deshabilita el clic cuando ya está activo */
+        }
+
+        /* ESTADO ACTIVE al hacer clic temporalmente (Para móviles o si no hay JS) */
+        .nav-item a:active {
+            background-color: #1e8449;
+            /* Verde más oscuro al presionarlo */
+        }
+
+
+        /* --- Estilos de las Secciones de Contenido --- */
+        .section {
+            padding: 80px 5%;
+            min-height: 100vh;
+            scroll-margin-top: 60px;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: var(--color-principal);
+            border-bottom: 2px solid var(--color-principal);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        #seccion1 {
+            background-color: var(--color-fondo-claro);
+        }
+
+        #seccion2 {
+            background-color: #ecf0f1;
+        }
+
+        #seccion3 {
+            background-color: #dcdde1;
+        }
+
+        .contenido-largo p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#seccion1" data-target="seccion1">Inicio & Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a href="#seccion2" data-target="seccion2">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a href="#seccion3" data-target="seccion3">Contacto & FAQ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="seccion1" class="section">
+        <div class="contenido-largo">
+            <h2>Inicio y Servicios Clave</h2>
+            <p>Bienvenido a nuestra landing page de prueba. Esta sección simula la parte introductoria...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat...</p>
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                minima veniam...</p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga...</p>
+            <p>[Fin de contenido largo de la Sección 1]</p>
+        </div>
+    </section>
+
+    <section id="seccion2" class="section">
+        <div class="contenido-largo">
+            <h2>Acerca de Nosotros y Nuestra Misión</h2>
+            <p>Esta sección detalla la historia de la empresa, su visión y el equipo detrás de ella. Al igual que la
+                anterior, está diseñada para ser larga y probar el desplazamiento suave al hacer clic en el botón de la
+                nav.</p>
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                minima veniam...</p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga...</p>
+            <p>[Fin de contenido largo de la Sección 2]</p>
+        </div>
+    </section>
+
+    <section id="seccion3" class="section">
+        <div class="contenido-largo">
+            <h2>Contacto y Preguntas Frecuentes (FAQ)</h2>
+            <p>Esta es la sección final, que generalmente incluye información de contacto, un formulario simulado o
+                enlaces, y respuestas a preguntas comunes.</p>
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                minima veniam...</p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga...</p>
+            <p>[Fin de contenido largo de la Sección 3]</p>
+        </div>
+    </section>
+
+    <script>
+        // Seleccionamos todos los enlaces de la navegación y las secciones
+        const navLinks = document.querySelectorAll('.nav-item a');
+        const sections = document.querySelectorAll('.section');
+
+        // Función para eliminar la clase 'active' de todos los enlaces
+        function removeActiveClass() {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+        }
+
+        // Función para establecer el enlace activo basándose en la posición del scroll
+        function setActiveLinkOnScroll() {
+            // Obtenemos la posición actual del scroll vertical
+            let currentScroll = window.scrollY;
+
+            // Iteramos sobre cada sección para ver cuál está en el viewport
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 70; // Desplazamiento desde la parte superior - ajuste para la nav
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+
+                // Comprobamos si el scroll está dentro del rango de la sección actual
+                if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
+                    // Si encontramos la sección, primero eliminamos la clase activa de todos
+                    removeActiveClass();
+
+                    // Luego, encontramos el enlace de navegación que apunta a esa sección
+                    const activeLink = document.querySelector(`.nav-item a[href="#${sectionId}"]`);
+
+                    // Y le añadimos la clase 'active'
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // 1. Añadimos el listener para el evento 'scroll'
+        window.addEventListener('scroll', setActiveLinkOnScroll);
+
+        // 2. Establecemos la sección activa al cargar la página por primera vez
+        window.addEventListener('load', setActiveLinkOnScroll);
+
+        // 3. (Opcional) Listener para los clics en los enlaces, para asegurar la inmediatez
+        // Aunque el 'scroll' lo maneja, esto puede ser útil si se desea un comportamiento ligeramente diferente al hacer clic
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Removemos la clase de todos temporalmente para asegurar que solo uno esté activo
+                removeActiveClass();
+                // Añadimos la clase 'active' al elemento que se acaba de hacer clic
+                this.classList.add('active');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

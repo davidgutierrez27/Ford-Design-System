@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!res.ok) throw new Error("404");
 
             main.innerHTML = await res.text();
+            //AGREGE ESTO para ayudarme con nav secundario
+            // Disparar evento para notificar que la vista cambió y el DOM está listo
+            window.dispatchEvent(new CustomEvent('viewLoaded', {
+                detail: { view }
+            }));
         } catch {
             main.innerHTML = "<h2>⚠️ Vista no encontrada</h2>";
         }

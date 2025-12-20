@@ -2,28 +2,30 @@
 // IMPORTADOR PRINCIPAL
 // =====================================================
 
-// ----- tokens -----
-@import "tokens/colors";
-@import "tokens/typography";
-@import "tokens/spacing";
-@import "tokens/radius";
+@use "media";
+@use "tokens";
 
 // ----- base -----
-@import "base/reset";
-@import "base/globals";
+@use "base/reset";
+@use "base/globals";
 
 // ----- layout -----
-@import "layout/grid";
-@import "layout/body";
-@import "layout/sidebar";
+@use "layout/layout";
+@use "layout/sidebar";
+@use "layout/nav";
 
-// ----- mixins -----
-@import "mixins/flex";
-@import "mixins/focus";
-@import "mixins/media";
+
 
 // ----- utils -----
-@import "utils/helpers";
-@import "pages/foundations";
-@import "atoms/buttons";
-@import "atoms/dropdown";
+@use "pages/_foundations";
+
+// ----- pages -----
+@use "pages/typography";
+@use "pages/colors";
+
+// ----- atoms -----
+@use "atoms/buttons";
+@use "atoms/dropdown";
+
+// ----- molecules -----
+@use "molecules/search";

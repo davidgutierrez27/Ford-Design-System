@@ -1,0 +1,237 @@
+@use "../tokens" as *;
+@use "../media" as media;
+
+
+.color-grid {
+    display: flex;
+}
+
+.color-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background: var(--color-neutral-white);
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    &__preview {
+        height: 200px;
+        width: 100%;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: -35px;
+        padding: var(--space-16px);
+
+
+        h5 {
+            @include body-16-regular;
+            color: var(--color-text-white);
+        }
+
+        p {
+            @include body-16-regular;
+            color: var(--color-text-white);
+        }
+
+
+
+    }
+
+}
+
+@include media.md {
+    .color-card {
+
+        &__info {
+            bottom: 0;
+            transform: rotate(-90deg);
+
+            h5 {
+                @include body-16-regular;
+                letter-spacing: 1.5px;
+            }
+
+            p {
+                display: none;
+            }
+
+        }
+    }
+}
+
+@include media.sm {
+    .color-card {
+
+        &__info {
+            display: none;
+
+        }
+    }
+}
+
+/* Usage List */
+.usage-list {
+    margin-top: var(--space-32px);
+    padding: var(--space-24px);
+    background: var(--color-neutral-white);
+    border-left: 4px solid var(--color-primary-500);
+    border-radius: 0 var(--radius-8) var(--radius-8) 0;
+    box-shadow: var(--shadow-card);
+
+    h4 {
+        @include body-14-bold;
+        text-transform: uppercase;
+        margin-bottom: var(--space-16px);
+        letter-spacing: 1px;
+    }
+
+    ul {
+        display: grid;
+        gap: var(--space-16px);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            align-items: baseline;
+            gap: var(--space-16px);
+
+            @include media.sm {
+                grid-template-columns: 1fr;
+                gap: var(--space-4px);
+            }
+
+            .token-range {
+                @include body-14-bold;
+                color: var(--color-text-700);
+                font-family: monospace;
+            }
+
+            .token-desc {
+                @include body-14-regular;
+                color: var(--color-text-500);
+            }
+        }
+    }
+}
+
+/* =========================================
+   INTERACTION STATES DEMO
+   ========================================= */
+
+.interaction-states-grid {
+    display: flex;
+    gap: var(--space-24px);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-48px);
+}
+
+.state-card {
+    flex: 1;
+    min-width: 140px;
+    background: var(--color-neutral-white);
+    border: var(--border-card);
+    border-radius: var(--radius-8);
+    overflow: hidden;
+
+    &__preview {
+        height: 120px;
+        background-color: var(--color-neutral-50);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--color-neutral-100);
+        gap: var(--space-12px);
+    }
+
+    &__info {
+        padding: var(--space-16px);
+
+        p {
+            @include body-14-regular;
+            margin-bottom: 4px;
+            color: var(--color-text-500);
+
+            strong {
+                color: var(--color-text-700);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            code {
+                background: var(--color-neutral-50);
+                padding: 2px 4px;
+                border-radius: 4px;
+                color: var(--color-primary-600);
+                font-size: 0.85em;
+            }
+        }
+    }
+}
+
+.state-label {
+    @include body-12-bold;
+    text-transform: uppercase;
+    color: var(--color-text-400);
+    letter-spacing: 0.5px;
+}
+
+/* BUTTON DEMOS FOR STATES */
+.btn-demo {
+    padding: 10px 24px;
+    border-radius: 100px;
+    /* Pill shape */
+    border: none;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: default;
+    /* Just for demo */
+    transition: all 0.2s ease;
+}
+
+/* States Implementation */
+.btn-primary-rest {
+    background-color: var(--color-primary-500);
+    color: var(--color-text-white);
+}
+
+.btn-primary-hover {
+    background-color: var(--color-primary-600);
+    color: var(--color-text-white);
+    cursor: pointer;
+}
+
+.btn-primary-active {
+    background-color: var(--color-primary-700);
+    color: var(--color-text-white);
+    transform: scale(0.98);
+}
+
+.btn-primary-focus {
+    background-color: var(--color-primary-500);
+    color: var(--color-text-white);
+    outline: none;
+    box-shadow: 0 0 0 4px var(--color-primary-200);
+    /* Focus Ring */
+    border: 2px solid var(--color-primary-800);
+    /* Visual border indicator for ref */
+}
+
+.btn-primary-disabled {
+    background-color: var(--color-desabled);
+    /* Using the typo variable as requested */
+    color: var(--color-text-400);
+    cursor: not-allowed;
+    opacity: 0.7;
+}

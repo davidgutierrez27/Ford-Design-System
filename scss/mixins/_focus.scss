@@ -1,8 +1,0 @@
-// ======================================================================
-// MIXIN DE FOCUS RING — Accesibilidad
-// ======================================================================
-
-@mixin focus-ring($color, $width: 2px, $offset: 2px) {
-  outline: $width solid $color;
-  outline-offset: $offset;
-}

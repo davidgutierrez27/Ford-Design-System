@@ -1,11 +1,6 @@
 // IMPORTS (solo lo necesario)
-@use "../tokens/colors" as colors;
-@use "../tokens/spacing" as space;
-@use "../tokens/radius" as radius;
-@use "../tokens/typography" as font;
-@use "../mixins/flex" as flex;
-@use "../mixins/focus" as focus;
-@use "../mixins/media" as media;
+@use "../tokens" as *;
+@use "../media" as media;
 
 
 /* ===========================
@@ -17,28 +12,29 @@
   flex-direction: column;
   width: 100%;
   border: none;
-  background: colors.$white;
+  background: var(--color-background-white);
 
   /* -------------------------
      ELEMENTOS INTERNOS
      ------------------------- */
   &__btn {
-    color: colors.$blue-500;
-    height: auto;
+    color: var(--color-text-500);
+    height: 34px;
     display: flex;
     align-items: center;
     width: 100%;
-    gap: space.$spacing-sm-12px;
-    border-radius: radius.$radius-12;
+    gap: var(--space-12px);
+    border-left: 2px solid transparent;
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.30s ease;
-    padding: space.$spacing-sm-12px space.$spacing-xl-24px;
-    @include font.subtitle-18-regular;
+    padding: var(--space-8px) var(--space-12px);
+
 
     /* icono 24x24 */
     .icon {
-      width: space.$spacing-xl-24px;
-      height: space.$spacing-xl-24px;
+      width: var(--space-24px);
+      height: var(--space-24px);
     }
 
     .label {
@@ -50,27 +46,28 @@
 
     /* caret 16x16 */
     .caret {
-      width: space.$spacing-md-16px;
-      height: space.$spacing-md-16px;
+      width: var(--space-16px);
+      height: var(--space-16px);
       background: none;
       margin-left: auto;
       transition: transform 0.3s ease;
     }
 
     &:hover {
-      background: colors.$grey-50;
+      background: var(--color-background-50);
     }
 
     &--active {
-      background: colors.$skyview-500;
-      color: colors.$white;
+      border-left: 2px solid var(--color-primary-default);
+      background: var(--color-primary-50);
+      color: var(--color-primary-default);
 
       .caret {
-        fill: colors.$white;
+        fill: var(--color-primary-default);
       }
 
       &:hover {
-        background: colors.$skyview-600;
+        background: var(--color-primary-100);
       }
     }
 
@@ -81,25 +78,14 @@
     }
   }
 
-  /* Tamaños pequeños dando por sentado que el btn es grande por defecto----------------- */
-
-
-  &--small {
-    .dropdown__btn {
-      height: space.$spacing-2xl-32px;
-      border-radius: radius.$radius-8;
-    }
-  }
-
   /* -------------------------
      CONTENIDO DESPLEGABLE
      ------------------------- */
   &__content {
     display: none;
     flex-direction: column;
-    gap: space.$spacing-xs-8px;
-    margin-left: space.$spacing-xl-24px; // sangría para niveles
-    padding: space.$spacing-sm-12px 0;
+    margin-left: var(--space-24px); // sangría para niveles
+    padding: var(--space-12px) 0;
 
     &--open {
       display: flex;
@@ -108,3 +94,16 @@
     }
   }
 }
+
+/*
+@include media.md {
+  .dropdown__btn {
+    .label {
+      display: none;
+    }
+
+    .caret {
+      display: none;
+    }
+  }
+}*/

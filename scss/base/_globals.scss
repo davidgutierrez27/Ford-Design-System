@@ -8,28 +8,103 @@
 // Nunca escribas valores hardcodeados en este archivo.
 // -------------------------------------------------------------
 
+@use "../tokens" as *;
+@use "../media" as media;
+
 body {
     font-family: var(--font-family-base);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--color-background-white);
+    color: var(--color-text-500);
     line-height: 1.5;
 }
 
-// Textos generales
+
+// ============================================================================
+// DEFAULT ELEMENT STYLES (UI IMPLEMENTATION)
+// ============================================================================
+
+h1 {
+    @include heading-title-48-regular;
+}
+
+@include media.sm {
+    h1 {
+        @include heading-title-32-regular;
+    }
+}
+
+
+h2 {
+    @include heading-title-32-regular;
+    margin-bottom: var(--space-16px);
+    padding-bottom: var(--space-8px);
+    border-bottom: 1px solid var(--color-neutral-100);
+    color: var(--color-text-500);
+}
+
+@include media.md {
+    h2 {
+        @include heading-title-24-regular;
+    }
+}
+
+h3 {
+    @include body-20-regular;
+    margin-bottom: var(--space-8px);
+    color: var(--color-text-400);
+}
+
+h4 {
+    @include body-16-regular;
+    margin-bottom: var(--space-8px);
+    color: var(--color-text-400);
+}
+
+h5 {
+    @include body-16-regular;
+    margin-bottom: var(--space-8px);
+    color: var(--color-text-300);
+}
+
+h6 {
+    @include body-14-regular;
+    margin-bottom: var(--space-4px);
+    color: var(--color-text-300);
+}
+
 p {
-    color: var(--text-color);
+    @include body-16-regular;
+    margin-bottom: var(--space-32px);
+    max-width: 600px;
+    color: var(--color-text-300);
+    line-height: 1.3;
+    text-wrap: balance;
+}
+
+@include media.md {
+    p {
+        @include body-14-regular;
+        margin-bottom: var(--space-12px);
+    }
+}
+
+
+span {
+    @include body-16-regular;
 }
 
 // Links
+
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--color-text-400);
     cursor: pointer;
 
     &:hover {
-        opacity: 0.8;
+        opacity: 0.9;
     }
 }
+
 
 // Imágenes siempre adaptables
 img {

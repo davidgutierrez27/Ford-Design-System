@@ -1,56 +1,599 @@
-<div class="content-wrapper">
-    <div class="doc-page">
-        <header class="doc-page__header">
-            <h1>Typography</h1>
-            <p>We use a simple yet versatile type scale to ensure readability and hierarchy.</p>
-        </header>
+<div class="hero-banner">
+    <img src="../../assets/img/pageColors/typography.png" alt="Typography Foundations" class="hero-banner__image">
 
-        <section class="doc-page__section">
-            <h2>Headings</h2>
-            <div class="type-scale">
-                <div class="type-scale__item">
-                    <span class="label">Heading Title 54 Regular</span>
-                    <div class="text--large">The quick brown fox jumps over the lazy dog</div>
-                </div>
-                <div class="type-scale__item">
-                    <span class="label">Heading Title 42 Bold</span>
-                    <div class="text--medium--bold" style="font-size: 42px; line-height: 58px;">The quick brown
-                        fox jumps over the lazy dog</div>
-                </div>
-                <div class="type-scale__item">
-                    <span class="label">Heading Title 42 Regular</span>
-                    <div class="text--medium" style="font-size: 42px; line-height: 58px;">The quick brown fox
-                        jumps over the lazy dog</div>
-                </div>
-                <div class="type-scale__item">
-                    <span class="label">Heading Title 32 Bold</span>
-                    <div class="text--medium--bold">The quick brown fox jumps over the lazy dog</div>
-                </div>
-                <div class="type-scale__item">
-                    <span class="label">Heading Title 32 Regular</span>
-                    <div class="text--medium">The quick brown fox jumps over the lazy dog</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="doc-page__section">
-            <h2>Subtitles & Body</h2>
-            <div class="type-scale">
-                <div class="type-scale__item">
-                    <span class="label">Subtitle 20 Bold</span>
-                    <div style="font-size: 20px; font-weight: 700; line-height: 24px;">The quick brown fox jumps
-                        over the lazy dog</div>
-                </div>
-                <div class="type-scale__item">
-                    <span class="label">Subtitle 20 Regular</span>
-                    <div class="text--small">The quick brown fox jumps over the lazy dog</div>
-                </div>
-                <div class="type-scale__item">
-                    <span class="label">Body 16 Regular</span>
-                    <div class="text--text">The quick brown fox jumps over the lazy dog. This is a paragraph of
-                        text that might wrap to multiple lines.</div>
-                </div>
-            </div>
-        </section>
+    <div class="hero-banner__overlay"></div>
+    <div class="hero-banner__content">
+        <h1>Tipografía</h1>
     </div>
+</div>
+<!-- NAVIGATION2 -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#principles" data-target="principles">Principios</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#scale" data-target="scale">Escala tipográfica</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#roles" data-target="roles">Roles tipográficos</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#weights" data-target="weights">Pesos</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="content-page">
+
+    <!-- ================================================================================= -->
+    <!-- PRINCIPLES -->
+    <!-- ================================================================================= -->
+    <section id="principles" class="foundations-section">
+        <h2>Principios Tipográficos</h2>
+        <div class="foundations-principles">
+            <article class="principle-card">
+                <!-- <div class="principle-card__icon"><i class="fas fa-layer-group"></i></div> -->
+                <h3>Consistencia</h3>
+                <p>Mantener patrones reconocibles a través de todas las interfaces asegura que los usuarios puedan
+                    navegar y comprender el contenido sin esfuerzo adicional.</p>
+            </article>
+
+            <article class="principle-card">
+                <!-- <div class="principle-card__icon"><i class="fas fa-sort-amount-down"></i></div> -->
+                <h3>Jerarquía</h3>
+                <p>Permitir distinguir títulos, subtítulos y cuerpo de forma inmediata mediante tamaño, peso y
+                    espaciado diferenciado, guiando la lectura.</p>
+            </article>
+
+            <article class="principle-card">
+                <!-- <div class="principle-card__icon"><i class="fas fa-eye"></i></div> -->
+                <h3>Escaneo rápido</h3>
+                <p>Mejorar cómo los usuarios consumen texto en pantallas mediante interlineado adecuado y longitudes
+                    de línea óptimas para reducir la carga cognitiva.</p>
+            </article>
+
+            <article class="principle-card">
+                <!-- <div class="principle-card__icon"><i class="fas fa-mobile-alt"></i></div> -->
+                <h3>Flexibilidad</h3>
+                <p>Adaptarse a distintos tamaños de dispositivos manteniendo legibilidad y jerarquía visual en todas
+                    las resoluciones y contextos de uso.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="foundations-section">
+        <h2>Anatomía de la tipografía</h2>
+
+        <div class="content-columns">
+            <div class="content-columns__text">
+                <p>Cada estilo tipográfico tiene atributos definidos: tamaño, peso, interlineado y familia. Estos
+                    parámetros garantizan lecturabilidad y consistencia en la interfaz.</p>
+
+                <h3>Componentes que definimos</h3>
+                <ul class="doc-list">
+                    <li><strong>Tamaño (font-size):</strong> Expresa el nivel de importancia visual. Usamos una escala
+                        de 12px a 54px para cubrir todos los casos de uso.</li>
+                    <li><strong>Peso (font-weight):</strong> Diferencia énfasis y roles. Disponemos de Regular (400),
+                        Medium (500) y Bold (700).</li>
+                    <li><strong>Altura de línea (line-height):</strong> Mejora la lectura en bloques largos. Usamos
+                        ratios de 1.1 (tight), 1.3 (normal) y 1.5 (relaxed).</li>
+                    <li><strong>Familia tipográfica:</strong> Arial sans-serif establece la voz del producto con una
+                        fuente legible y profesional.</li>
+                </ul>
+            </div>
+            <div class="content-columns__image">
+                <img src="../../assets/img/pageColors/t.png" alt="Typography Anatomy Diagram">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- SCALE -->
+    <!-- ================================================================================= -->
+    <section id="scale" class="foundations-section">
+        <h2>Escala Tipográfica</h2>
+        <p>La escala establece el sistema de tamaños que usamos para mantener armonía y proporción en títulos,
+            párrafos y acciones. Cada tamaño tiene un propósito específico y características definidas.</p>
+
+        <div class="type-scale">
+            <!-- Headings -->
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">H1 Title</span>
+                    <span class="type-row__size">54px / 3.375rem</span>
+                    <span class="type-row__details">LH: 1.1 | W: 400, 700</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--h1">Títulos principales de página</p>
+                    <p class="type-row__usage">Uso: Hero sections, landing pages, títulos de sección principal</p>
+                </div>
+            </div>
+
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">H2 Title</span>
+                    <span class="type-row__size">42px / 2.625rem</span>
+                    <span class="type-row__details">LH: 1.1 | W: 400, 700</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--h2">Encabezados de sección</p>
+                    <p class="type-row__usage">Uso: Títulos de secciones importantes, headers de módulos principales</p>
+                </div>
+            </div>
+
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">H3 Title</span>
+                    <span class="type-row__size">32px / 2rem</span>
+                    <span class="type-row__details">LH: 1.3 | W: 400, 700</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--h3">Subsecciones y categorías</p>
+                    <p class="type-row__usage">Uso: Títulos de cards, subsecciones, categorías de contenido</p>
+                </div>
+            </div>
+
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">H4 Title</span>
+                    <span class="type-row__size">28px / 1.75rem</span>
+                    <span class="type-row__details">LH: 1.3 | W: 400, 700</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--h4">Títulos de componentes</p>
+                    <p class="type-row__usage">Uso: Headers de componentes, títulos de listas, nombres de productos</p>
+                </div>
+            </div>
+
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">H5 Subtitle</span>
+                    <span class="type-row__size">24px / 1.5rem</span>
+                    <span class="type-row__details">LH: 1.3 | W: 400, 700</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--h5">Subtítulos y labels destacados</p>
+                    <p class="type-row__usage">Uso: Subtítulos, labels de formularios, metadatos importantes</p>
+                </div>
+            </div>
+
+            <!-- Body Large (previously Subtitles) -->
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">Body 20</span>
+                    <span class="type-row__size">20px / 1.25rem</span>
+                    <span class="type-row__details">LH: 1.3 | W: 400</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--subtitle-20">Texto destacado</p>
+                    <p class="type-row__usage">Uso: Subtítulos, descripciones destacadas, intro de secciones</p>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">Body 16</span>
+                    <span class="type-row__size">16px / 1rem</span>
+                    <span class="type-row__details">LH: 1.5 | W: 400, 700</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--body-16">Texto principal de lectura y contenido descriptivo</p>
+                    <p class="type-row__usage">Uso: Párrafos, artículos, documentación, contenido principal</p>
+                </div>
+            </div>
+
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">Body 14</span>
+                    <span class="type-row__size">14px / 0.875rem</span>
+                    <span class="type-row__details">LH: 1.5 | W: 400, 700</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--body-14">Texto secundario y descripciones</p>
+                    <p class="type-row__usage">Uso: Descripciones, metadatos, texto de apoyo, captions</p>
+                </div>
+            </div>
+
+            <!-- Actions & Small -->
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">Link 16</span>
+                    <span class="type-row__size">16px / 1rem</span>
+                    <span class="type-row__details">LH: 1.5 | W: 400</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--link-16">Enlaces y acciones principales</p>
+                    <p class="type-row__usage">Uso: Links de navegación, acciones textuales</p>
+                </div>
+            </div>
+
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">Button 14</span>
+                    <span class="type-row__size">14px / 0.875rem</span>
+                    <span class="type-row__details">LH: 1.3 | W: 700</span>
+                </div>
+                <div class="type-row__content">
+                    <div class="type-row__demo"><button class="demo--button-14">TEXTO DE BOTONES</button></div>
+                    <p class="type-row__usage">Uso: Labels de botones, CTAs, acciones destacadas</p>
+                </div>
+            </div>
+
+            <div class="type-row">
+                <div class="type-row__meta">
+                    <span class="type-row__label">Small 12</span>
+                    <span class="type-row__size">12px / 0.75rem</span>
+                    <span class="type-row__details">LH: 1.3 | W: 400</span>
+                </div>
+                <div class="type-row__content">
+                    <p class="type-row__demo demo--small">Texto auxiliar y metadatos</p>
+                    <p class="type-row__usage">Uso: Timestamps, labels pequeños, disclaimers, footnotes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ROLES -->
+    <!-- ================================================================================= -->
+    <section id="roles" class="foundations-section">
+        <h2>Roles Tipográficos</h2>
+        <p>Asignamos roles claros a cada estilo para evitar uso incorrecto y mantener coherencia. Cada rol tiene
+            características específicas y casos de uso definidos.</p>
+
+        <div class="role-section">
+            <h3>Títulos (Headings)</h3>
+            <p>Se utilizan para secciones, encabezados principales y contenido destacado. Establecen la jerarquía
+                principal del contenido.</p>
+
+            <div class="type-examples">
+                <div class="type-example">
+                    <h1 style="margin: 0;">H1 - Título Principal</h1>
+                    <p class="type-example__meta">54px | Bold/Regular | Line-height 1.1</p>
+                </div>
+                <div class="type-example">
+                    <h2 style="margin: 0;">H2 - Título de Sección</h2>
+                    <p class="type-example__meta">42px | Bold/Regular | Line-height 1.1</p>
+                </div>
+                <div class="type-example">
+                    <h3 style="margin: 0;">H3 - Subsección</h3>
+                    <p class="type-example__meta">32px | Bold/Regular | Line-height 1.3</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="role-section">
+            <h3>Cuerpo y Texto (Body & Text)</h3>
+            <p>Es el texto base para artículos, documentación y contenido descriptivo. Optimizado para lectura
+                prolongada con interlineado relajado.</p>
+
+            <div class="type-examples">
+                <div class="type-example">
+                    <p style="font-size: 20px; line-height: 1.3; margin: 0;">Body 20 - Introducción o texto destacado.
+                    </p>
+                    <p class="type-example__meta">20px | Regular/Bold | Line-height 1.3</p>
+                </div>
+                <div class="type-example">
+                    <p style="font-size: 16px; line-height: 1.5; margin: 0;">Body 16 - Este es el texto principal para
+                        lectura. Utilizado en párrafos, artículos y contenido extenso.</p>
+                    <p class="type-example__meta">16px | Regular/Bold | Line-height 1.5</p>
+                </div>
+                <div class="type-example">
+                    <p style="font-size: 14px; line-height: 1.5; margin: 0;">Body 14 - Texto secundario para
+                        descripciones y contenido de apoyo.</p>
+                    <p class="type-example__meta">14px | Regular/Bold | Line-height 1.5</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="role-section">
+            <h3>Acciones (Actions)</h3>
+            <p>Estilos específicos para botones y enlaces, optimizados para clicabilidad y reconocimiento inmediato.</p>
+
+            <div class="type-examples">
+                <div class="type-example">
+                    <a href="#" style="font-size: 16px; margin: 0; text-decoration: underline;">Link 16 - Enlace de
+                        navegación</a>
+                    <p class="type-example__meta">16px | Regular | Line-height 1.5</p>
+                </div>
+                <div class="type-example">
+                    <button class="btn btn--primary btn--medium" style="margin: 0;">BOTÓN PRIMARIO</button>
+                    <p class="type-example__meta">14px | Bold | Line-height 1.3 | Uppercase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- WEIGHTS -->
+    <!-- ================================================================================= -->
+    <section id="weights" class="foundations-section">
+        <h2>Pesos y Jerarquía</h2>
+        <p>Disponemos de tres pesos tipográficos que permiten crear jerarquía y énfasis sin cambiar el tamaño del texto.
+        </p>
+
+        <div class="content-columns">
+            <div class="content-columns__text">
+                <div class="weight-examples">
+                    <div class="weight-example">
+                        <h3 style="font-weight: 400; margin: 0 0 8px 0;">Regular (400)</h3>
+                        <p>Peso estándar para texto de lectura, subtítulos y contenido general. Proporciona buena
+                            legibilidad sin fatiga visual.</p>
+                        <p style="font-weight: 400; font-size: 16px; margin: 8px 0;">Este es un ejemplo de texto en peso
+                            Regular (400). Ideal para párrafos y contenido extenso.</p>
+                    </div>
+
+                    <div class="weight-example">
+                        <h3 style="font-weight: 500; margin: 0 0 8px 0;">Medium (500)</h3>
+                        <p>Peso intermedio para destacar elementos sin llegar a bold. Útil para labels, metadatos
+                            importantes y énfasis sutil.</p>
+                        <p style="font-weight: 500; font-size: 16px; margin: 8px 0;">Este es un ejemplo de texto en peso
+                            Medium (500). Perfecto para destacar sin ser demasiado pesado.</p>
+                    </div>
+
+                    <div class="weight-example">
+                        <h3 style="font-weight: 700; margin: 0 0 8px 0;">Bold (700)</h3>
+                        <p>Peso fuerte para títulos, acciones y elementos que requieren máxima atención. Crea jerarquía
+                            clara y énfasis fuerte.</p>
+                        <p style="font-weight: 700; font-size: 16px; margin: 8px 0;">Este es un ejemplo de texto en peso
+                            Bold (700). Usado en títulos y elementos de alta importancia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-columns__image">
+                <img src="../../assets/img/pageColors/card vehiculos-1.png" alt="Typography Weights Hierarchy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="foundations-section">
+        <h2>Implementación</h2>
+        <p>Todos los estilos del sistema se implementan mediante mixins SCSS para asegurar consistencia,
+            reutilización y mantenibilidad. Cada mixin encapsula tamaño, peso, line-height y familia tipográfica.</p>
+
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>Mixins Disponibles</h3>
+                <p>Lista completa de mixins de tipografía para usar en tus componentes.</p>
+            </div>
+            <div class="foundations-implementation__body" style="padding: 0;">
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Mixin</th>
+                                <th>Tamaño</th>
+                                <th>Peso</th>
+                                <th>Line-height</th>
+                                <th>Uso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>@include heading-title-54-regular</code></td>
+                                <td>54px</td>
+                                <td>400</td>
+                                <td>1.1</td>
+                                <td>H1 títulos principales</td>
+                            </tr>
+                            <tr>
+                                <td><code>@include heading-title-48-regular</code></td>
+                                <td>48px</td>
+                                <td>400</td>
+                                <td>1.1</td>
+                                <td>H1 títulos</td>
+                            </tr>
+                            <tr>
+                                <td><code>@include heading-title-42-regular</code></td>
+                                <td>42px</td>
+                                <td>400</td>
+                                <td>1.1</td>
+                                <td>H2 secciones</td>
+                            </tr>
+                            <tr>
+                                <td><code>@include heading-title-32-regular</code></td>
+                                <td>32px</td>
+                                <td>400</td>
+                                <td>1.3</td>
+                                <td>H3 subsecciones</td>
+                            </tr>
+                            <tr>
+                                <td><code>@include heading-title-28-regular</code></td>
+                                <td>28px</td>
+                                <td>400</td>
+                                <td>1.3</td>
+                                <td>H4 títulos</td>
+                            </tr>
+                            <tr>
+                                <td><code>@include body-20-regular</code></td>
+                                <td>20px</td>
+                                <td>400</td>
+                                <td>1.3</td>
+                                <td>Texto destacado</td>
+                            </tr>
+                            <tr>
+                                <td><code>@include body-16-regular</code></td>
+                                <td>16px</td>
+                                <td>400</td>
+                                <td>1.5</td>
+                                <td>Texto principal</td>
+                            </tr>
+                            <tr>
+                                <td><code>@include body-14-regular</code></td>
+                                <td>14px</td>
+                                <td>400</td>
+                                <td>1.5</td>
+                                <td>Texto secundario</td>
+                            </tr>
+                            <tr>
+                                <td><code>@include button-14</code></td>
+                                <td>14px</td>
+                                <td>700</td>
+                                <td>1.3</td>
+                                <td>Botones</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="foundations-implementation" style="margin-top: 32px;">
+            <div class="foundations-implementation__header">
+                <h3>Ejemplos de Uso</h3>
+                <p>Patrón recomendado para implementar tipografía en archivos SCSS.</p>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-scss">// 1. Título de sección
+.section-title {
+    @include heading-title-32-regular; /* Aplica estilos de H3 */
+    color: var(--color-text-900);
+}
+
+// 2. Texto de contenido
+.article-text {
+    @include body-16-regular; /* Aplica Body 16 con LH 1.5 */
+    color: var(--color-text-500);
+    max-width: 600px;
+}
+
+// 3. Botón personalizado
+.btn-primary {
+    @include button-14; /* Aplica weight bold y uppercase si configurado */
+    color: var(--color-text-white);
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="foundations-section">
+        <h2>Accesibilidad y buenas prácticas</h2>
+        <p>La tipografía debe ser legible para todos los usuarios. Seguimos las pautas WCAG 2.1 para garantizar
+            accesibilidad en contraste y legibilidad.</p>
+
+        <div class="foundations-accessibility">
+            <!-- Contrast Card -->
+            <article class="a11y-card">
+                <h3>Contraste de Color</h3>
+                <p>Asegura un ratio mínimo para garantizar la lectura.</p>
+
+                <div class="contrast-examples">
+                    <div class="contrast-example contrast-example--good">
+                        <div class="contrast-example__meta">
+                            <span>✓</span> Cumple AAA (Ratio 15.8:1)
+                        </div>
+                        <p style="color: #262626; background: #fefefe; padding: 16px; margin: 0; font-size: 16px;">
+                            Texto negro (#262626) sobre blanco
+                        </p>
+                    </div>
+
+                    <div class="contrast-example contrast-example--good">
+                        <div class="contrast-example__meta">
+                            <span>✓</span> Cumple AAA (Ratio 15.8:1)
+                        </div>
+                        <p style="color: #fefefe; background: #262626; padding: 16px; margin: 0; font-size: 16px;">
+                            Texto blanco (#fefefe) sobre negro
+                        </p>
+                    </div>
+
+                    <div class="contrast-example contrast-example--bad">
+                        <div class="contrast-example__meta">
+                            <span>✗</span> No cumple AA (Ratio 2.4:1)
+                        </div>
+                        <p style="color: #b5b5b5; background: #fefefe; padding: 16px; margin: 0; font-size: 16px;">
+                            Gris claro (#b5b5b5) sobre blanco
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Best Practices Card -->
+            <article class="a11y-card">
+                <h3>Mejores Prácticas</h3>
+                <p>Reglas de oro para una tipografía accesible.</p>
+
+                <ul class="doc-list">
+                    <li><strong>Contraste mínimo AA:</strong> 4.5:1 para texto normal, 3:1 para texto grande.</li>
+                    <li><strong>No usar solo color:</strong> Combinar color con peso o iconos para transmitir
+                        información.</li>
+                    <li><strong>Interlineado óptimo:</strong> Al menos 1.5 veces el tamaño de fuente para párrafos.</li>
+                    <li><strong>Longitud de línea:</strong> Máximo 60-80 caracteres por línea para evitar fatiga.</li>
+                    <li><strong>Jerarquía clara:</strong> No saltar niveles de encabezado (H1 -> H2 -> H3).</li>
+                    <li><strong>Fuentes relativas:</strong> Usar 'rem' o 'em' para respetar preferencias del usuario.
+                    </li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Line Height Reference -->
+        <div class="foundations-implementation" style="margin-top: 40px;">
+            <div class="foundations-implementation__header">
+                <h3>Line-height Recomendados</h3>
+                <p>Referencias de altura de línea según tamaño de texto.</p>
+            </div>
+            <div class="foundations-implementation__body" style="padding: 0;">
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Tamaño de Texto</th>
+                                <th>Line-height Mínimo</th>
+                                <th>Line-height Recomendado</th>
+                                <th>Uso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>42px - 54px</td>
+                                <td>1.1</td>
+                                <td>1.1 - 1.2</td>
+                                <td>Títulos grandes</td>
+                            </tr>
+                            <tr>
+                                <td>24px - 32px</td>
+                                <td>1.2</td>
+                                <td>1.3</td>
+                                <td>Títulos medianos</td>
+                            </tr>
+                            <tr>
+                                <td>16px - 20px</td>
+                                <td>1.3</td>
+                                <td>1.5</td>
+                                <td>Texto de lectura</td>
+                            </tr>
+                            <tr>
+                                <td>12px - 14px</td>
+                                <td>1.3</td>
+                                <td>1.5</td>
+                                <td>Texto pequeño</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 </div>
