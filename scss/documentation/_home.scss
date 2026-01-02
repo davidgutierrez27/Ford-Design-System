@@ -11,7 +11,7 @@
         text-align: left;
         width: 100%;
         min-height: 95vh;
-        background-image: url('../../assets/cover.webp');
+        background-image: url('../assets/cover.webp');
         background-size: cover;
         background-position: right center;
         background-repeat: no-repeat;
@@ -223,17 +223,51 @@
             padding: 8px 16px;
             border-radius: 100px;
             border: 1px solid var(--transp-10);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
 
             img {
                 width: 32px;
                 height: 32px;
                 border-radius: 50%;
                 object-fit: cover;
+                transition: transform 0.3s ease;
             }
 
             strong {
                 color: var(--color-text-900);
                 font-weight: 600;
+            }
+
+            .label {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 12px;
+                font-weight: 500;
+                color: var(--color-primary-default);
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                white-space: nowrap;
+            }
+
+            &:hover {
+                background-color: var(--transp-50);
+                transform: translateY(-4px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+                img {
+                    transform: scale(1.1);
+                }
+
+                .label {
+                    opacity: 1;
+                    bottom: -30px;
+                }
             }
         }
     }
