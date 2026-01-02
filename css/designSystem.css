@@ -3211,7 +3211,7 @@ html[data-theme=dark] .nav #theme-toggle-button .theme-label.dark {
   text-align: left;
   width: 100%;
   min-height: 95vh;
-  background-image: url("../../assets/Cover.png");
+  background-image: url("../../assets/cover.webp");
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
