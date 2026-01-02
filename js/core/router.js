@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     async function loadView(view) {
         try {
-            const res = await fetch(`/pages/${view}.html`);
+            const res = await fetch(`pages/${view}.html`);
             if (!res.ok) throw new Error("404");
 
             // Inyectar contenido en el contenedor principal
