@@ -64,7 +64,8 @@ El proyecto está construido bajo una filosofía de **"Modern Lean Web"**:
 
 ## ✍️ Autor
 **David Gutierrez** - *Design System Lead & Front-end Developer*
-- LinkedIn: [Visita mi perfil](https://www.linkedin.com/in/fernando-david-gutierrez-b1a612316/)
+- LinkedIn: [Visita mi perfil en LinkedIn](https://www.linkedin.com/in/fernando-david-gutierrez-b1a612316/)
+- Behance: [Visita mi behance](https://www.behance.net/gallery/231367919/Design-System-Ford)
 - Sitio Web: [davidgutierrez.design](https://davidgutierrez.design) (Próximamente)
 
 ---

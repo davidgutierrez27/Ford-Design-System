@@ -1220,6 +1220,7 @@ img {
 }
 .dropdown__btn:hover {
   background: var(--color-background-50);
+  color: var(--color-text-900);
 }
 .dropdown__btn--active {
   border-left: 2px solid var(--color-primary-default);

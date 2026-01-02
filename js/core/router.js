@@ -1,17 +1,19 @@
 /**
  * router.js
- * 
- * Gestiona la navegación entre vistas sin recargar la página (SPA Style).
- * Carga contenido HTML dinámicamente en el contenedor #app-main.
+ * Manages navigation between views without page reloads (SPA Style).
+ * Dynamically loads HTML content into the #app-main container.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
     const main = document.getElementById("app-main");
 
-    // Carga de la vista inicial al entrar al sitio
+    // Initial view load (Always Home by default on refresh)
+    if (window.location.hash) {
+        history.replaceState(null, "", "index.html");
+    }
     loadView("home");
 
-    // Delegación de eventos para capturar clics en elementos con data-view
+    // Event delegation to capture clicks on elements with data-view
     document.body.addEventListener("click", (e) => {
         const link = e.target.closest("[data-view]");
         if (!link) return;
@@ -23,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /**
-     * Navega a una nueva vista y actualiza el historial del navegador.
-     * @param {string} view - El nombre/ruta de la vista a cargar.
+     * Navigates to a new view and updates the browser history.
+     * @param {string} view - The name/path of the view to load.
      */
     async function navigate(view) {
         await loadView(view);
@@ -32,24 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /**
-     * Carga el contenido HTML de una vista desde la carpeta /pages.
-     * Notifica a otros scripts disparando el evento 'viewLoaded'.
-     * @param {string} view - El nombre de la vista (ej: 'foundations/colors').
+     * Loads the HTML content of a view from the /pages folder.
+     * Notifies other scripts by firing the 'viewLoaded' event.
+     * @param {string} view - The name of the view (e.g., 'foundations/colors').
      */
     async function loadView(view) {
         try {
             const res = await fetch(`pages/${view}.html`);
             if (!res.ok) throw new Error("404");
 
-            // Inyectar contenido en el contenedor principal
+            // Inject content into the main container
             main.innerHTML = await res.text();
 
-            // Resetear el scroll al inicio después de cada navegación
+            // Reset scroll to top after each navigation
             main.scrollTo(0, 0);
 
             /**
-             * IMPORTANTE: Notificamos que la vista se ha cargado.
-             * Esto permite que scripts como main-nav.js se reinicialicen.
+             * IMPORTANT: Notify that the view has loaded.
+             * This allows scripts like main-nav.js to re-initialize.
              */
             window.dispatchEvent(new CustomEvent('viewLoaded', {
                 detail: { view }
@@ -67,24 +69,24 @@ document.addEventListener("DOMContentLoaded", () => {
             // Differentiate between 404 and network errors
             const is404 = error.message === "404";
             const errorClass = is404 ? "error-container--not-found" : "error-container--network-error";
-            const errorTitle = is404 ? "⚠️ Vista no encontrada" : "❌ Error de conexión";
+            const errorTitle = is404 ? "⚠️ View Not Found" : "❌ Connection Error";
             const errorMessage = is404
-                ? `La página "${view}" no existe o no se pudo cargar.`
-                : "Hubo un problema al cargar el contenido. Por favor, verifica tu conexión.";
+                ? `The page "${view}" doesn't exist or couldn't be loaded.`
+                : "There was a problem loading the content. Please check your connection.";
 
             // Render error component with CSS classes
             main.innerHTML = `
                 <div class="error-container ${errorClass}">
                     <h2 class="error-container__title">${errorTitle}</h2>
                     <p class="error-container__message">${errorMessage}</p>
-                    <a href="#/home" class="btn btn--primary" data-view="home">Volver al inicio</a>
+                    <a href="#/home" class="btn btn--primary" data-view="home">Back to home</a>
                 </div>
             `;
         }
     }
 
     /**
-     * Maneja el botón de "atrás" y "adelante" del navegador.
+     * Handles the browser's "back" and "forward" buttons.
      */
     window.addEventListener("popstate", (e) => {
         if (e.state?.view) {

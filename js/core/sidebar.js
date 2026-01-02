@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .forEach(el => el.classList.remove("dropdown__btn--active"));
     }
 
-    // OPEN-ACTIVE → solo caret, puede haber varios
+    // OPEN-ACTIVE → caret only, there can be multiple
     function clearOpenActive() {
         sidebar
             .querySelectorAll(".dropdown__btn--open-active")
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const isOpen =
                 content.classList.contains("dropdown__content--open");
 
-            // 1 ACTIVE → siempre este dropdown pasa a ser el foco
+            // 1 ACTIVE → this dropdown always becomes the focus
             clearActive();
             btn.classList.add("dropdown__btn--active");
 
@@ -71,10 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // 3 CARET
             if (!isOpen) {
-                // se abre
+                // opens
                 btn.classList.add("dropdown__btn--open-active");
             } else {
-                // se cierra
+                // closes
                 btn.classList.remove("dropdown__btn--open-active");
             }
 
@@ -90,5 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
             closeSidebar();
         }
     });
+
+    // 4. Initial State (Always Home on Physical Load)
+    const homeBtn = sidebar.querySelector('[data-view="home"]');
+    if (homeBtn) {
+        homeBtn.classList.add("dropdown__btn--active");
+    }
 });
 
