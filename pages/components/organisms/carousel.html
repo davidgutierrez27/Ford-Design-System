@@ -1,0 +1,257 @@
+<div class="hero-banner hero-banner__component">
+    <div class="hero-banner__content hero-banner__content__component">
+        <h1>Hero Carousel</h1>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#layout" data-target="layout">Layout y Espaciado</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#variants" data-target="variants">Variantes</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-page page-carousel">
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="general-section">
+        <h2>Anatomía</h2>
+        <div class="anatomy-layout anatomy-layout-organism">
+            <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                <img src="../../../assets/img/propeties/carroucel/Artwork.png" alt="Hero Carousel Anatomy"
+                    style="width: 100%;">
+            </div>
+
+            <div class="anatomy-layout__details anatomy-layout-organism__details">
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">1</span>
+                    <div class="anatomy-item__content">
+                        <h4>Carousel Container</h4>
+                        <ul>
+                            <li>Height: 100vh</li>
+                            <li>Width: 100%</li>
+                            <li>Background: Image Variant</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">2</span>
+                    <div class="anatomy-item__content">
+                        <h4>Hero H1</h4>
+                        <ul>
+                            <li>Style: Heading-Title-48-Bold</li>
+                            <li>Color: White</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">3</span>
+                    <div class="anatomy-item__content">
+                        <h4>Primary CTA</h4>
+                        <ul>
+                            <li>Component: button-large-primary</li>
+                            <li>Show Icon Grande: true</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">4</span>
+                    <div class="anatomy-item__content">
+                        <h4>Pagination Dots</h4>
+                        <ul>
+                            <li>Component: navigation-Dots</li>
+                            <li>Position: Bottom Center</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">5</span>
+                    <div class="anatomy-item__content">
+                        <h4>Navigation Controls</h4>
+                        <ul>
+                            <li>Previous/Next buttons</li>
+                            <li>Position: Vertical Center, Left/Right</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- LAYOUT -->
+    <!-- ================================================================================= -->
+    <section id="layout" class="general-section">
+        <h2>Layout y Espaciado</h2>
+        <div class="anatomy-layout anatomy-layout-organism">
+            <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                <img src="../../../assets/img/propeties/carroucel/Artwork-4.png" alt="Carousel Layout Detailed"
+                    style="width: 100%;">
+            </div>
+            <div class="anatomy-layout__details anatomy-layout-organism__details">
+                <div class="property-group__specs">
+                    <h4>Puntos de Interrupción (Breakpoints)</h4>
+                    <ul>
+                        <li><strong>Desktop (> 1024px):</strong> Padding 160px, Controles laterales visibles.</li>
+                        <li><strong>Tablet (480px - 1024px):</strong> Padding 48px, Controles laterales visibles.</li>
+                        <li><strong>Mobile (< 480px):</strong> Padding 16px, Alineación centrada, Controles laterales
+                                    ocultos.</li>
+                    </ul>
+                </div>
+                <div class="property-group__specs">
+                    <h4>CTA Spacing</h4>
+                    <ul>
+                        <li>Direction: Horizontal</li>
+                        <li>Alignment: Middle left</li>
+                        <li>Gap: 10px</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- VARIANTS -->
+    <!-- ================================================================================= -->
+    <section id="variants" class="general-section">
+        <h2>Variantes</h2>
+        <p>Configuraciones de diapositivas según el modelo o temática.</p>
+
+        <div class="properties-detail-list">
+
+            <!-- Slide 1 -->
+            <div class="property-group">
+                <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                    <img src="../../../assets/img/propeties/carroucel/Artwork-1.png" alt="Carousel Layout Detailed"
+                        style="width: 100%;">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Diapositiva 1: Ranger</h4>
+                    <ul>
+                        <li>Título: 2025 Nueva Generacion Ranger</li>
+                        <li>Nav Dots: Variante 1</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="property-group">
+                <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                    <img src="../../../assets/img/propeties/carroucel/Artwork-2.png" alt="Carousel Layout Detailed"
+                        style="width: 100%;">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Diapositiva 2: Lifestyle</h4>
+                    <ul>
+                        <li>Título: 2025 Ford para tu estilo de vida</li>
+                        <li>Nav Dots: Variante 2</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="property-group">
+                <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                    <img src="../../../assets/img/propeties/carroucel/Artwork-3.png" alt="Carousel Layout Detailed"
+                        style="width: 100%;">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Diapositiva 3: BroncoSport</h4>
+                    <ul>
+                        <li>Título: 2025 Nuevo Ford BroncoSport</li>
+                        <li>Nav Dots: Variante 3</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>HTML Estructural</h3>
+                <p>Uso del componente para la Hero Section.</p>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-html">&lt;!-- Estructura Hero Carousel --&gt;
+&lt;section class="section-hero-carousel"&gt;
+    &lt;div class="section-hero-carousel__slides"&gt;
+        &lt;!-- Slide Activo --&gt;
+        &lt;div class="section-hero-carousel__slide is-active" style="background-image: url('assets/img/hero/image1.png');"&gt;
+            &lt;div class="section-hero-carousel__content"&gt;
+                &lt;h1&gt;2025&lt;br&gt;Nueva Generacion&lt;br&gt;Ranger&lt;/h1&gt;
+                &lt;div class="cta-container"&gt;
+                    &lt;button class="btn btn--large theme--skyview--primary"&gt;
+                        Solicitar cotización
+                        &lt;svg ...&gt;&lt;/svg&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Controles --&gt;
+    &lt;div class="section-hero-carousel__controls"&gt;
+        &lt;button class="hc-prev"&gt;&lt;svg ...&gt;&lt;/svg&gt;&lt;/button&gt;
+        &lt;button class="hc-next"&gt;&lt;svg ...&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Paginación dots --&gt;
+    &lt;div class="section-hero-carousel__pagination"&gt;
+        &lt;div class="nav--dots"&gt;
+            &lt;div class="pill blue"&gt;&lt;/div&gt;
+            &lt;div class="pill white"&gt;&lt;/div&gt;
+            &lt;div class="pill white"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="general-section">
+        <h2>Accesibilidad</h2>
+        <div class="foundations-accessibility">
+            <article class="a11y-card">
+                <h3>Carousel y Navegación</h3>
+                <ul class="doc-list">
+                    <li><strong>Aria Labels:</strong> Asegurar que los botones de Siguiente y Anterior tengan etiquetas
+                        descriptivas.</li>
+                    <li><strong>Contraste:</strong> El degradado oscuro sobre las imágenes garantiza la legibilidad del
+                        texto blanco (H1).</li>
+                    <li><strong>Control:</strong> El usuario debe poder pausar o navegar manualmente a través de los
+                        slides.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+</div>

@@ -14,7 +14,7 @@
 body {
     font-family: var(--font-family-base);
     background-color: var(--color-background-white);
-    color: var(--color-text-500);
+    color: var(--color-text-400); // Standard Body
     line-height: 1.5;
 }
 
@@ -25,9 +25,10 @@ body {
 
 h1 {
     @include heading-title-48-regular;
+    color: var(--color-text-900);
 }
 
-@include media.sm {
+@include media.md {
     h1 {
         @include heading-title-32-regular;
     }
@@ -35,35 +36,35 @@ h1 {
 
 
 h2 {
-    @include heading-title-32-regular;
+    @include heading-title-32-semibold;
     margin-bottom: var(--space-16px);
     padding-bottom: var(--space-8px);
-    border-bottom: 1px solid var(--color-neutral-100);
-    color: var(--color-text-500);
+    border-bottom: 2px solid var(--transp-50);
+    color: var(--color-text-800);
 }
 
-@include media.md {
+@include media.lg {
     h2 {
-        @include heading-title-24-regular;
+        @include heading-title-24-semibold;
     }
 }
 
 h3 {
     @include body-20-regular;
     margin-bottom: var(--space-8px);
-    color: var(--color-text-400);
+    color: var(--color-text-700);
 }
 
 h4 {
     @include body-16-regular;
     margin-bottom: var(--space-8px);
-    color: var(--color-text-400);
+    color: var(--color-text-500);
 }
 
 h5 {
     @include body-16-regular;
     margin-bottom: var(--space-8px);
-    color: var(--color-text-300);
+    color: var(--color-text-400);
 }
 
 h6 {
@@ -81,7 +82,7 @@ p {
     text-wrap: balance;
 }
 
-@include media.md {
+@include media.lg {
     p {
         @include body-14-regular;
         margin-bottom: var(--space-12px);

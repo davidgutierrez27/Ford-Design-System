@@ -9,23 +9,49 @@
 @use "base/reset";
 @use "base/globals";
 
-// ----- layout -----
-@use "layout/layout";
-@use "layout/sidebar";
-@use "layout/nav";
-
-
-
-// ----- utils -----
-@use "pages/_foundations";
-
-// ----- pages -----
-@use "pages/typography";
-@use "pages/colors";
-
 // ----- atoms -----
-@use "atoms/buttons";
-@use "atoms/dropdown";
+@use "components/atoms/buttons";
+@use "components/atoms/inputs";
+@use "components/atoms/navigation-dots";
+@use "components/atoms/logo";
+@use "components/atoms/link-button";
 
 // ----- molecules -----
-@use "molecules/search";
+@use "components/molecules/search";
+@use "components/molecules/card-value-proposition";
+@use "components/molecules/cards";
+@use "components/molecules/dropdown";
+
+// ----- organisms -----
+@use "components/organisms/nav-bar";
+@use "components/organisms/hero-carousel";
+
+// ----- pages landing -----
+@use "landing-page";
+
+
+// ----- pages documentation-----
+// ----- utils propias del designsystem-----
+@use "documentation/general-classes";
+@use "documentation/properties";
+@use "documentation/error";
+@use "documentation/social-floating";
+
+// ----- layout -----
+@use "documentation/layout/layout";
+@use "documentation/layout/sidebar";
+@use "documentation/layout/nav";
+@use "documentation/home";
+
+// ----- pages foundations -----
+@use "documentation/foundationsPage/typography";
+@use "documentation/foundationsPage/colors";
+@use "documentation/foundationsPage/radius";
+@use "documentation/foundationsPage/spacing";
+@use "documentation/foundationsPage/icons";
+@use "documentation/foundationsPage/grid-layout";
+
+// ----- pages components (documentation styles) -----
+@use "documentation/componentsPage/atoms/buttons" as buttonsPage;
+@use "documentation/componentsPage/atoms/inputs" as inputsPage;
+@use "documentation/componentsPage/organisms/nav-page" as navPage;

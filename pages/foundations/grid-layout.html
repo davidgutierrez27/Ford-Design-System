@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilla y Layout - Design System</title>
+</head>
+
+<body>
+    <div class="hero-banner">
+        <img src="../../assets/img/pageColors/grid-layout.png" alt="Grid and Layout Foundations"
+            class="hero-banner__image">
+        <div class="hero-banner__content">
+            <h1>Grilla y Layout</h1>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+        <ul class="main-nav__list">
+            <li class="main-nav__item">
+                <a href="#principles" data-target="principles" class="active">Principios</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#breakpoints" data-target="breakpoints">Breakpoints</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#grid-system" data-target="grid-system">Sistema de Grilla</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#safe-zones" data-target="safe-zones">Zonas Seguras</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#media-queries" data-target="media-queries">Media Queries</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#container-queries" data-target="container-queries">Container Queries</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#best-practices" data-target="best-practices">Buenas Prácticas</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content-page">
+
+        <!-- ================================================================================= -->
+        <!-- PRINCIPLES -->
+        <!-- ================================================================================= -->
+        <section id="principles" class="general-section">
+            <h2>Principios de Layout</h2>
+            <div class="foundations-principles">
+                <article class="principle-card">
+                    <h3>Proporcionalidad</h3>
+                    <p>El uso de una grilla de 12 columnas permite que los elementos mantengan una jerarquía visual
+                        clara y proporcional en cualquier dispositivo.</p>
+                </article>
+
+                <article class="principle-card">
+                    <h3>Adaptabilidad</h3>
+                    <p>Nuestra estructura responde automáticamente a los cambios de resolución, redistribuyendo el
+                        contenido para optimizar el espacio.</p>
+                </article>
+
+                <article class="principle-card">
+                    <h3>Consistencia</h3>
+                    <p>Márgenes y gutters estandarizados garantizan que el alineamiento sea idéntico en todas las
+                        secciones del producto.</p>
+                </article>
+
+                <article class="principle-card">
+                    <h3>Ritmo Visual</h3>
+                    <p>El espaciado sistemático crea un flujo de lectura predecible y confortable para el usuario.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================================================================================= -->
+        <!-- BREAKPOINTS -->
+        <!-- ================================================================================= -->
+        <section id="breakpoints" class="general-section">
+            <h2>Resoluciones y Breakpoints</h2>
+            <p>Definimos cuatro puntos de interrupción principales para cubrir todo el espectro de dispositivos, desde
+                móviles hasta monitores ultra-wide.</p>
+
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Dispositivo</th>
+                        <th>Ancho (px)</th>
+                        <th>Columnas</th>
+                        <th>Márgenes</th>
+                        <th>Gutter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desktop Wide</td>
+                        <td>1440+</td>
+                        <td>12</td>
+                        <td>160px</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td>Desktop</td>
+                        <td>1024</td>
+                        <td>12</td>
+                        <td>24px</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td>Tablet</td>
+                        <td>768</td>
+                        <td>8</td>
+                        <td>24px</td>
+                        <td>24px</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile</td>
+                        <td>
+                            <768< /td>
+                        <td>4</td>
+                        <td>16px</td>
+                        <td>16px</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ================================================================================= -->
+        <!-- GRID SYSTEM -->
+        <!-- ================================================================================= -->
+        <section id="grid-system" class="general-section">
+            <h2>Sistema de Grilla</h2>
+            <p>Visualización técnica de la distribución de columnas según el punto de interrupción activo.</p>
+
+            <div class="grid-showcase">
+                <div class="grid-demo">
+                    <div class="grid-demo__container">
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                        <div class="grid-demo__column"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================================= -->
+        <!-- SAFE ZONES -->
+        <!-- ================================================================================= -->
+        <section id="safe-zones" class="general-section">
+            <h2>Zonas Seguras</h2>
+            <p>Los márgenes laterales aseguran que el contenido nunca toque los bordes físicos de la pantalla,
+                manteniendo el foco en el centro.</p>
+
+            <div class="query-card-grid">
+                <article class="query-card">
+                    <h3>Márgenes (Margins)</h3>
+                    <p>Espacio fijo entre el contenedor principal y el borde del viewport. Varía según el dispositivo
+                        para optimizar el ancho de lectura.</p>
+                </article>
+                <article class="query-card">
+                    <h3>Medianiles (Gutters)</h3>
+                    <p>Espacio entre columnas. Evitan que el contenido de bloques adyacentes se mezcle visualmente,
+                        facilitando la separación de conceptos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================================================================================= -->
+        <!-- MEDIA QUERIES -->
+        <!-- ================================================================================= -->
+        <section id="media-queries" class="general-section">
+            <h2>Media Queries (Mixins)</h2>
+            <p>Utilizamos mixins de SASS para gestionar los puntos de interrupción de forma centralizada y semántica.
+            </p>
+
+            <div class="code-block">
+                <span class="keyword">@use</span> <span class="string">"media"</span> <span class="keyword">as</span>
+                media;<br><br>
+                <span class="comment">// Desktop Wide (1440px)</span><br>
+                <span class="keyword">@include</span> media.<span class="mixin">xl</span> { ... }<br><br>
+                <span class="comment">// Desktop (1024px)</span><br>
+                <span class="keyword">@include</span> media.<span class="mixin">lg</span> { ... }<br><br>
+                <span class="comment">// Tablet (768px)</span><br>
+                <span class="keyword">@include</span> media.<span class="mixin">md</span> { ... }<br><br>
+                <span class="comment">// Mobile (480px)</span><br>
+                <span class="keyword">@include</span> media.<span class="mixin">sm</span> { ... }
+            </div>
+        </section>
+
+        <!-- ================================================================================= -->
+        <!-- CONTAINER QUERIES -->
+        <!-- ================================================================================= -->
+        <section id="container-queries" class="general-section">
+            <h2>Container Queries</h2>
+            <p>Para componentes modulares, utilizamos Container Queries. Esto permite que un elemento responda al tamaño
+                de su padre en lugar del viewport.</p>
+
+            <div class="code-block">
+                <span class="comment">// Definir el contenedor</span><br>
+                .parent { <span class="keyword">container-type</span>: inline-size; }<br><br>
+                <span class="comment">// Mixin para el hijo</span><br>
+                <span class="keyword">@include</span> media.<span class="mixin">cq-md</span> {<br>
+                &nbsp;&nbsp;display: flex;<br>
+                &nbsp;&nbsp;flex-direction: column;<br>
+                }
+            </div>
+        </section>
+
+        <!-- ================================================================================= -->
+        <!-- BEST PRACTICES -->
+        <!-- ================================================================================= -->
+        <section id="best-practices" class="general-section">
+            <h2>Buenas Prácticas</h2>
+            <div class="guidelines-grid">
+                <article class="guideline-card">
+                    <div class="guideline-card__header guideline-card__header--do">✓ Qué hacer</div>
+                    <div class="guideline-card__content">
+                        <ul>
+                            <li>Alinea siempre los bloques principales a las 12 columnas.</li>
+                            <li>Usa el mixin de media query correspondiente al breakpoint.</li>
+                            <li>Prioriza Container Queries para componentes reutilizables.</li>
+                            <li>Mantén gutters consistentes en toda la aplicación.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="guideline-card">
+                    <div class="guideline-card__header guideline-card__header--dont">✗ Qué evitar</div>
+                    <div class="guideline-card__content">
+                        <ul>
+                            <li>No uses valores de ancho fijos (px) para contenedores.</li>
+                            <li>Evita saltar breakpoints (ej. pasar de XL a SM directamente).</li>
+                            <li>No coloques contenido crítico fuera de la zona segura.</li>
+                            <li>Evita anidar demasiadas grillas, simplifica la estructura.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

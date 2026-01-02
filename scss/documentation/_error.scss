@@ -1,0 +1,48 @@
+@use "../tokens" as *;
+@use "../media" as media;
+
+/* =============================================
+   ERROR CONTAINER COMPONENT
+   ============================================= */
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-64px) var(--space-32px);
+    text-align: center;
+    min-height: 400px;
+    gap: var(--space-24px);
+
+    &__title {
+        @include heading-title-42-bold;
+        color: var(--color-text-900);
+        margin: 0;
+    }
+
+    &__message {
+        @include body-16-regular;
+        color: var(--color-text-700);
+        max-width: 500px;
+        margin: 0;
+    }
+
+    // Variante para 404
+    &--not-found {
+        background: linear-gradient(135deg,
+                var(--color-primary-50) 0%,
+                var(--color-neutral-white) 100%);
+    }
+
+    // Variante para errores de red
+    &--network-error {
+        background: linear-gradient(135deg,
+                var(--color-status-danger-2) 0%,
+                var(--color-neutral-white) 100%);
+    }
+
+    .btn {
+        margin-top: var(--space-16px);
+    }
+}

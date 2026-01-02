@@ -1,0 +1,8 @@
+@use "../../../tokens" as *;
+@use "../../../media" as media;
+
+.page-inputs {
+    padding-bottom: 100px;
+}
+
+/* Local anatomy/layout overrides removed to use global .anatomy-layout from _properties.scss */

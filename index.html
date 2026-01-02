@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CEO">
-  <meta name="keywords" content="CEO">
-  <title>Ford - </title>
+  <meta name="description"
+    content="Ford Design System - Sistema de diseño completo con componentes reutilizables, documentación interactiva y tokens de diseño para aplicaciones web">
+  <title>Ford Design System - Component Library</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/designSystem.css">
+  <script src="js/core/theme-init.js"></script>
   <script src="https://kit.fontawesome.com/e048560479.js" crossorigin="anonymous"></script>
 </head>
 
@@ -52,25 +53,25 @@
           </button>
         </div>
 
-        <button id="temes-button" class="btn btn--small btn--secondary" style="border-radius: var(--radius-8);">
-          TEMAS
-          <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-            <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
+
+        <!-- BOTON DE TOGGLE THEME -->
+        <button id="theme-toggle-button" class="btn btn--small btn--secondary">
+          <span class="theme-label light">Modo claro ☼</span>
+          <span class="theme-label dark">Modo oscuro ☪</span>
         </button>
 
-
-        <div id="menu-button" class="nav-button">
+        <!-- BOTON DE TOGGLE MENU -->
+        <button id="menu-button" class="nav-button" aria-label="Abrir menú de navegación">
           <span class="nav-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              aria-hidden="true">
               <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
               <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-opacity="0.2" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </span>
-        </div>
+        </button>
       </div>
 
 
@@ -78,6 +79,7 @@
 
     <div class="app">
       <aside class="sidebar">
+
         <section class="sidebar--content">
           <div class="sidebar--line"></div>
           <div class="sidebar--menu">
@@ -136,14 +138,9 @@
                 </div>
 
                 <div class="dropdown--small">
-                  <a href="pages/foundations/layout.html" class="dropdown__btn" data-view="foundations/layout">
-                    <span class="label">Layout</span>
-                  </a>
-                </div>
-
-                <div class="dropdown--small">
-                  <a href="pages/foundations/grid.html" class="dropdown__btn" data-view="foundations/grid">
-                    <span class="label">Grid</span>
+                  <a href="pages/foundations/grid-layout.html" class="dropdown__btn"
+                    data-view="foundations/grid-layout">
+                    <span class="label">Grid & Layout</span>
                   </a>
                 </div>
               </div>
@@ -191,29 +188,24 @@
                       <span class="label">Buttons</span>
                     </a>
 
-                    <a href="pages/components/atoms/buttons.html" class="dropdown__btn dropdown--small"
-                      data-view="components/atoms/buttons">
-                      <span class="label">Inputs</span>
+                    <a href="pages/components/atoms/link-button.html" class="dropdown__btn dropdown--small"
+                      data-view="components/atoms/link-button">
+                      <span class="label">Link Button</span>
                     </a>
 
-                    <a href="pages/components/atoms/buttons.html" class="dropdown__btn dropdown--small"
-                      data-view="components/atoms/buttons">
-                      <span class="label">Dropdown</span>
+                    <a href="pages/components/atoms/icons-buttons.html" class="dropdown__btn dropdown--small"
+                      data-view="components/atoms/icons-buttons">
+                      <span class="label">Icons button</span>
                     </a>
 
-                    <a href="pages/components/atoms/buttons.html" class="dropdown__btn dropdown--small"
-                      data-view="components/atoms/buttons">
+                    <a href="pages/components/atoms/navigation-dots.html" class="dropdown__btn dropdown--small"
+                      data-view="components/atoms/navigation-dots">
                       <span class="label">navigation dots</span>
                     </a>
 
-                    <a href="pages/components/atoms/buttons.html" class="dropdown__btn dropdown--small"
-                      data-view="components/atoms/buttons">
-                      <span class="label">Inputs</span>
-                    </a>
-
-                    <a href="pages/components/atoms/buttons.html" class="dropdown__btn dropdown--small"
-                      data-view="components/atoms/buttons">
-                      <span class="label">text</span>
+                    <a href="pages/components/atoms/logo.html" class="dropdown__btn dropdown--small"
+                      data-view="components/atoms/logo">
+                      <span class="label">Logo</span>
                     </a>
 
                   </div>
@@ -235,21 +227,28 @@
                   <div class="dropdown__content" id="drop3-3">
 
                     <!-- NIVEL 2 -->
-                    <a class="dropdown__btn dropdown--small">
+                    <a href="pages/components/molecules/dropdowns.html" class="dropdown__btn dropdown--small"
+                      data-view="components/molecules/dropdowns">
+                      <span class="label">Dropdown</span>
+                    </a>
+
+                    <a href="pages/components/molecules/inputs.html" class="dropdown__btn dropdown--small"
+                      data-view="components/molecules/inputs">
+                      <span class="label">Inputs</span>
+                    </a>
+
+                    <a href="pages/components/molecules/cards.html" class="dropdown__btn dropdown--small"
+                      data-view="components/molecules/cards">
                       <span class="label">Cards</span>
                     </a>
 
-                    <a class="dropdown__btn dropdown--small">
-                      <span class="label">links</span>
+                    <a href="pages/components/molecules/card-value-proposition.html"
+                      class="dropdown__btn dropdown--small" data-view="components/molecules/card-value-proposition">
+                      <span class="label">Value Proposition</span>
                     </a>
-
-                    <a class="dropdown__btn dropdown--small">
-                      <span class="label">navigation</span>
-                    </a>
-
                   </div>
                 </div>
-                <!-- NIVEL 1.3 -->
+                <!-- ORGANISMS (NIVEL 1.3) -->
                 <div class="dropdown--small">
                   <button class="dropdown__btn dropdown-toggle" data-target="drop3-4">
                     <span class="label">Organisms</span>
@@ -266,47 +265,30 @@
                   <div class="dropdown__content" id="drop3-4">
 
                     <!-- NIVEL 2 -->
-                    <a class="dropdown__btn dropdown--small">
+                    <a href="pages/components/organisms/carousel.html" class="dropdown__btn dropdown--small"
+                      data-view="components/organisms/carousel">
                       <span class="label">carousel</span>
                     </a>
-
-                    <a class="dropdown__btn dropdown--small">
-                      <span class="label">footer</span>
-                    </a>
-
-                    <a class="dropdown__btn dropdown--small">
+                    <a href="pages/components/organisms/nav.html" class="dropdown__btn dropdown--small"
+                      data-view="components/organisms/nav">
                       <span class="label">navbar</span>
                     </a>
-                    <a class="dropdown__btn dropdown--small">
-                      <span class="label">sidebar</span>
-                    </a>
-
-                    <a class="dropdown__btn dropdown--small">
-                      <span class="label">cards group</span>
-                    </a>
-
                   </div>
-                </div>
-                <!-- NIVEL 1.4 -->
-                <div class="dropdown--small">
-                  <a class="dropdown__btn">
-                    <span class="label">Templates</span>
-                  </a>
                 </div>
               </div>
             </div>
 
             <!-- DROPDOWN - SECCION 4 (simple) -->
             <div class="dropdown--primary">
-              <a class="dropdown__btn">
-
-                <span class="label">Patrones de diseño</span>
+              <a href="pages/landing-page.html" target="_blank" class="dropdown__btn">
+                <span class="label">Landing Page</span>
               </a>
             </div>
 
             <!-- DROPDOWN - SECCION 5 (simple) -->
             <div class="dropdown--primary">
-              <a class="dropdown__btn">
+              <a href="https://www.figma.com/design/DJdAHr3lWErFzq2SmaS9hT/Design-System-Ford.ar-DAVID-GUTIERREZ---ENTREGA-FINAL?node-id=162-992&p=f&t=jAd9SaPOh4sI5fAM-0"
+                target="_blank" class="dropdown__btn">
                 <span class="label">Documentación</span>
               </a>
             </div>
@@ -316,10 +298,10 @@
 
         </section>
         <section class="sidebar--footer">
-          <img class="img" src="assets/img/user.png" alt="user">
-          <div>
-            <h6 style="margin: 0;">BY</h6>
-            <p style="margin: 0;">David Gutierrez</p>
+          <img class="img" src="assets/img/user.png" alt="Foto de perfil de David Gutierrez" loading="lazy">
+          <div class="sidebar--footer__info">
+            <h6>BY</h6>
+            <p>David Gutierrez</p>
           </div>
         </section>
       </aside>
@@ -330,11 +312,43 @@
     </div>
   </div>
 
-  <script src="/js/router.js"></script>
-  <script src="/js/sidebar.js"></script>
-  <script src="/js/search.js"></script>
-  <script src="/js/main-nav2.js"></script>
-  <script src="/js/type-scale.js"></script>
+  <!-- FLOATING SOCIAL BUTTONS -->
+  <div class="social-floating">
+    <!-- Figma -->
+    <a href="https://www.figma.com/design/DJdAHr3lWErFzq2SmaS9hT/Design-System-Ford.ar-DAVID-GUTIERREZ---ENTREGA-FINAL?node-id=162-992&p=f&t=jAd9SaPOh4sI5fAM-0"
+      target="_blank" class="social-floating__btn social-floating__btn--figma" aria-label="Figma">
+      <img src="assets/links/figma.png" alt="Figma">
+      <span class="label">Figma</span>
+    </a>
+
+    <!-- Behance -->
+    <a href="https://www.behance.net/portfolio/editor?project_id=231367919" target="_blank"
+      class="social-floating__btn social-floating__btn--behance" aria-label="Behance">
+      <img src="assets/links/behance.png" alt="Behance">
+      <span class="label">Behance</span>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/fernando-david-gutierrez-b1a612316/" target="_blank"
+      class="social-floating__btn social-floating__btn--linkedin" aria-label="LinkedIn">
+      <img src="assets/links/linkedin.png" alt="LinkedIn">
+      <span class="label">LinkedIn</span>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/davidgutierrez27/Ford-Design-System#" target="_blank"
+      class="social-floating__btn social-floating__btn--github" aria-label="GitHub">
+      <img src="assets/links/github.png" alt="GitHub">
+      <span class="label">GitHub</span>
+    </a>
+  </div>
+
+  <script src="/js/core/router.js"></script>
+  <script src="/js/core/sidebar.js"></script>
+  <script src="/js/features/theme-toggle.js"></script>
+  <script src="/js/features/search.js"></script>
+  <script src="/js/features/main-nav.js"></script>
+  <script src="/js/features/type-scale.js"></script>
 </body>
 
 </html>

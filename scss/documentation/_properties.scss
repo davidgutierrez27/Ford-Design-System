@@ -1,0 +1,264 @@
+@use "../tokens" as *;
+@use "../media" as media;
+
+/* ==========================================================================
+   PROPERTIES SECTION STYLES
+   ========================================================================== */
+
+.properties-showcase {
+    background-color: var(--color-neutral-background); // Assuming a light bg from image
+    border-radius: var(--radius-12);
+    padding: var(--space-32px);
+    border: 1px solid var(--color-neutral-200);
+}
+
+/* --- STATES TABLE GRID --- */
+.states-grid {
+    display: grid;
+    // Labels column + 5 state columns
+    grid-template-columns: 200px repeat(5, 1fr);
+    gap: 0; // Seamless look like the image 0? Or spaced? Image 0 has dashed lines.
+    // Let's go with a bordered look or dashed grid.
+
+    // Header row styling
+    &__header {
+        display: contents;
+        @include body-14-bold;
+        color: var(--color-primary-500); // Blue headings like in image
+        text-align: center;
+
+        div {
+            padding: var(--space-16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-primary-50); // Light blue bg header?
+            // Image shows transparent but blue text.
+        }
+    }
+
+    /* Rows */
+    &__row {
+        display: contents;
+
+        // The label cell
+        &.label-cell {
+            @include body-14-semibold;
+            color: var(--color-primary-600);
+            display: flex;
+            align-items: center;
+            padding: var(--space-32px) var(--space-16px);
+        }
+
+        // The state visual cell
+        .state-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-32px);
+            background-color: var(--color-neutral-100); // Light purple/gray bg
+            border: 1px dashed var(--color-primary-300); // Dashed lines like image
+            position: relative;
+        }
+    }
+}
+
+
+.foundations-principles-component {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    gap: var(--space-48px);
+
+    .foundations-principles {
+        grid-template-columns: auto;
+
+        .principle-card {
+            width: 250px;
+        }
+    }
+}
+
+/* --- ANATOMY & LAYOUT UNIFIED STRUCTURE --- */
+.anatomy-layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-48px);
+    align-items: start;
+    border-radius: var(--radius-12);
+
+    @include media.cq-md("content-page") {
+        grid-template-columns: 1fr;
+    }
+
+    &__visual {
+        width: 450px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+        border-radius: var(--radius-8);
+        background-color: var(--transp-10);
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-8);
+        }
+
+        &--big {
+            width: 100%;
+            align-items: start;
+            background-color: transparent;
+
+            @include media.cq-md("content-page") {
+                width: 100%;
+            }
+
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-32px);
+    }
+}
+
+.anatomy-item {
+    display: flex;
+    gap: var(--space-16px);
+    align-items: flex-start;
+    justify-content: center;
+    align-self: start;
+    height: 100%;
+
+    &__badge {
+        // The orange/brown circles numbers
+        background-color: #C05621; // Approximate orange
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        flex-shrink: 0;
+    }
+
+    &__content {
+        h4 {
+            @include body-16-bold;
+            margin: 0 0 var(--space-8px) 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-8px);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                @include body-14-regular;
+                color: var(--color-text-600);
+                margin-bottom: var(--space-4px);
+                display: flex;
+                gap: 8px;
+
+                span:first-child {
+                    font-weight: 600;
+                    color: var(--color-text-900);
+                }
+            }
+        }
+    }
+}
+
+/* --- DETAILED PROPERTIES LIST --- */
+.properties-detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-48px);
+}
+
+.property-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-48px);
+    align-items: stretch; // allow children to match height if needed
+
+    @include media.cq-md("content-page") {
+        grid-template-columns: 1fr;
+    }
+
+    &__visual {
+        width: 450px;
+        padding: var(--space-32px);
+        border-radius: var(--radius-12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        position: relative; // For any overlays or absolute elements inside
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-8);
+        }
+
+        &--big {
+            width: auto;
+
+            @include media.cq-md("content-page") {
+                width: 100%;
+            }
+        }
+    }
+
+    &__specs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // Vertical centering for text if visual is taller
+
+        h4 {
+            @include body-16-bold;
+            margin: 0 0 var(--space-16px) 0;
+            color: var(--color-text-900);
+        }
+
+        .spec-item {
+            margin-bottom: var(--space-16px);
+
+            &__label {
+                display: flex;
+                align-items: center;
+                gap: var(--space-8px);
+                @include body-14-bold;
+                margin-bottom: var(--space-4px);
+            }
+
+            &__value {
+                @include body-14-regular;
+                color: var(--color-text-500);
+                background: var(--transp-10);
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: monospace;
+            }
+        }
+    }
+}
+
+/* --- LAYOUT AND SPACING --- */
+.layout-specs {
+    &__dimensions {
+        text-align: right;
+        @include body-14-regular;
+        color: var(--color-text-500);
+    }
+}

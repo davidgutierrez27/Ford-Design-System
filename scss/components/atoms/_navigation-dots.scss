@@ -1,0 +1,27 @@
+@use "../../tokens" as *;
+
+/* Navigation Dots */
+.nav--dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 110px;
+    height: 10px;
+
+    .pill {
+        height: 10px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+
+        &.blue {
+            background: var(--color-primary-500);
+            width: 50px;
+        }
+
+        &.white {
+            background: var(--color-neutral-white);
+            width: 20px;
+        }
+    }
+}

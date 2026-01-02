@@ -1,0 +1,115 @@
+@use "../../tokens" as *;
+@use "../../media" as media;
+
+/* ==========================================================================
+   CARD COMPONENT
+   Strictly following Figma specifications with Senior UI polish.
+   ========================================================================== */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 517px;
+    max-width: 100%;
+    min-height: 400px;
+    border-radius: var(--radius-12);
+    background: var(--color-neutral-white);
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-24px);
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-card-hover);
+    }
+
+    /* internal elements */
+    &__image-container {
+        width: 469px;
+        height: 381px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--transp-10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0; // Gap handles spacing
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    &__title {
+        @include heading-title-32-regular;
+        color: var(--color-text-300);
+        margin: 0;
+        height: 50px;
+        display: flex;
+        align-items: end;
+    }
+
+    &__text {
+        @include body-20-regular;
+        color: var(--color-text-500);
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    /* VARIANTS */
+
+    /* Variant 1: White (Default style above) */
+    &--white {
+        background: var(--color-neutral-white);
+
+        .card__image-container {
+            background: var(--transp-10);
+        }
+    }
+
+    /* Variant 2: Neutral 500 */
+    &--neutral-500 {
+        background: var(--color-neutral-500);
+
+        .card__title {
+            color: var(--white);
+        }
+
+        .card__text {
+            color: rgba(254, 254, 254, 0.8);
+        }
+
+        .card__image-container {
+            background: rgba(0, 0, 0, 0.2); // Dark transparency
+        }
+    }
+}
+
+/* Responsive adjustments */
+@include media.cq-md("content-page") {
+    .card {
+        width: 100%;
+        min-width: auto;
+
+        &__image-container {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 469/381;
+        }
+    }
+}

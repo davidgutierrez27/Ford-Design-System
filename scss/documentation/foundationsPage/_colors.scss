@@ -1,0 +1,277 @@
+@use "../../tokens" as *;
+@use "../../media" as media;
+
+
+/* Color Grid: Container for color swatch cards. */
+.color-grid {
+    display: flex;
+}
+
+/* Color Card: Visual representation of a design system color or token. */
+.color-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    background: var(--color-neutral-white);
+    transition: transform 0.2s ease;
+
+    @media (hover: hover) {
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card-hover);
+        }
+    }
+
+    &__preview {
+        height: 200px;
+        width: 100%;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: -35px;
+        padding: var(--space-16px);
+
+
+        h5 {
+            @include body-16-regular;
+            color: var(--color-text-white);
+        }
+
+        p {
+            @include body-16-regular;
+            color: var(--color-text-white);
+        }
+
+
+
+    }
+
+}
+
+@include media.lg {
+    .color-card {
+
+        &__info {
+            bottom: 0;
+            transform: rotate(-90deg);
+
+            h5 {
+                @include body-16-regular;
+                letter-spacing: 1.5px;
+            }
+
+            p {
+                display: none;
+            }
+
+        }
+    }
+}
+
+@include media.md {
+    .color-card {
+
+        &__info {
+            display: none;
+
+        }
+    }
+}
+
+/* Usage List: Secondary documentation component explaining the application of tokens. */
+.usage-list {
+    border-radius: 0 var(--radius-12) var(--radius-12) 0;
+    margin-top: var(--space-32px);
+    padding: var(--space-24px);
+    background: var(--transp-10);
+    border-left: 4px solid var(--color-primary-500);
+
+    h4 {
+        @include body-14-bold;
+        text-transform: uppercase;
+        margin-bottom: var(--space-16px);
+        letter-spacing: 1px;
+    }
+
+    ul {
+        display: grid;
+        gap: var(--space-16px);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            align-items: baseline;
+            gap: var(--space-16px);
+
+            @include media.cq-sm ("content-page") {
+                grid-template-columns: 1fr;
+                gap: var(--space-4px);
+            }
+
+            .token-range {
+                @include body-14-bold;
+                color: var(--color-text-700);
+                font-family: monospace;
+            }
+
+            .token-desc {
+                @include body-14-regular;
+                color: var(--color-text-500);
+            }
+        }
+    }
+}
+
+/* Interaction States Grid: Layout for demonstrating UI state changes (hover, active, focus). */
+.interaction-states-grid {
+    display: flex;
+    gap: var(--space-24px);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-48px);
+}
+
+/* State Card: Individual container for a specific UI interaction state preview. */
+.state-card {
+    flex: 1;
+    min-width: 140px;
+    overflow: hidden;
+
+    &__preview {
+        height: 120px;
+        background-color: var(--transp-10);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--transp-50);
+        gap: var(--space-12px);
+    }
+
+    &__info {
+        padding: var(--space-16px);
+
+        p {
+            @include body-14-regular;
+            margin-bottom: 4px;
+            color: var(--color-text-500);
+
+            strong {
+                color: var(--color-text-700);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            code {
+                background: var(--transp-50);
+                padding: 2px 4px;
+                border-radius: 4px;
+                color: var(--color-primary-600);
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+
+/* Transparency Checkerboard: Visual aid background to demonstrate transparency levels. */
+.transparency-checkerboard {
+    background-image:
+        linear-gradient(45deg, #eee 25%, transparent 25%),
+        linear-gradient(-45deg, #eee 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #eee 75%),
+        linear-gradient(-45deg, transparent 75%, #eee 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px 10px, 10px 0;
+    background-color: white;
+}
+
+.state-label {
+    @include body-12-bold;
+    text-transform: uppercase;
+    color: var(--color-text-400);
+    letter-spacing: 0.5px;
+}
+
+/* BUTTON DEMOS FOR STATES */
+.btn-demo {
+    padding: 10px 24px;
+    border-radius: 100px;
+    /* Pill shape */
+    border: none;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: default;
+    /* Just for demo */
+    transition: all 0.2s ease;
+}
+
+/* States Implementation */
+.btn-primary-rest {
+    background-color: var(--color-primary-500);
+    color: var(--color-text-white);
+}
+
+.btn-primary-hover {
+    background-color: var(--color-primary-600);
+    color: var(--color-text-white);
+    cursor: pointer;
+}
+
+.btn-primary-active {
+    background-color: var(--color-primary-700);
+    color: var(--color-text-white);
+    transform: scale(0.98);
+}
+
+.btn-primary-focus {
+    background-color: var(--color-primary-500);
+    color: var(--color-text-white);
+    outline: none;
+    box-shadow: 0 0 0 4px var(--color-primary-200);
+    /* Focus Ring */
+    border: 2px solid var(--color-primary-800);
+    /* Visual border indicator for ref */
+}
+
+.btn-primary-disabled {
+    background-color: var(--color-desabled);
+    /* Using the typo variable as requested */
+    color: var(--color-text-400);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Contrast Examples: Side-by-side comparison for accessibility compliance. */
+.contrast-examples {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16px);
+    margin-top: var(--space-24px);
+}
+
+.contrast-example {
+    border-radius: var(--radius-8);
+    overflow: hidden;
+
+    &__meta {
+        @include body-12-regular;
+        padding: var(--space-8px) var(--space-16px);
+        background: var(--color-neutral-50);
+        color: var(--color-text-300);
+        margin: 0;
+    }
+
+    &--good {
+        border: 2px solid var(--color-status-success-1);
+    }
+
+    &--bad {
+        border: 2px solid var(--color-status-danger-1);
+    }
+}

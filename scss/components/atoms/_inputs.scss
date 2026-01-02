@@ -1,0 +1,157 @@
+@use "../../tokens" as *;
+
+/* Input Group: Container for label, input and helper text */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8px);
+    width: 100%;
+    max-width: 375px;
+    /* Specs say Width: 375 */
+}
+
+/* Label */
+.input-label {
+    @include body-14-bold;
+    color: var(--color-text-500);
+    /* Specs: Text color #000000 60% approx -> neutral-500/600 check tokens */
+    margin-bottom: 2px;
+}
+
+/* Input Container: Wraps input and icons */
+.input-container {
+    display: flex;
+    align-items: center;
+    min-width: 375px;
+    gap: 10px;
+    /* Padding left/right handled by container or input? Specs: Padding left 14, right 14 */
+    height: 44px;
+    /* Specs: Height 44 */
+    padding: 10px 14px;
+    /* Specs: Top/Bottom 10, Left/Right 14 */
+    border-radius: var(--radius-8);
+    /* Specs: 8 */
+    border: 1px solid var(--color-neutral-200);
+    /* Specs: Border color #000000 20% -> neutral-200/300 */
+    background: var(--color-background-white);
+    transition: all 0.2s ease;
+    @include body-16-regular;
+    /* Text style Body */
+
+    /* Box sizing is usually border-box globally, ensuring padding doesn't add to height */
+
+    &:hover {
+        border-color: var(--color-neutral-400);
+    }
+
+    &:focus-within {
+        border-color: var(--color-primary-default);
+        /* Specs usually imply ring/shadow for focus, keeping existing accessible focus */
+        box-shadow: 0 0 0 4px var(--transp-10);
+    }
+}
+
+/* Input Field */
+.input-field {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--color-text-900);
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    @include body-16-regular;
+
+    &::placeholder {
+        color: var(--color-text-300);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        color: var(--color-text-300);
+    }
+}
+
+/* Icons within input */
+.input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-500);
+    flex-shrink: 0;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Helper / Error Text */
+.input-helper {
+    @include body-12-regular;
+    color: var(--color-text-500);
+    margin-top: 4px;
+}
+
+/* STATES */
+
+/* Active (Assuming this means Typed text present or Focused) */
+/* The user listed "Active" as a state with text. Usually means Focus or Filled. 
+   "Typing" usually means Focus. "Active" might be just filled? Or Pressed? 
+   Web inputs don't usually have "Active" in the button sense. 
+   I will treat "Active" as "Filled" visually for the doc, or Focus. 
+   But CSS :active is click. 
+*/
+
+/* Error State */
+.input-group--error {
+    .input-label {
+        color: var(--color-status-danger-1);
+        /* Error Red */
+    }
+
+    .input-container {
+        border-color: var(--color-status-danger-1);
+
+        &:focus-within {
+            box-shadow: 0 0 0 4px var(--color-status-danger-2);
+            border-color: var(--color-status-danger-1);
+        }
+    }
+
+    .input-icon {
+        color: var(--color-status-danger-1);
+    }
+
+    .input-helper {
+        color: var(--color-status-danger-1);
+    }
+}
+
+/* Disabled State */
+.input-group--disabled {
+    .input-label {
+        color: var(--color-text-300);
+    }
+
+    .input-container {
+        background: var(--color-neutral-100);
+        border-color: var(--color-neutral-200);
+        cursor: not-allowed;
+    }
+
+    .input-field {
+        color: var(--color-text-300);
+        cursor: not-allowed;
+
+        &::placeholder {
+            color: var(--color-text-300);
+        }
+    }
+
+    .input-icon {
+        color: var(--color-text-300);
+    }
+}

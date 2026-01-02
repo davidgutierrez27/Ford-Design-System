@@ -1,0 +1,41 @@
+@use "../../tokens" as *;
+
+/* Logo Component */
+.nav--icon--button--logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    color: var(--color-neutral-white); // Visible on white
+
+    svg {
+        width: 92px;
+        height: 36px;
+        transition: color 0.15s ease-in-out;
+
+        path {
+            stroke: currentColor;
+            fill: currentColor;
+            stroke-width: 0.5px;
+        }
+    }
+
+    &:hover,
+    &.is-hover {
+        color: var(--color-primary-hover);
+    }
+
+    &:active,
+    &.is-active {
+        color: var(--color-primary-active);
+    }
+
+    &:focus,
+    &.is-focus {
+        color: var(--color-primary-focus);
+    }
+}

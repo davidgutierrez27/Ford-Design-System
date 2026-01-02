@@ -1,0 +1,447 @@
+<div class="hero-banner hero-banner__component">
+    <div class="hero-banner__content hero-banner__content__component">
+        <h1>Dropdowns</h1>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#variants" data-target="variants">Variantes</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#states" data-target="states">Propiedades y Estados</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#layout" data-target="layout">Layout y Espaciado</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-page page-dropdowns">
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="general-section">
+        <h2>Anatomía</h2>
+        <p>Los dropdowns son componentes versátiles que permiten organizar la navegación o selecciones en un menú
+            desplegable.</p>
+
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="../../../assets/img/propeties/droptdowns/Artwork.svg" alt="Dropdown Anatomy">
+            </div>
+
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">1</span>
+                    <div class="anatomy-item__content">
+                        <h4>Dropdown Container</h4>
+                        <ul>
+                            <li>Height: 34px</li>
+                            <li>Width: 210px (Min) / 310px (Max)</li>
+                            <li>Border left weight: 2px</li>
+                            <li>Border radius: 4px</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">2</span>
+                    <div class="anatomy-item__content">
+                        <h4>Icon (Home)</h4>
+                        <ul>
+                            <li>Style: Icon/Outline/home</li>
+                            <li>Visibility: Optional (Boolean)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">3</span>
+                    <div class="anatomy-item__content">
+                        <h4>Label</h4>
+                        <ul>
+                            <li>Text style: Body/Body 16 Regular</li>
+                            <li>Default color: Neutral-500 (#303030)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">4</span>
+                    <div class="anatomy-item__content">
+                        <h4>Caret Icon</h4>
+                        <ul>
+                            <li>Style: Icon/Outline/caret</li>
+                            <li>Behavior: Rotates when menu is open (Points Down by default)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- VARIANTS -->
+    <!-- ================================================================================= -->
+    <section id="variants" class="general-section">
+        <h2>Variantes</h2>
+        <p>Configuraciones de elementos internos según la necesidad de la interfaz.</p>
+
+        <div class="properties-detail-list">
+
+            <!-- Full Variant -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M3 12L12 3L21 12M5 10V20H19V10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span class="label">Icon + Label + Caret</span>
+                            <span class="caret">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                    <g transform="rotate(90 8 8)">
+                                        <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Completo</h4>
+                    <p>Variante estándar con todos los elementos visibles.</p>
+                </div>
+            </div>
+
+            <!-- No Icon Variant -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn">
+                            <span class="label">Label + Caret</span>
+                            <span class="caret">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                    <g transform="rotate(90 8 8)">
+                                        <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Sin Icono</h4>
+                    <p>Para menús donde el texto es suficiente identificador.</p>
+                </div>
+            </div>
+
+            <!-- No Caret Variant -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M3 12L12 3L21 12M5 10V20H19V10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span class="label">Icon + Label</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Sin Caret</h4>
+                    <p>Para items que actúan como enlaces directos pero mantienen el estilo de dropdown.</p>
+                </div>
+            </div>
+
+            <!-- Text Only -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn">
+                            <span class="label">Solo Texto</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Solo Texto</h4>
+                    <p>Máxima simplicidad visual.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- STATES -->
+    <!-- ================================================================================= -->
+    <section id="states" class="general-section">
+        <h2>Propiedades y Estados</h2>
+        <p>Los estados del componente extraídos directamente de la implementación de la Sidebar.</p>
+
+        <div class="properties-detail-list">
+
+            <!-- Default -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn">
+                            <span class="label">Default (Inactivo)</span>
+                            <span class="caret">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                    <g transform="rotate(90 8 8)">
+                                        <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Default</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Bg</div>
+                        <div class="spec-item__value">Transparent / White</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Text</div>
+                        <div class="spec-item__value">Neutral-500 (#303030)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hover -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn" style="background: var(--color-background-50);">
+                            <span class="label">Hover</span>
+                            <span class="caret">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                    <g transform="rotate(90 8 8)">
+                                        <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Hover</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Bg</div>
+                        <div class="spec-item__value">Neutral-50 (var(--color-background-50))</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn dropdown__btn--active">
+                            <span class="label">Active (Selected)</span>
+                            <span class="caret">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                    <g transform="rotate(90 8 8)">
+                                        <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Active</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Bg</div>
+                        <div class="spec-item__value">rgba(6, 111, 239, 0.3)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Border Left</div>
+                        <div class="spec-item__value">2px Solid Skyview-500</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Text</div>
+                        <div class="spec-item__value">White (#FEFEFE)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Open Active -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn dropdown__btn--active dropdown__btn--open-active">
+                            <span class="label">Open Active</span>
+                            <span class="caret">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                    <g transform="rotate(270 8 8)">
+                                        <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Open Active</h4>
+                    <p>Mantiene el estilo <strong>Active</strong> pero el Caret rota 180° (apunta arriba).</p>
+                </div>
+            </div>
+
+            <!-- Active Hover -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="dropdown--primary" style="width: 250px;">
+                        <button class="dropdown__btn dropdown__btn--active"
+                            style="background: var(--color-primary-default); color: white;">
+                            <span class="label">Hover on Active</span>
+                            <span class="caret">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                    <g transform="rotate(90 8 8)">
+                                        <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Active Hover</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Bg</div>
+                        <div class="spec-item__value">Skyview-500 (Solid)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Text</div>
+                        <div class="spec-item__value">White (#FEFEFE)</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="property-booleans" style="margin-top: 40px;">
+            <h3>Propiedades del Componente (Boolean)</h3>
+            <div class="foundations-principles">
+                <article class="principle-card">
+                    <h4>Label</h4>
+                    <p>Default: true</p>
+                </article>
+                <article class="principle-card">
+                    <h4>Caret</h4>
+                    <p>Default: true</p>
+                </article>
+                <article class="principle-card">
+                    <h4>Icon</h4>
+                    <p>Default: true</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- LAYOUT -->
+    <!-- ================================================================================= -->
+    <section id="layout" class="general-section">
+        <h2>Layout y Espaciado</h2>
+
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="../../../assets/img/propeties/droptdowns/Artwork-1.svg" alt="Dropdown Layout">
+            </div>
+
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <div class="anatomy-item__content">
+                        <h4>Dropdown Config</h4>
+                        <ul>
+                            <li>Direction: Horizontal</li>
+                            <li>Alignment: Middle left</li>
+                            <li>Vertical resizing: Fixed (34px)</li>
+                            <li>Horizontal resizing: Fill</li>
+                            <li>Item spacing: 12px</li>
+                            <li>Padding: 0 12px</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>HTML Estructural</h3>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-html">&lt;!-- Dropdown Completo --&gt;
+&lt;div class="dropdown"&gt;
+  &lt;button class="dropdown__btn dropdown-toggle" data-target="drop1"&gt;
+    &lt;span class="icon"&gt;...&lt;/span&gt;
+    &lt;span class="label"&gt;Menu Item&lt;/span&gt;
+    &lt;span class="caret"&gt;
+       &lt;svg ...&gt;&lt;g transform="rotate(90 8 8)"&gt;...&lt;/g&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="dropdown__content" id="drop1"&gt;
+    &lt;!-- Sub-items --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="general-section">
+        <h2>Accesibilidad</h2>
+        <div class="foundations-accessibility">
+            <article class="a11y-card">
+                <h3>Buenas Prácticas</h3>
+                <ul class="doc-list">
+                    <li><strong>Aria expanded:</strong> El JS debe alternar <code>aria-expanded="true/false"</code>.
+                    </li>
+                    <li><strong>Roles:</strong> Usar <code>role="button"</code> y <code>role="menu"</code> para el
+                        contenido.</li>
+                    <li><strong>Teclado:</strong> El foco debe mantenerse visible en todo momento.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+</div>

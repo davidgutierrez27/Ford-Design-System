@@ -1,0 +1,64 @@
+@use "../../media";
+@use "../../tokens" as *;
+
+.card-value-proposition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-10px);
+    width: fit-content;
+    height: fit-content;
+
+
+
+    &__img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+
+    }
+
+    &__labels {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: var(--space-10px);
+        width: fit-content;
+
+        h3 {
+            @include heading-title-24-regular;
+            color: var(--color-text-500);
+            margin: 0;
+        }
+
+        p {
+            @include body-14-regular;
+            color: var(--color-text-500);
+            max-width: 300px;
+            margin: 0;
+            text-wrap: wrap;
+        }
+    }
+
+    &__icon.cheveron {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: start;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-text-500);
+        }
+    }
+
+    @include media.xl {
+        &__icon.cheveron {
+            display: none;
+        }
+    }
+}

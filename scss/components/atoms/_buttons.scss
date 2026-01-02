@@ -1,0 +1,276 @@
+// IMPORTS (solo lo necesario)
+@use "../../tokens" as *;
+
+
+/* Botones */
+.btn {
+  // 1. ESTILOS BASE (Comunes a todos)
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8px);
+  border-radius: var(--radius-32);
+  cursor: pointer;
+  font-feature-settings: 'liga' off, 'clig' off;
+  padding: 10px 14px 10px 18px;
+  width: fit-content;
+  border: 2px solid transparent;
+  @include button-16;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--transp-20);
+    border-color: var(--color-primary-300);
+  }
+
+  &--icon {
+    width: var(--space-20px);
+    height: var(--space-20px);
+  }
+
+  &--only-icon {
+    padding: 10px 18px 10px 18px;
+  }
+
+
+
+  &--small {
+    min-height: 39px; //10+10+19
+  }
+
+  &--medium {
+    min-width: 125px;
+    min-height: 40px; //10+10+20
+  }
+
+  &--large {
+    min-width: 170px;
+    min-height: 40px; //10+10+20
+
+  }
+
+  &--disabled {
+    background-color: var(--color-desabled);
+    color: var(--color-desabled);
+    cursor: not-allowed;
+    border-color: var(--color-desabled);
+  }
+}
+
+/* ==================================================== */
+/* 6. SOBRESCRITURA CONTEXTUAL (Temas/Paletas Alternativas) */
+/* ==================================================== */
+.theme--skyview {
+  &--primary {
+    background-color: var(--color-primary-default);
+    color: $white;
+    border: none;
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+    }
+
+    &:active {
+      background-color: var(--color-primary-active);
+    }
+
+    &:focus {
+      background-color: var(--color-primary-focus);
+    }
+  }
+
+  &--secondary {
+    background: none;
+    color: var(--color-primary-default);
+    border-color: var(--color-primary-default);
+
+
+    &:hover {
+      color: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+    }
+
+    &:active {
+      color: var(--color-primary-active);
+      border-color: var(--color-primary-active);
+    }
+
+    &:focus {
+      color: var(--color-primary-focus);
+      border-color: var(--color-primary-focus);
+    }
+  }
+
+  &--tertiary {
+    background-color: none;
+    color: var(--color-primary-default);
+
+    &:hover {
+      color: var(--color-primary-hover);
+    }
+
+    &:active {
+      color: var(--color-primary-active);
+    }
+
+    &:focus {
+      color: var(--color-primary-focus);
+    }
+
+  }
+}
+
+.theme--neutral {
+  &--primary {
+    background-color: var(--color-neutral-default);
+    color: $neutral-500;
+    border: none;
+
+    &:hover {
+      background-color: var(--color-neutral-hover);
+    }
+
+    &:active {
+      background-color: var(--color-neutral-active);
+    }
+
+    &:focus {
+      background-color: var(--color-neutral-focus);
+    }
+  }
+
+  &--secondary {
+    background: none;
+    color: var(--color-neutral-default);
+    border-color: var(--color-neutral-default);
+
+
+    &:hover {
+      color: var(--color-neutral-hover);
+      border-color: var(--color-neutral-hover);
+    }
+
+    &:active {
+      color: var(--color-neutral-active);
+      border-color: var(--color-neutral-active);
+    }
+
+    &:focus {
+      color: var(--color-neutral-focus);
+      border-color: var(--color-neutral-focus);
+    }
+  }
+
+  &--tertiary {
+    background-color: none;
+    color: var(--color-neutral-default);
+
+    &:hover {
+      color: var(--color-neutral-hover);
+    }
+
+    &:active {
+      color: var(--color-neutral-active);
+    }
+
+    &:focus {
+      color: var(--color-neutral-focus);
+    }
+
+  }
+}
+
+.theme--grabber {
+  &--primary {
+    background-color: var(--color-secondary-default);
+    color: $white;
+    border: none;
+
+    &:hover {
+      background-color: var(--color-secondary-hover);
+    }
+
+    &:active {
+      background-color: var(--color-secondary-active);
+    }
+
+    &:focus {
+      background-color: var(--color-secondary-focus);
+    }
+  }
+
+  &--secondary {
+    background: none;
+    color: var(--color-secondary-default);
+    border-color: var(--color-secondary-default);
+
+
+    &:hover {
+      color: var(--color-secondary-hover);
+      border-color: var(--color-secondary-hover);
+    }
+
+    &:active {
+      color: var(--color-secondary-active);
+      border-color: var(--color-secondary-active);
+    }
+
+    &:focus {
+      color: var(--color-secondary-focus);
+      border-color: var(--color-secondary-focus);
+    }
+  }
+
+  &--tertiary {
+    background-color: none;
+    color: var(--color-secondary-default);
+
+    &:hover {
+      color: var(--color-secondary-hover);
+    }
+
+    &:active {
+      color: var(--color-secondary-active);
+    }
+
+    &:focus {
+      color: var(--color-secondary-focus);
+    }
+
+  }
+}
+
+
+.btn__icon {
+  flex-shrink: 0;
+  background-color: transparent;
+  color: var(--color-text-500);
+  border: none;
+  fill: var(--color-text-500);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--logo {
+    min-width: 94px;
+    min-height: 37px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+
+  &:active {
+    color: var(--color-primary-active);
+  }
+}

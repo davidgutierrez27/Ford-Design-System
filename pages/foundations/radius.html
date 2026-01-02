@@ -1,23 +1,261 @@
-<div class="content-page">
-    <header class="doc-page__header">
-        <h1>Radius</h1>
-        <p>Border radius tokens control the roundness of corners.</p>
-    </header>
+<div class="hero-banner">
+    <img src="../../assets/img/pageColors/radius.png" alt="Radius Foundations" class="hero-banner__image">
+    <div class="hero-banner__content">
+        <h1>Border Radius</h1>
+    </div>
+</div>
 
-    <section class="content-page__section">
-        <h2>Radius Scale</h2>
-        <div class="radius-grid">
-            <div class="radius-box" style="border-radius: 2px;">2px</div>
-            <div class="radius-box" style="border-radius: 4px;">4px</div>
-            <div class="radius-box" style="border-radius: 8px;">8px</div>
-            <div class="radius-box" style="border-radius: 10px;">10px</div>
-            <div class="radius-box" style="border-radius: 12px;">12px</div>
-            <div class="radius-box" style="border-radius: 14px;">14px</div>
-            <div class="radius-box" style="border-radius: 16px;">16px</div>
-            <div class="radius-box" style="border-radius: 24px;">24px</div>
-            <div class="radius-box" style="border-radius: 32px;">32px</div>
-            <div class="radius-box" style="border-radius: 9999px;">Full</div>
+<!-- NAVIGATION2 -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#principles" data-target="principles">Principios</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#scale" data-target="scale">Escala de Radius</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#roles" data-target="roles">Roles de uso</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#best-practices" data-target="best-practices">Buenas prácticas</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-page">
+
+    <!-- ================================================================================= -->
+    <!-- PRINCIPLES -->
+    <!-- ================================================================================= -->
+    <section id="principles" class="general-section">
+        <h2>Principios de Radius</h2>
+        <div class="foundations-principles">
+            <article class="principle-card">
+                <h3>Consistencia</h3>
+                <p>El uso sistemático de radios de borde crea una experiencia visual armoniosa y profesional en toda la
+                    suite de productos.</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Jerarquía Visual</h3>
+                <p>Los radios más grandes suelen aplicarse a contenedores principales, mientras que los pequeños se
+                    reservan para elementos internos.</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Tactilidad Digital</h3>
+                <p>Las esquinas redondeadas suavizan la interfaz, haciéndola sentir más moderna, accesible y amigable
+                    para el usuario.</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Escalabilidad</h3>
+                <p>Nuestra escala está diseñada para funcionar desde micro-interacciones hasta grandes layouts
+                    estructurales.</p>
+            </article>
         </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- SCALE -->
+    <!-- ================================================================================= -->
+    <section id="scale" class="general-section">
+        <h2>Escala de Radius</h2>
+        <p>Definimos una escala lógica basada en píxeles que cubre todas las necesidades de redondeado, desde bordes
+            casi rectos hasta formas circulares.</p>
+
+        <div class="radius-grid">
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-2);">2</div>
+                <p class="radius-item__label">2px</p>
+                <p class="radius-item__token">--radius-2</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-4);">4</div>
+                <p class="radius-item__label">4px</p>
+                <p class="radius-item__token">--radius-4</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-8);">8</div>
+                <p class="radius-item__label">8px</p>
+                <p class="radius-item__token">--radius-8</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-10);">10</div>
+                <p class="radius-item__label">10px</p>
+                <p class="radius-item__token">--radius-10</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-12);">12</div>
+                <p class="radius-item__label">12px</p>
+                <p class="radius-item__token">--radius-12</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-14);">14</div>
+                <p class="radius-item__label">14px</p>
+                <p class="radius-item__token">--radius-14</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-16);">16</div>
+                <p class="radius-item__label">16px</p>
+                <p class="radius-item__token">--radius-16</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-24);">24</div>
+                <p class="radius-item__label">24px</p>
+                <p class="radius-item__token">--radius-24</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: var(--radius-32);">32</div>
+                <p class="radius-item__label">32px</p>
+                <p class="radius-item__token">--radius-32</p>
+            </div>
+            <div class="radius-item">
+                <div class="radius-box" style="border-radius: 9999px;">Full</div>
+                <p class="radius-item__label">Full</p>
+                <p class="radius-item__token">9999px</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ROLES -->
+    <!-- ================================================================================= -->
+    <section id="roles" class="general-section">
+        <h2>Roles de Uso</h2>
+        <p>Cada token de radio tiene un propósito específico dentro del sistema para asegurar que la estética se
+            mantenga coherente.</p>
+
+        <div class="role-section">
+            <h3>Small Radius (2px - 4px)</h3>
+            <p>Utilizado para detalles pequeños y elementos de interfaz compactos.</p>
+            <ul class="doc-list">
+                <li>Checkboxes y Radio buttons</li>
+                <li>Inputs de formularios</li>
+                <li>Tooltips</li>
+            </ul>
+        </div>
+
+        <div class="role-section">
+            <h3>Medium Radius (8px - 14px)</h3>
+            <p>El estándar para la mayoría de los componentes interactivos y contenedores pequeños.</p>
+            <ul class="doc-list">
+                <li>Botones principales y secundarios</li>
+                <li>Cards de contenido pequeño</li>
+                <li>Dropdowns y Menús flotantes</li>
+            </ul>
+        </div>
+
+        <div class="role-section">
+            <h3>Large Radius (16px - 32px)</h3>
+            <p>Reservado para grandes contenedores y superficies que estructuran la página.</p>
+            <ul class="doc-list">
+                <li>Modales y Diálogos</li>
+                <li>Cards principales de dashboard</li>
+                <li>Secciones destacadas con fondo</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <p>Al igual que otros tokens, el radio debe consumirse preferiblemente a través de variables CSS para permitir
+            flexibilidad.</p>
+
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>Tokens de Radius</h3>
+                <p>Lista de variables disponibles para aplicar en SCSS o CSS inline.</p>
+            </div>
+            <div class="foundations-implementation__body" style="padding: 0;">
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>Valor</th>
+                                <th>Uso común</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>var(--radius-4)</code></td>
+                                <td>4px</td>
+                                <td>Pequeños componentes / Inputs</td>
+                            </tr>
+                            <tr>
+                                <td><code>var(--radius-12)</code></td>
+                                <td>12px</td>
+                                <td>Cards / Botones estándar</td>
+                            </tr>
+                            <tr>
+                                <td><code>var(--radius-24)</code></td>
+                                <td>24px</td>
+                                <td>Grandes superficies / Modales</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="foundations-implementation" style="margin-top: 32px;">
+            <div class="foundations-implementation__header">
+                <h3>Ejemplo SCSS</h3>
+                <p>Cómo aplicar el radio en tus estilos.</p>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-scss">.my-card {
+    background: var(--color-background-white);
+    border-radius: var(--radius-12);
+    padding: var(--space-24px);
+    box-shadow: var(--shadow-card);
+}
+
+.my-button {
+    border-radius: var(--radius-8);
+    // ... otros estilos
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- BEST PRACTICES -->
+    <!-- ================================================================================= -->
+    <section id="best-practices" class="general-section">
+        <h2>Buenas Prácticas</h2>
+        <div class="guidelines-grid">
+            <article class="guideline-card">
+                <div class="guideline-card__header guideline-card__header--do">✓ Qué hacer</div>
+                <div class="guideline-card__content">
+                    <ul>
+                        <li>Usa radios consistentes dentro de un mismo componente.</li>
+                        <li>Asegura que el radio interior sea menor que el exterior si hay anidamiento.</li>
+                        <li>Mantén la coherencia con el estilo de marca (Ford usa radios suaves pero definidos).</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="guideline-card">
+                <div class="guideline-card__header guideline-card__header--dont">✗ Qué evitar</div>
+                <div class="guideline-card__content">
+                    <ul>
+                        <li>No mezcles estilos de bordes (rectos y redondos) sin un propósito de jerarquía.</li>
+                        <li>Evita radios excesivamente grandes que rompan la legibilidad del contenido.</li>
+                        <li>No ignores la escala: usa siempre los tokens definidos.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
     </section>
 
 </div>

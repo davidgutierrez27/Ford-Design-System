@@ -1,7 +1,5 @@
 <div class="hero-banner">
     <img src="../../assets/img/pageColors/typography.png" alt="Typography Foundations" class="hero-banner__image">
-
-    <div class="hero-banner__overlay"></div>
     <div class="hero-banner__content">
         <h1>Tipografía</h1>
     </div>
@@ -39,7 +37,7 @@
     <!-- ================================================================================= -->
     <!-- PRINCIPLES -->
     <!-- ================================================================================= -->
-    <section id="principles" class="foundations-section">
+    <section id="principles" class="general-section">
         <h2>Principios Tipográficos</h2>
         <div class="foundations-principles">
             <article class="principle-card">
@@ -75,28 +73,63 @@
     <!-- ================================================================================= -->
     <!-- ANATOMY -->
     <!-- ================================================================================= -->
-    <section id="anatomy" class="foundations-section">
+    <section id="anatomy" class="general-section">
         <h2>Anatomía de la tipografía</h2>
+        <p>Cada estilo tipográfico tiene atributos definidos: tamaño, peso, interlineado y familia. Estos parámetros
+            garantizan lecturabilidad y consistencia.</p>
 
-        <div class="content-columns">
-            <div class="content-columns__text">
-                <p>Cada estilo tipográfico tiene atributos definidos: tamaño, peso, interlineado y familia. Estos
-                    parámetros garantizan lecturabilidad y consistencia en la interfaz.</p>
-
-                <h3>Componentes que definimos</h3>
-                <ul class="doc-list">
-                    <li><strong>Tamaño (font-size):</strong> Expresa el nivel de importancia visual. Usamos una escala
-                        de 12px a 54px para cubrir todos los casos de uso.</li>
-                    <li><strong>Peso (font-weight):</strong> Diferencia énfasis y roles. Disponemos de Regular (400),
-                        Medium (500) y Bold (700).</li>
-                    <li><strong>Altura de línea (line-height):</strong> Mejora la lectura en bloques largos. Usamos
-                        ratios de 1.1 (tight), 1.3 (normal) y 1.5 (relaxed).</li>
-                    <li><strong>Familia tipográfica:</strong> Arial sans-serif establece la voz del producto con una
-                        fuente legible y profesional.</li>
-                </ul>
+        <div class="anatomy-layout anatomy-layout-organism">
+            <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                <img src="../../assets/img/pageColors/tipography2.png" alt="Typography Anatomy Diagram"
+                    style="width: 100%;">
             </div>
-            <div class="content-columns__image">
-                <img src="../../assets/img/pageColors/t.png" alt="Typography Anatomy Diagram">
+
+            <div class="anatomy-layout__details anatomy-layout-organism__details">
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">1</div>
+                    <div class="anatomy-item__content">
+                        <h4>Familia tipográfica</h4>
+                        <ul>
+                            <li>Font family: "Arial", sans-serif</li>
+                            <li>Role: Voz del producto, legible y profesional.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">2</div>
+                    <div class="anatomy-item__content">
+                        <h4>Tamaño (Font-size)</h4>
+                        <ul>
+                            <li>Range: 12px - 54px</li>
+                            <li>Role: Nivel de importancia visual.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">3</div>
+                    <div class="anatomy-item__content">
+                        <h4>Peso (Font-weight)</h4>
+                        <ul>
+                            <li>Regular (400)</li>
+                            <li>Medium (500)</li>
+                            <li>Bold (700)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">4</div>
+                    <div class="anatomy-item__content">
+                        <h4>Altura de línea (Line-height)</h4>
+                        <ul>
+                            <li>Tight: 1.1</li>
+                            <li>Normal: 1.3</li>
+                            <li>Relaxed: 1.5</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -104,7 +137,7 @@
     <!-- ================================================================================= -->
     <!-- SCALE -->
     <!-- ================================================================================= -->
-    <section id="scale" class="foundations-section">
+    <section id="scale" class="general-section">
         <h2>Escala Tipográfica</h2>
         <p>La escala establece el sistema de tamaños que usamos para mantener armonía y proporción en títulos,
             párrafos y acciones. Cada tamaño tiene un propósito específico y características definidas.</p>
@@ -251,7 +284,7 @@
     <!-- ================================================================================= -->
     <!-- ROLES -->
     <!-- ================================================================================= -->
-    <section id="roles" class="foundations-section">
+    <section id="roles" class="general-section">
         <h2>Roles Tipográficos</h2>
         <p>Asignamos roles claros a cada estilo para evitar uso incorrecto y mantener coherencia. Cada rol tiene
             características específicas y casos de uso definidos.</p>
@@ -322,41 +355,35 @@
     <!-- ================================================================================= -->
     <!-- WEIGHTS -->
     <!-- ================================================================================= -->
-    <section id="weights" class="foundations-section">
+    <section id="weights" class="general-section">
         <h2>Pesos y Jerarquía</h2>
         <p>Disponemos de tres pesos tipográficos que permiten crear jerarquía y énfasis sin cambiar el tamaño del texto.
         </p>
 
         <div class="content-columns">
-            <div class="content-columns__text">
+            <div class="content-columns__text" style="width: 100%;">
                 <div class="weight-examples">
                     <div class="weight-example">
-                        <h3 style="font-weight: 400; margin: 0 0 8px 0;">Regular (400)</h3>
+                        <h3>Regular (400)</h3>
                         <p>Peso estándar para texto de lectura, subtítulos y contenido general. Proporciona buena
-                            legibilidad sin fatiga visual.</p>
-                        <p style="font-weight: 400; font-size: 16px; margin: 8px 0;">Este es un ejemplo de texto en peso
+                            legibilidad sin fatiga visual.<br> <br> Este es un ejemplo de texto en peso
                             Regular (400). Ideal para párrafos y contenido extenso.</p>
                     </div>
 
                     <div class="weight-example">
-                        <h3 style="font-weight: 500; margin: 0 0 8px 0;">Medium (500)</h3>
+                        <h3>Medium (500)</h3>
                         <p>Peso intermedio para destacar elementos sin llegar a bold. Útil para labels, metadatos
-                            importantes y énfasis sutil.</p>
-                        <p style="font-weight: 500; font-size: 16px; margin: 8px 0;">Este es un ejemplo de texto en peso
+                            importantes y énfasis sutil.<br> <br> Este es un ejemplo de texto en peso
                             Medium (500). Perfecto para destacar sin ser demasiado pesado.</p>
                     </div>
 
                     <div class="weight-example">
-                        <h3 style="font-weight: 700; margin: 0 0 8px 0;">Bold (700)</h3>
+                        <h3>Bold (700)</h3>
                         <p>Peso fuerte para títulos, acciones y elementos que requieren máxima atención. Crea jerarquía
-                            clara y énfasis fuerte.</p>
-                        <p style="font-weight: 700; font-size: 16px; margin: 8px 0;">Este es un ejemplo de texto en peso
+                            clara y énfasis fuerte.<br> <br> Este es un ejemplo de texto en peso
                             Bold (700). Usado en títulos y elementos de alta importancia.</p>
                     </div>
                 </div>
-            </div>
-            <div class="content-columns__image">
-                <img src="../../assets/img/pageColors/card vehiculos-1.png" alt="Typography Weights Hierarchy">
             </div>
         </div>
     </section>
@@ -364,7 +391,7 @@
     <!-- ================================================================================= -->
     <!-- IMPLEMENTATION -->
     <!-- ================================================================================= -->
-    <section id="implementation" class="foundations-section">
+    <section id="implementation" class="general-section">
         <h2>Implementación</h2>
         <p>Todos los estilos del sistema se implementan mediante mixins SCSS para asegurar consistencia,
             reutilización y mantenibilidad. Cada mixin encapsula tamaño, peso, line-height y familia tipográfica.</p>
@@ -487,7 +514,7 @@
     <!-- ================================================================================= -->
     <!-- ACCESSIBILITY -->
     <!-- ================================================================================= -->
-    <section id="accessibility" class="foundations-section">
+    <section id="accessibility" class="general-section">
         <h2>Accesibilidad y buenas prácticas</h2>
         <p>La tipografía debe ser legible para todos los usuarios. Seguimos las pautas WCAG 2.1 para garantizar
             accesibilidad en contraste y legibilidad.</p>

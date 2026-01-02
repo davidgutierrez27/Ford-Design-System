@@ -1,0 +1,25 @@
+@use "../../../tokens" as *;
+@use "../../../media" as media;
+
+
+.anatomy-layout-organism {
+    display: flex;
+    flex-direction: column;
+
+    &__details {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-32px);
+    }
+}
+
+.property-group-organism {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    &__visual {
+        padding: 0;
+    }
+}

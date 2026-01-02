@@ -1,0 +1,258 @@
+<div class="hero-banner hero-banner__component">
+    <div class="hero-banner__content hero-banner__content__component">
+        <h1>Cards</h1>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#properties" data-target="properties">Propiedades</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#layout" data-target="layout">Layout y Espaciado</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-page page-cards">
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="general-section">
+        <h2>Anatomía</h2>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                <img src="../../../assets/img/propeties/cards/Artwork.svg" alt="Card Anatomy Breakdown">
+            </div>
+
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">1</span>
+                    <div class="anatomy-item__content">
+                        <h4>Product Card Medium</h4>
+                        <ul>
+                            <li>Width: 517px</li>
+                            <li>Min height: 400px</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">2</span>
+                    <div class="anatomy-item__content">
+                        <h4>Media Container</h4>
+                        <ul>
+                            <li>Dimensions: 469px x 381px</li>
+                            <li>Border radius: 10px</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">3</span>
+                    <div class="anatomy-item__content">
+                        <h4>Title</h4>
+                        <ul>
+                            <li>Style: @mixin heading-title-32-regular</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">4</span>
+                    <div class="anatomy-item__content">
+                        <h4>Text / Description</h4>
+                        <ul>
+                            <li>Style: @mixin body-20-regular</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">5</span>
+                    <div class="anatomy-item__content">
+                        <h4>Primary Action</h4>
+                        <ul>
+                            <li>Component: Button Large Secondary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- PROPERTIES (VARIANTS) -->
+    <!-- ================================================================================= -->
+    <section id="properties" class="general-section">
+        <h2>Propiedades y Variantes</h2>
+        <p>Diferentes configuraciones visuales según el contexto de fondo y jerarquía.</p>
+
+        <div class="properties-detail-list">
+
+            <!-- Variant 1: White -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <article class="card card--white">
+                        <div class="card__image-container">
+                            <!-- Placeholder with transparency -->
+                            <div
+                                style="width: 100%; height: 100%; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center;">
+                                <span style="color: var(--color-text-300); font-size: 14px;">Product Image</span>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Lorem Ipsum</h3>
+                            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipiscing elit, praesent
+                                vulputate viverra fringilla non tempus gravida venenatis.</p>
+                            <button class="btn btn--large theme--skyview--secondary">button</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Variante 1 - White</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Bg</div>
+                        <div class="spec-item__value">White (#FEFEFE)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Shadow</div>
+                        <div class="spec-item__value">var(--shadow-card)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Button</div>
+                        <div class="spec-item__value">Secondary Large</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variant 2: Neutral 500 -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <article class="card card--neutral-500">
+                        <div class="card__image-container">
+                            <div
+                                style="width: 100%; height: 100%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+                                <span style="color: rgba(255,255,255,0.3); font-size: 14px;">Product Image</span>
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Lorem Ipsum</h3>
+                            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipiscing elit, praesent
+                                vulputate viverra fringilla non tempus gravida venenatis.</p>
+                            <button class="btn btn--large theme--skyview--tertiary"
+                                style="background: var(--color-primary-default); border-color: var(--color-primary-default); color: white;">button</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Variante 2 - Neutral 500</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Bg</div>
+                        <div class="spec-item__value">Neutral-500 (#303030)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Shadow</div>
+                        <div class="spec-item__value">var(--shadow-card)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Button</div>
+                        <div class="spec-item__value">Tertiary Large Skyview</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- LAYOUT -->
+    <!-- ================================================================================= -->
+    <section id="layout" class="general-section">
+        <h2>Layout y Espaciado</h2>
+
+        <div class="guidelines-grid">
+            <div class="guideline-card">
+                <div class="guideline-card__header">Container Specs</div>
+                <div class="guideline-card__content">
+                    <img src="../../../assets/img/propeties/cards/Artwork-1.svg" alt="Card Spacing Overall"
+                        style="width: 100%; margin-bottom: 20px;">
+                    <ul class="doc-list">
+                        <li><strong>Alignment:</strong> Top left</li>
+                        <li><strong>Padding:</strong> 24px (All sides)</li>
+                        <li><strong>Item Spacing:</strong> 10px</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guideline-card">
+                <div class="guideline-card__header">Content Stack</div>
+                <div class="guideline-card__content">
+                    <img src="../../../assets/img/propeties/cards/Artwork-2.svg" alt="Card Content Detail"
+                        style="width: 100%; margin-bottom: 20px;">
+                    <ul class="doc-list">
+                        <li><strong>Resizing (Vertical):</strong> Hug</li>
+                        <li><strong>Resizing (Horizontal):</strong> Fill</li>
+                        <li><strong>Padding right:</strong> 20px (Content area)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>HTML Estructural</h3>
+                <p>Uso de clases BEM y modificadores de variante.</p>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-html">&lt;article class="card card--white"&gt;
+  &lt;div class="card__image-container"&gt;
+    &lt;img src="..." alt="..." /&gt;
+  &lt;/div&gt;
+  &lt;div class="card__content"&gt;
+    &lt;h3 class="card__title"&gt;Titulo&lt;/h3&gt;
+    &lt;p class="card__text"&gt;Descripción larga...&lt;/p&gt;
+    &lt;button class="btn btn--large theme--skyview--secondary"&gt;Action&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="general-section">
+        <h2>Accesibilidad</h2>
+        <div class="foundations-accessibility">
+            <article class="a11y-card">
+                <h3>Buenas Prácticas</h3>
+                <ul class="doc-list">
+                    <li><strong>Semántica:</strong> Usar la etiqueta <code>&lt;article&gt;</code> para contenido
+                        independiente.</li>
+                    <li><strong>Imágenes:</strong> Siempre incluir <code>alt="..."</code> descriptivo.</li>
+                    <li><strong>Orden de foco:</strong> Asegurar que el botón sea el último elemento al tabulear.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+</div>

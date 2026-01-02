@@ -1,0 +1,275 @@
+<div class="hero-banner hero-banner__component">
+    <div class="hero-banner__content hero-banner__content__component">
+        <h1>Icon Buttons</h1>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#layout" data-target="layout">Layout</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#states" data-target="states">Estados</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#variantes" data-target="variantes">Variantes</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="content-page page-buttons">
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="general-section">
+        <h2>Anatomía</h2>
+        <p>Desglose de los elementos que componen un botón de icono.</p>
+
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="/assets/img/propeties/icons-buttons/Artwork-4.svg" alt="Icon Button Anatomy Diagram">
+            </div>
+
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">1</div>
+                    <div class="anatomy-item__content">
+                        <h4>button-user</h4>
+                        <ul>
+                            <li><span>Height:</span> <span>60px</span></li>
+                            <li><span>Width:</span> <span>60px</span></li>
+                            <li><span>Background:</span> <span>Transparent</span></li>
+                            <li><span>Justify/Align:</span> <span>Center</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">2</div>
+                    <div class="anatomy-item__content">
+                        <h4>Icon/Outline/user</h4>
+                        <ul>
+                            <li><span>Depends on:</span> <span>Icon/Outline/user</span></li>
+                            <li><span>Size:</span> <span>24px</span></li>
+                            <li><span>Color:</span> <span>Neutros/white (#FEFEFE)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- LAYOUT -->
+    <!-- ================================================================================= -->
+    <section id="layout" class="general-section">
+        <h2>Layout and spacing</h2>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="/assets/img/propeties/icons-buttons/Artwork.svg" alt="Icon Button Layout Diagram">
+            </div>
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <div class="anatomy-item__content">
+                        <h4>Selected node: button-user</h4>
+                        <ul>
+                            <li><span>Direction:</span> <span>Horizontal</span></li>
+                            <li><span>Alignment:</span> <span>Middle center</span></li>
+                            <li><span>Vertical resizing:</span> <span>Fixed</span></li>
+                            <li><span>Horizontal resizing:</span> <span>Fixed</span></li>
+                            <li><span>Item spacing:</span> <span>10</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- STATES -->
+    <!-- ================================================================================= -->
+    <section id="states" class="general-section">
+        <h2>Estados</h2>
+
+        <div class="properties-detail-list">
+
+            <!-- Default -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/icons-buttons/Artwork-1.svg" alt="Icon Button Default State">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Default</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">◇ Icon-button</div>
+                        <div class="spec-item__value">color: Neutros/white (#FEFEFE)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hover -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/icons-buttons/Artwork-2.svg" alt="Icon Button Hover State">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Hover</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">◇ Icon-button</div>
+                        <div class="spec-item__value">color: Skyview-500 (#066FEF)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/icons-buttons/Artwork-3.svg" alt="Icon Button Active State">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Active</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">◇ Icon-button</div>
+                        <div class="spec-item__value">color: Skyview-600 (#0565D9)</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- VARIANTES (Examples with provided icons) -->
+    <!-- ================================================================================= -->
+    <section id="variantes" class="general-section">
+        <h2>Variantes y Ejemplos</h2>
+        <p>Ejemplos de botones de iconos aplicados.</p>
+
+        <div class="properties-detail-list">
+            <h3 style="margin-top: 40px; margin-bottom: 24px;">Botón de Usuario (User)</h3>
+
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="btn-stack">
+                        <!-- BOTONES NAV CON ICONOS USER (From Original HTML) -->
+                        <button class="btn__icon">
+                            <div class="btn__icon--button">
+                                <svg viewBox="0 0 24 24" style="color: inherit;">
+                                    <path
+                                        d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                        fill="none" stroke="currentColor" stroke-width="2" />
+                                    <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" fill="none"
+                                        stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h3>Icon/Outline/user</h3>
+                    <p>Botón utilizado para perfiles o cuentas de usuario.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px; margin-bottom: 24px;">Botón de Búsqueda (Search)</h3>
+
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="btn-stack">
+                        <!-- BOTONES NAV CON ICONOS SEARCH (From Original HTML) -->
+                        <button class="btn__icon">
+                            <div class="btn__icon--button">
+                                <svg viewBox="0 0 24 24" style="color: inherit;">
+                                    <path
+                                        d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                                        fill="none" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h3>Icon/Outline/search</h3>
+                    <p>Botón utilizado para activar funciones de búsqueda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <p>Estructura HTML para implementar botones de iconos.</p>
+
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>Código HTML</h3>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-html">&lt;!-- Botón de Icono --&gt;
+&lt;button class="btn__icon"&gt;
+    &lt;div class="btn__icon--button"&gt;
+        &lt;svg viewBox="0 0 24 24"&gt;
+            &lt;!-- Path del SVG aquí --&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+&lt;/button&gt;
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="general-section">
+        <h2>Accesibilidad y Buenas Prácticas</h2>
+        <p>Garantizar que los botones de iconos sean accesibles es crucial, ya que carecen de etiquetas de texto
+            visibles por defecto.</p>
+
+        <div class="foundations-accessibility">
+            <!-- Best Practices Card -->
+            <article class="a11y-card">
+                <h3>Mejores Prácticas</h3>
+                <ul class="doc-list">
+                    <li><strong>Aria-label:</strong> Siempre proporciona un atributo `aria-label` descriptivo al botón
+                        (ej. `aria-label="Buscar"`).</li>
+                    <li><strong>Tamaño de toque:</strong> Asegura un área interactiva mínima de 44x44px.</li>
+                    <li><strong>Iconos universales:</strong> Utiliza iconos comúnmente entendidos para evitar confusión.
+                    </li>
+                    <li><strong>Tooltip:</strong> Considera añadir un tooltip al hacer hover para clarificar la función.
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Contrast Card -->
+            <article class="a11y-card">
+                <h3>Contraste</h3>
+                <p>El color del icono debe tener suficiente contraste contra su fondo.</p>
+                <div class="contrast-example">
+                    <div class="contrast-example__card">
+                        <span>Icono sobre fondo</span>
+                        <span class="contrast-example__status">Ratio 3:1+ (Gráficos) ✓</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</div>

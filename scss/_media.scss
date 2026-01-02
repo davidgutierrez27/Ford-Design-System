@@ -2,23 +2,95 @@
 // MIXINS DE BREAKPOINTS
 // ======================================================================
 
-// mobile (hasta 478px)
+// mobile (hasta 480px)
 @mixin sm {
-  @media (max-width: 478px) {
+  @media (max-width: 480px) {
     @content;
   }
 }
 
-// tablet (hasta 991px)
+// tablet (hasta 768px)
 @mixin md {
-  @media (max-width: 991px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
 
-// desktop (hasta 1440px)
+// desktop (hasta 1024px)
 @mixin lg {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+
+// desktop large (hasta 1440px)
+@mixin xl {
   @media (max-width: 1440px) {
     @content;
+  }
+}
+
+// ======================================================================
+// BREAKPOINTS PARA CONTENEDORES
+// ======================================================================
+//recuerda que deben ser llamados en hijos de una etiqueta container con nombre o no
+// Mobile (Basado en sm de 480px)
+@mixin cq-sm ($name: null) {
+  @if $name {
+    @container #{$name} (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @else {
+    @container (max-width: 480px) {
+      @content;
+    }
+  }
+}
+
+// Tablet (Basado en md de 768px)
+@mixin cq-md($name: null) {
+  @if $name {
+    @container #{$name} (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @else {
+    @container (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+// Desktop (Basado en lg de 1024px)
+@mixin cq-lg($name: null) {
+  @if $name {
+    @container #{$name} (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else {
+    @container (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+// Desktop large (Basado en xl de 1440px)
+@mixin cq-xl($name: null) {
+  @if $name {
+    @container #{$name} (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @else {
+    @container (max-width: 1440px) {
+      @content;
+    }
   }
 }

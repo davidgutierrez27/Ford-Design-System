@@ -1,0 +1,91 @@
+// Estilos específicos para la página de documentación de Botones
+.page-buttons {
+
+    // =====================================================
+    // ANATOMY
+    // =====================================================
+    // Anatomy handled by global .anatomy-layout from _properties.scss
+
+
+    // =====================================================
+    // STATES
+    // =====================================================
+    #states {
+        .states-container {
+            background: var(--transp-10);
+        }
+
+        // Simulaciones visuales para documentación (no usar en producción)
+        .sim-hover {
+            background-color: var(--color-primary-hover) !important;
+        }
+
+        .sim-active {
+            background-color: var(--color-primary-active) !important;
+        }
+
+        .sim-focus {
+            background-color: var(--color-primary-focus) !important;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2) !important;
+        }
+    }
+
+    // =====================================================
+    // VARIANTES
+    // =====================================================
+    #variantes {
+        .btn-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .property-group__specs {
+            .hierarchy-card__tag {
+                display: inline-block;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 14px;
+                margin-top: 8px;
+
+                &--primary {
+                    background: rgba(0, 120, 212, 0.1);
+                    color: #0078d4;
+                }
+
+                &--secondary,
+                &--tertiary {
+                    background: rgba(100, 100, 100, 0.1);
+                    color: var(--color-text-600);
+                }
+            }
+        }
+    }
+
+    // =====================================================
+    // ACCESSIBILITY
+    // =====================================================
+    #accessibility {
+        .contrast-example {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+
+            &__card {
+                background: #232323;
+                color: white;
+                padding: 16px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &__status {
+                font-weight: bold;
+                color: #4CAF50;
+            }
+        }
+    }
+}

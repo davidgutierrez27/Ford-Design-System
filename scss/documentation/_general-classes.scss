@@ -1,0 +1,354 @@
+@use "../tokens" as *;
+@use "../media" as media;
+
+/* Generic Section Container: Provides consistent vertical spacing for page sections. */
+.general-section {
+    margin-bottom: var(--space-80px);
+    scroll-margin-top: 160px;
+}
+
+
+/* Principles Grid: A multi-column layout for displaying core design principles. */
+.foundations-principles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-24px);
+    width: 100%;
+
+    &--2cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media.cq-lg ("content-page") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media.cq-md ("content-page") {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Principle Card: Visual container for a single principle with icon, title, and description. */
+.principle-card {
+    background-color: var(--transp-10);
+    padding: var(--space-24px);
+    border-radius: var(--radius-12);
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16px);
+    height: 100%;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-card-hover);
+        border-color: var(--color-primary-200);
+    }
+
+    /* Icon container within the principle card. */
+    &__icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-primary-500);
+        margin-bottom: var(--space-8px);
+    }
+
+    h3 {
+        @include body-20-bold;
+        color: var(--color-text-800);
+        margin: 0;
+    }
+
+    p {
+        @include body-16-regular;
+        margin: 0;
+        line-height: 1.6;
+    }
+}
+
+
+/* Implementation Section: A split layout for displaying context/headers and live code or examples. */
+.foundations-implementation {
+    display: flex;
+    border-radius: var(--radius-12);
+    overflow: hidden;
+
+    /* Left header area for context and summary. */
+    &__header {
+        width: 25rem;
+        padding: var(--space-24px);
+        background: var(--transp-40);
+
+        h3 {
+            @include body-20-bold;
+            margin: 0;
+            color: var(--color-text-700);
+        }
+
+        p {
+            @include body-14-regular;
+            color: var(--color-text-500);
+            margin: var(--space-8px) 0 0 0;
+        }
+    }
+
+    /* Right body area for code snippets, tables, or visual demos. */
+    &__body {
+        width: 100%;
+        padding: var(--space-24px);
+        background: var(--transp-40);
+    }
+}
+
+@include media.cq-lg("content-page") {
+    .foundations-implementation {
+        flex-direction: column;
+
+        &__header {
+            width: 100%;
+        }
+
+        &__body {
+            background: var(--transp-10);
+
+            .data-table-container {
+                .data-table {
+                    thead {
+                        th {
+                            width: auto;
+                            padding: var(--space-8px);
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            width: auto;
+
+                            td {
+                                padding: var(--space-8px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Code Block: Styled container for pre-formatted code snippets. */
+pre {
+    width: 100%;
+    height: auto;
+    background: var(--color-neutral-500);
+    color: #d4d4d4;
+    padding: var(--space-24px);
+    border-radius: var(--radius-8);
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    code {
+        background: transparent;
+        padding: 0;
+        white-space: pre-wrap;
+    }
+}
+
+
+/* 3. ACCESSIBILITY GRID (Reusable)
+   ----------------------------------------- */
+.foundations-accessibility {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-32px);
+
+    @include media.cq-md("content-page") {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Accessibility Card: Side-bordered container highlighting accessibility or best practice tips. */
+.a11y-card {
+    border-radius: 0 var(--radius-12) var(--radius-12) 0;
+    background: var(--transp-10);
+    padding: var(--space-32px);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 4px;
+        background: var(--color-primary-500);
+    }
+
+    h3 {
+        @include heading-title-24-bold;
+        margin-bottom: var(--space-16px);
+        color: var(--color-text-800);
+    }
+
+    p {
+        @include body-16-regular;
+        color: var(--color-text-500);
+        margin-bottom: var(--space-24px);
+    }
+}
+
+
+/* 4. UTILITIES (Doc Lists, etc)
+   ----------------------------------------- */
+/* Documentation List: Bulleted list with primary color accents. */
+.doc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12px);
+
+    li {
+        @include body-16-regular;
+        color: var(--color-text-600);
+        padding-left: var(--space-24px);
+        position: relative;
+
+        &::before {
+            content: "•";
+            color: var(--color-primary-500);
+            font-weight: bold;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            line-height: 1.4;
+        }
+
+        strong {
+            color: var(--color-text-800);
+            font-weight: 600;
+        }
+    }
+}
+
+/* Content Columns: Utility for side-by-side text and visual content with responsive behavior. */
+.content-columns {
+    gap: var(--space-48px);
+    align-items: start;
+
+    @include media.cq-md("content-page") {
+        grid-template-columns: 1fr;
+        gap: var(--space-32px);
+    }
+
+    &__image {
+        width: auto;
+        top: 20px;
+
+        img {
+            display: block;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-32px);
+    }
+}
+
+.weight-example {
+    h3 {
+        @include body-20-bold;
+        margin-bottom: var(--space-16px);
+    }
+
+    p {
+        @include body-14-regular;
+        color: var(--color-text-600);
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+/* The cleanest solution (modern Chrome, Firefox, Safari) */
+.content-page__section {
+    /* Maintains scroll margin 150px below top edge */
+    scroll-margin-top: 150px;
+}
+
+
+
+
+
+/* Guidelines Grid: Side-by-side layout for comparison or best practice visualization. */
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-24px);
+    margin-top: var(--space-32px);
+
+    @include media.cq-lg("content-page") {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Guideline Card: Comparative card emphasizing correct and incorrect usage patterns. */
+.guideline-card {
+    border-radius: var(--radius-12);
+    background-color: var(--transp-10);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+
+    &__header {
+        padding: var(--space-16px) var(--space-24px);
+        @include body-16-bold;
+
+        &--do {
+            background-color: rgba(var(--color-status-success-1), 0.1);
+            color: var(--color-status-success-1);
+            border-bottom: 2px solid var(--color-status-success-1);
+        }
+
+        &--dont {
+            background-color: rgba(var(--color-status-danger-1), 0.1);
+            color: var(--color-status-danger-1);
+            border-bottom: 2px solid var(--color-status-danger-1);
+        }
+    }
+
+    &__content {
+        padding: var(--space-24px);
+
+        ul {
+            list-style: disc;
+
+            li {
+                margin-bottom: 8px;
+                @include body-14-regular;
+                color: var(--color-text-300);
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@use "../../tokens" as *;
+@use "../../media" as media;
+
+/* =========================================
+   SPACING PAGE STYLES
+   ========================================= */
+
+/* Spacing List: Vertical list container for displaying spacing tokens and previews. */
+.spacing-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16px);
+}
+
+/* Spacing Item: Entry in the spacing scale with token name, value, and visual preview. */
+.spacing-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-24px);
+    padding: var(--space-8px) 0;
+    border-bottom: 1px solid var(--transp-50);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__preview {
+        background-color: var(--color-primary-100);
+        height: 24px;
+        border-radius: var(--radius-2);
+        min-width: 4px;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scaleY(1.2);
+            background-color: var(--color-primary-500);
+        }
+    }
+
+    &__label {
+        @include body-14-bold;
+        color: var(--color-text-700);
+        width: 140px;
+        flex-shrink: 0;
+    }
+
+    &__value {
+        @include body-12-regular;
+        color: var(--color-text-300);
+        font-family: 'Consolas', monospace;
+        margin-left: auto;
+    }
+}

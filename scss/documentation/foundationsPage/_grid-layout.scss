@@ -1,0 +1,133 @@
+@use "../../tokens" as *;
+@use "../../media" as media;
+
+/* Grid Showcase: High-level container for grid system demonstrations. */
+.grid-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-48px);
+}
+
+/* Grid Demo: Visual interactive area showing the grid and its columns. */
+.grid-demo {
+    background-color: var(--transp-10);
+    padding: var(--space-32px) 0;
+    border-radius: var(--radius-8);
+    position: relative;
+
+    &__container {
+        display: grid;
+        // Desktop Wide default
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+        padding-inline: 160px;
+
+        @include media.lg {
+            padding-inline: 24px;
+        }
+
+        @include media.md {
+            grid-template-columns: repeat(8, 1fr);
+        }
+
+        @include media.sm {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            padding-inline: 16px;
+        }
+    }
+}
+
+
+/* Grid Column: Individual representative column within the grid system demo. */
+.grid-demo__column {
+    height: 120px;
+    background-color: rgba(6, 111, 239, 0.1);
+    border: 1px solid var(--color-primary-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body-sm);
+    color: var(--color-primary-500);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-4);
+
+    &::after {
+        content: "Col";
+    }
+}
+
+/* Specs Table: Detailed breakdown of grid specifications (columns, margins, gutters). */
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-24px);
+
+    th,
+    td {
+        padding: var(--space-16px);
+        text-align: left;
+        border-bottom: 1px solid var(--transp-50);
+    }
+
+    th {
+        @include body-14-bold;
+        color: var(--color-text-900);
+        background-color: var(--transp-10);
+    }
+
+    td {
+        @include body-14-regular;
+        color: var(--color-text-700);
+    }
+}
+
+.code-block {
+    background-color: $neutral-500;
+    color: #e6e6e6;
+    padding: var(--space-24px);
+    border-radius: var(--radius-8);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: auto;
+    margin-top: var(--space-16px);
+
+    .comment {
+        color: #888;
+    }
+
+    .keyword {
+        color: #f92672;
+    }
+
+    .mixin {
+        color: #66d9ef;
+    }
+
+    .string {
+        color: #e6db74;
+    }
+}
+
+.query-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-24px);
+}
+
+.query-card {
+    padding: var(--space-24px);
+    background-color: var(--transp-10);
+    border-radius: var(--radius-12);
+
+    h3 {
+        margin-bottom: var(--space-12px);
+    }
+
+    p {
+        @include body-14-regular;
+        margin-bottom: var(--space-16px);
+    }
+}

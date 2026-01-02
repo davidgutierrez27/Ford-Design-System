@@ -1,0 +1,122 @@
+@use "../../tokens" as *;
+@use "../../media" as media;
+
+/* Main Navigation: Top fixed navigation bar providing site-wide identity and actions. */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    height: 60px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--space-24px);
+    background-color: var(--color-background-50);
+
+    /* Logo: Main brand identifier within the navigation. */
+    .nav--logo {
+        height: 60px;
+        display: flex;
+        align-items: center;
+
+        .logo {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .logo {
+                width: 72px;
+                height: 30px;
+                color: var(--color-text-500);
+                stroke: var(--color-text-500);
+                fill: var(--color-text-500);
+                transition: all 0.25s ease;
+            }
+
+            &:hover .logo {
+                color: var(--color-primary-default);
+                stroke: var(--color-primary-default);
+                fill: var(--color-primary-default);
+            }
+        }
+    }
+
+    /* Theme Toggle Button: Styled to match search component */
+    #theme-toggle-button {
+        height: 42px;
+        border-radius: var(--radius-8);
+        border: 2px solid var(--transp-60);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 var(--space-12px);
+        background: none;
+        cursor: pointer;
+        transition: border-color 0.2s ease;
+
+        .theme-label {
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--color-text-500);
+            margin: 0;
+
+            &.light {
+                display: none;
+            }
+
+            &.dark {
+                display: block;
+            }
+        }
+
+        // Correct selector for dark mode
+        // This targets: html[data-theme="dark"] .nav #theme-toggle-button
+        @at-root html[data-theme="dark"] & {
+            .theme-label.light {
+                display: block;
+            }
+
+            .theme-label.dark {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: var(--color-neutral-70);
+            background-color: var(--color-background-900);
+            border-color: var(--color-neutral-70);
+
+            .theme-label {
+                color: var(--color-text-white);
+            }
+        }
+
+        &:focus {
+            border-color: var(--transp-70);
+        }
+
+    }
+
+    @include media.lg {
+        #theme-toggle-button {
+            display: none;
+        }
+    }
+
+}
+
+@include media.lg {
+    .nav {
+        padding-inline: var(--space-24px);
+    }
+}
+
+@include media.sm {
+    .nav {
+        padding-inline: var(--space-12px);
+    }
+}

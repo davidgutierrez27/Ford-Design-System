@@ -1,27 +1,23 @@
-<div class="hero-banner">
-    <img src="../../assets/img/pageColors/TypographyFoundations.png" alt="Color Foundations" class="hero-banner__image">
-
-    <div class="hero-banner__overlay"></div>
-    <div class="hero-banner__content">
-        <h1>Buttons</h1>
-        <p>La tipografía define el tono, la jerarquía y la claridad en la comunicación visual del producto. Este sistema
-            establece estilos consistentes para títulos, subtítulos, párrafos y acciones.</p>
+<div class="hero-banner hero-banner__component">
+    <div class="hero-banner__content hero-banner__content__component">
+        <h1>Botones</h1>
     </div>
 </div>
-<!-- NAVIGATION2 -->
+
+<!-- NAVIGATION -->
 <nav class="main-nav">
     <ul class="main-nav__list">
-        <li class="main-nav__item">
-            <a href="#principles" data-target="principles">Principios</a>
-        </li>
         <li class="main-nav__item">
             <a href="#anatomy" data-target="anatomy">Anatomía</a>
         </li>
         <li class="main-nav__item">
-            <a href="#scale" data-target="scale">Escala tipográfica</a>
+            <a href="#layout" data-target="layout">Layout</a>
         </li>
         <li class="main-nav__item">
-            <a href="#roles" data-target="roles">Roles tipográficos</a>
+            <a href="#states" data-target="states">Estados</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#variantes" data-target="variantes">Variantes</a>
         </li>
         <li class="main-nav__item">
             <a href="#implementation" data-target="implementation">Implementación</a>
@@ -33,109 +29,506 @@
 </nav>
 
 
-<div class="content-page">
-
-
-
-    <!-- ================================================================================= -->
-    <!-- PRINCIPLES -->
-    <!-- ================================================================================= -->
-    <section id="principles" class="doc-section">
-        <h2>Principios Tipográficos</h2>
-        <p>La tipografía debe ser accesible, coherente y clara. Su propósito es transmitir información con
-            eficiencia, respetando el tono de la marca y manteniendo una experiencia visual uniforme.</p>
-
-        <ul class="doc-list">
-            <li><strong>Consistencia:</strong> mantener patrones reconocibles a través de todas las interfaces.
-            </li>
-            <li><strong>Jerarquía:</strong> permitir distinguir títulos, subtítulos y cuerpo de forma inmediata.
-            </li>
-            <li><strong>Escaneo rápido:</strong> mejorar cómo los usuarios consumen texto en pantallas.</li>
-            <li><strong>Flexibilidad:</strong> adaptarse a distintos tamaños de dispositivos.</li>
-        </ul>
-    </section>
+<div class="content-page page-buttons">
 
     <!-- ================================================================================= -->
     <!-- ANATOMY -->
     <!-- ================================================================================= -->
-    <section id="anatomy" class="doc-section" style="background-color: var(--color-white);">
-        <h2>Anatomía de la tipografía</h2>
-        <p>Cada estilo tipográfico tiene atributos definidos: tamaño, peso, interlineado y familia. Estos
-            parámetros garantizan lecturabilidad y consistencia en la interfaz.</p>
+    <section id="anatomy" class="general-section">
+        <h2>Anatomía</h2>
+        <p>Un botón se compone de elementos clave que definen su estilo y función.</p>
 
-        <h4>Por Color</h4>
-        <ul class="doc-list ">
-            <button class="btn btn--small theme--skyview-palette--primary">
-                skyview primary
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-            <button class="btn btn--medium theme--skyview-palette--primary">
-                skyview secondary
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-            <button class="btn btn--large theme--skyview-palette--primary">
-                skyview tertiary
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </ul>
-        <h4>Por Tamaño</h4>
-        <ul class="doc-list">
-            <button class="btn btn--small btn--primary">
-                Small
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-            <button class="btn btn--medium btn--primary">
-                Medium
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-            <button class="btn btn--large btn--primary">
-                Large
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </ul>
-        <h4>Por jerarquía</h4>
-        <ul class="doc-list">
-            <button class="btn btn--medium btn--primary">
-                Primary
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-            <button class="btn btn--medium btn--secondary">
-                Secondary
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-            <button class="btn btn--medium btn--tertiary">
-                Tertiary
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </ul>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="/assets/img/propeties/buttons/Artwork-0.svg" alt="Button Anatomy Diagram">
+            </div>
+
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">1</div>
+                    <div class="anatomy-item__content">
+                        <h4>button-medium-primary</h4>
+                        <ul>
+                            <li>min-width: 125px</li>
+                            <li>Border radius: 32px (<code>var(--radius-32)</code>)</li>
+                            <li>Padding: 8px 16px (<code>var(--space-8) var(--space-16)</code>)</li>
+                            <li>Gap: 8px (<code>var(--space-8)</code>)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">2</div>
+                    <div class="anatomy-item__content">
+                        <h4>button (Text)</h4>
+                        <ul>
+                            <li>Font family: "Arial", Roboto</li>
+                            <li>Font weight: Semibold</li>
+                            <li>Font size: 16px (<code>var(--font-size-16)</code>)</li>
+                            <li>Line height: 18px</li>
+                            <li>Color: Neutros/white (#FEFEFE) <code>var(--color-text-white)</code></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anatomy-item">
+                    <div class="anatomy-item__badge">3</div>
+                    <div class="anatomy-item__content">
+                        <h4>Icon/Default/chevron-right</h4>
+                        <ul>
+                            <li>Depends on: Icon/Default/chevron-right</li>
+                            <li>Size: 16px (<code>var(--space-16)</code>)</li>
+                            <li>Color: Neutros/white (#FEFEFE) <code>var(--color-text-white)</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- ================================================================================= -->
+    <!-- ================================================================================= -->
+    <!-- LAYOUT -->
+    <!-- ================================================================================= -->
+    <section id="layout" class="general-section">
+        <h2>Layout</h2>
+        <p>El layout define la disposición visual de los elementos en la pantalla.</p>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="/assets/img/propeties/buttons/Artwork-8.svg" alt="Layout Spacing Diagram">
+            </div>
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <div class="anatomy-item__content">
+                        <h4>◇ button-medium-primary</h4>
+                        <ul>
+                            <li><span>Direction:</span> <span>Horizontal</span></li>
+                            <li><span>Alignment:</span> <span>Middle center</span></li>
+                            <li><span>Vertical resizing:</span> <span>Hug</span></li>
+                            <li><span>Horizontal resizing:</span> <span>Fixed</span></li>
+                            <li><span>Item spacing:</span> <span>8</span></li>
+                            <li><span>Padding top:</span> <span>10</span></li>
+                            <li><span>Padding bottom:</span> <span>10</span></li>
+                            <li><span>Padding left:</span> <span>16</span></li>
+                            <li><span>Padding right:</span> <span>12</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- STATES -->
+    <!-- ================================================================================= -->
+    <section id="states" class="general-section">
+        <h2>Estados</h2>
+
+        <div class="properties-detail-list">
+
+            <!-- Default -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/buttons/Artwork-1.svg" alt="Button Default State">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Default</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">◇ button-medium-primary</div>
+                        <div class="spec-item__value">Background color: Skyview-500 (#066FEF)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">T button</div>
+                        <div class="spec-item__value">Text color: Neutros/white (#FEFEFE)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hover -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/buttons/Artwork-2.svg" alt="Button Hover State">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Hover</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">◇ button-medium-primary</div>
+                        <div class="spec-item__value">Background color: Skyview-600 (#0565D9)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/buttons/Artwork-3.svg" alt="Button Active State">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Active</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">◇ button-medium-primary</div>
+                        <div class="spec-item__value">Background color: Skyview-700 (#044FAA)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Focus -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/buttons/Artwork-4.svg" alt="Button Focus State">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Focus</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">◇ button-medium-primary</div>
+                        <div class="spec-item__value">Background color: Skyview-800 (#033D83)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inactive -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/buttons/Artwork-5.svg" alt="Button Inactive State">
+                </div>
+                <div class="property-group__specs">
+                    <h4>Inactive</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">◇ button-medium-primary</div>
+                        <div class="spec-item__value">Background color: Neutral-50 (#EAEAEA)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">T button</div>
+                        <div class="spec-item__value">Text color: Neutral-200 (#ADADAD)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mostrar Icono Header -->
+            <h3 style="margin-top: 40px; margin-bottom: 24px;">Mostrar icono</h3>
+
+            <!-- Mostrar Icono -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/buttons/Artwork-6.svg" alt="Button With Icon">
+                </div>
+                <div class="property-group__specs">
+                    <div class="spec-item">
+                        <div class="spec-item__label">Property type: Boolean</div>
+                        <div class="spec-item__value">Default: true</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Associated layers:</div>
+                        <div class="spec-item__value">◇ Icon/Default/chevron-right</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sin Icono Header -->
+            <h3 style="margin-top: 40px; margin-bottom: 24px;">Sin icono</h3>
+
+            <!-- Sin Icono -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <img src="/assets/img/propeties/buttons/Artwork-7.svg" alt="Button Without Icon">
+                </div>
+                <div class="property-group__specs">
+                    <div class="spec-item">
+                        <div class="spec-item__label">Property type: Boolean</div>
+                        <div class="spec-item__value">Default: false</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Associated layers:</div>
+                        <div class="spec-item__value">◇ Icon/Default/chevron-right</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- VARIANTES (HIERARCHY + SIZES) -->
+    <!-- ================================================================================= -->
+    <section id="variantes" class="general-section">
+        <h2>Variantes</h2>
+        <p>Utilizamos distintos niveles de énfasis, tamaños y colores para comunicar la jerarquía de las acciones.</p>
+
+        <div class="properties-detail-list">
+            <h3 style="margin-top: 40px; margin-bottom: 24px;">Jerarquía</h3>
+
+            <!-- Primary -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="btn-stack">
+                        <button class="btn btn--medium theme--skyview--primary">
+                            Skyview Primary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="btn btn--medium theme--grabber--primary">
+                            Grabber Primary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="btn btn--medium theme--neutral--primary">
+                            Neutral Primary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h3>Primario (Primary)</h3>
+                    <p>Para la acción más importante de la pantalla. Debe destacar sobre los demás elementos.</p>
+                    <div class="spec-item">
+                        <span class="hierarchy-card__tag hierarchy-card__tag--primary">Acción principal</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="btn-stack">
+                        <button class="btn btn--medium theme--skyview--secondary">
+                            Skyview Secondary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="btn btn--medium theme--grabber--secondary">
+                            Grabber Secondary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="btn btn--medium theme--neutral--secondary">
+                            Neutral Secondary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h3>Secundario (Secondary)</h3>
+                    <p>Para acciones importantes que no son la principal (ej. "Cancelar", "Atrás", filtros).</p>
+                    <div class="spec-item">
+                        <span class="hierarchy-card__tag hierarchy-card__tag--secondary">Acciones alternativas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tertiary -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="btn-stack">
+                        <button class="btn btn--medium theme--skyview--tertiary">
+                            Skyview Tertiary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="btn btn--medium theme--grabber--tertiary">
+                            Grabber Tertiary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="btn btn--medium theme--neutral--tertiary">
+                            Neutral Tertiary
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h3>Terciario (Tertiary)</h3>
+                    <p>Para acciones con la menor prioridad o enlaces dentro de contextos no intrusivos.</p>
+                    <div class="spec-item">
+                        <span class="hierarchy-card__tag hierarchy-card__tag--tertiary">Menor importancia</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sizes -->
+            <h3 style="margin-top: 40px; margin-bottom: 24px;">Tamaños</h3>
+
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="btn-stack">
+                        <button class="btn btn--small theme--skyview--primary">
+                            Small
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn--medium theme--grabber--primary">
+                            Medium
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn--large theme--neutral--primary">
+                            Large
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Available Sizes</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Small (39px)</div>
+                        <div class="spec-item__value">Tablas, filtros, áreas densas</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Medium (40px)</div>
+                        <div class="spec-item__value">Formularios, acciones estándar</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Large (40px+)</div>
+                        <div class="spec-item__value">Landing pages, Hero sections</div>
+                    </div>
+                </div>
+            </div>
+            <h3 style="margin-top: 40px; margin-bottom: 24px;">Colores</h3>
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="btn-stack">
+                        <button class="btn btn--large theme--skyview--primary">
+                            Skyview
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn--large theme--grabber--primary">
+                            Grabber
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn--large theme--neutral--primary">
+                            Neutral
+                            <svg class="btn--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Available Sizes</h4>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Color skyview</div>
+                        <div class="spec-item__value">Botones principales</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Color grabber</div>
+                        <div class="spec-item__value">Botones secundarios</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-item__label">Color neutral</div>
+                        <div class="spec-item__value">Botones de sobre fondos primarios</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <p>Utiliza las clases utilitarias para implementar botones rápidamente.</p>
+
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>Clases Base</h3>
+                <p>Combina clase base + tamaño + tema + variante.</p>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-html">&lt;!-- Estructura Básica --&gt;
+&lt;button class="btn btn--medium theme--skyview--primary"&gt;
+   Label
+   &lt;svg class="btn--icon" ...&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;!-- Modificadores de Tamaño --&gt;
+.btn--small
+.btn--medium
+.btn--large
+
+&lt;!-- Temas --&gt;
+.theme--skyview--primary | secondary | tertiary
+.theme--grabber--primary | secondary | tertiary
+.theme--neutral--primary | secondary | tertiary
+
+&lt;!-- Estado --&gt;
+.btn--disabled
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="general-section">
+        <h2>Accesibilidad y Buenas Prácticas</h2>
+        <p>Garantizar que los botones sean accesibles es fundamental para una buena experiencia de usuario.</p>
+
+        <div class="foundations-accessibility">
+            <!-- Best Practices Card -->
+            <article class="a11y-card">
+                <h3>Mejores Prácticas</h3>
+                <ul class="doc-list">
+                    <li><strong>Labels descriptivos:</strong> Usa verbos activos (ej. "Enviar", "Guardar") en lugar de
+                        genéricos ("OK", "Clic aquí").</li>
+                    <li><strong>Área de clic:</strong> Asegura un tamaño mínimo de 44x44px para interacciones táctiles
+                        (o añade padding transparente).</li>
+                    <li><strong>Estado Focus:</strong> Nunca elimines el outline de focus sin proporcionar un estilo
+                        alternativo visible para navegación por teclado.</li>
+                    <li><strong>Disabled:</strong> Evita usar botones deshabilitados si es posible; es mejor mostrar un
+                        error al hacer clic explicando por qué no se puede proceder.</li>
+                </ul>
+            </article>
+
+            <!-- Contrast Card -->
+            <article class="a11y-card">
+                <h3>Contraste</h3>
+                <p>Los botones deben tener suficiente contraste contra el fondo y entre el texto y el color del botón.
+                </p>
+                <div class="contrast-example">
+                    <div class="contrast-example__card">
+                        <span>Texto sobre botón primario</span>
+                        <span class="contrast-example__status">Ratio 4.5:1+ ✓</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
 
 </div>

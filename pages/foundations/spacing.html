@@ -1,52 +1,220 @@
-<div class="content-page">
-    <header class="doc-page__header">
+<div class="hero-banner">
+    <img src="../../assets/img/pageColors/spacing.png" alt="Spacing Foundations" class="hero-banner__image">
+    <div class="hero-banner__content">
         <h1>Spacing</h1>
-        <p>Our spacing system is based on a 4px grid. This ensures consistency and rhythm across the
-            interface.</p>
-    </header>
+    </div>
+</div>
 
-    <section class="content-page__section">
-        <h2>Spacing Scale</h2>
+<!-- NAVIGATION2 -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#principles" data-target="principles">Principios</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#scale" data-target="scale">Escala de Spacing</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#layout" data-target="layout">Uso en Layout</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#components" data-target="components">Uso en Componentes</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-page">
+
+    <!-- ================================================================================= -->
+    <!-- PRINCIPLES -->
+    <!-- ================================================================================= -->
+    <section id="principles" class="general-section">
+        <h2>Principios de Spacing</h2>
+        <div class="foundations-principles">
+            <article class="principle-card">
+                <h3>La Regla del 4</h3>
+                <p>Nuestra sistema se basa en un grid de 4px. Todos los valores son múltiplos de 4, asegurando
+                    alineación y proporción matemática.</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Jerarquía Espacial</h3>
+                <p>El espacio vacío no es solo "aire", es una herramienta para agrupar o separar contenido y establecer
+                    niveles de importancia.</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Ritmo Vertical</h3>
+                <p>Al usar una escala predefinida, creamos un ritmo visual constante que facilita el escaneo de la
+                    página por parte del usuario.</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Respiración (White Space)</h3>
+                <p>El uso generoso del espacio reduce la carga cognitiva y permite que el contenido principal destaque
+                    sin distracciones.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- SCALE -->
+    <!-- ================================================================================= -->
+    <section id="scale" class="general-section">
+        <h2>Escala de Spacing</h2>
+        <p>Nuestra escala de espaciado proporciona los valores necesarios para cualquier situación, desde micro-espacios
+            internos hasta grandes márgenes de sección.</p>
+
         <div class="spacing-list">
             <div class="spacing-item">
-                <div class="spacing-item__label">XXS (4px)</div>
+                <div class="spacing-item__label">Tiny (4px)</div>
                 <div class="spacing-item__preview" style="width: 4px;"></div>
-                <div class="spacing-item__value">$spacing-xxs-4px</div>
+                <div class="spacing-item__value">--space-4px</div>
             </div>
             <div class="spacing-item">
-                <div class="spacing-item__label">XS (8px)</div>
+                <div class="spacing-item__label">XXS (8px)</div>
                 <div class="spacing-item__preview" style="width: 8px;"></div>
-                <div class="spacing-item__value">$spacing-xs-8px</div>
+                <div class="spacing-item__value">--space-8px</div>
             </div>
             <div class="spacing-item">
-                <div class="spacing-item__label">SM (12px)</div>
+                <div class="spacing-item__label">XS (12px)</div>
                 <div class="spacing-item__preview" style="width: 12px;"></div>
-                <div class="spacing-item__value">$spacing-sm-12px</div>
+                <div class="spacing-item__value">--space-12px</div>
             </div>
             <div class="spacing-item">
-                <div class="spacing-item__label">MD (16px)</div>
+                <div class="spacing-item__label">Small (16px)</div>
                 <div class="spacing-item__preview" style="width: 16px;"></div>
-                <div class="spacing-item__value">$spacing-md-16px</div>
+                <div class="spacing-item__value">--space-16px</div>
             </div>
             <div class="spacing-item">
-                <div class="spacing-item__label">LG (20px)</div>
-                <div class="spacing-item__preview" style="width: 20px;"></div>
-                <div class="spacing-item__value">$spacing-lg-20px</div>
-            </div>
-            <div class="spacing-item">
-                <div class="spacing-item__label">XL (24px)</div>
+                <div class="spacing-item__label">Medium (24px)</div>
                 <div class="spacing-item__preview" style="width: 24px;"></div>
-                <div class="spacing-item__value">$spacing-xl-24px</div>
+                <div class="spacing-item__value">--space-24px</div>
             </div>
             <div class="spacing-item">
-                <div class="spacing-item__label">2XL (32px)</div>
+                <div class="spacing-item__label">Large (32px)</div>
                 <div class="spacing-item__preview" style="width: 32px;"></div>
-                <div class="spacing-item__value">$spacing-2xl-32px</div>
+                <div class="spacing-item__value">--space-32px</div>
             </div>
             <div class="spacing-item">
-                <div class="spacing-item__label">3XL (40px)</div>
-                <div class="spacing-item__preview" style="width: 40px;"></div>
-                <div class="spacing-item__value">$spacing-3xl-40px</div>
+                <div class="spacing-item__label">XL (48px)</div>
+                <div class="spacing-item__preview" style="width: 48px;"></div>
+                <div class="spacing-item__value">--space-48px</div>
+            </div>
+            <div class="spacing-item">
+                <div class="spacing-item__label">2XL (64px)</div>
+                <div class="spacing-item__preview" style="width: 64px;"></div>
+                <div class="spacing-item__value">--space-64px</div>
+            </div>
+            <div class="spacing-item">
+                <div class="spacing-item__label">3XL (80px)</div>
+                <div class="spacing-item__preview" style="width: 80px;"></div>
+                <div class="spacing-item__value">--space-80px</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- LAYOUT USAGE -->
+    <!-- ================================================================================= -->
+    <section id="layout" class="general-section">
+        <h2>Uso en Layout</h2>
+        <p>El espaciado de layout controla los grandes bloques de la interfaz y la separación entre secciones
+            principales.</p>
+
+        <div class="role-section">
+            <h3>Secciones Principales</h3>
+            <p>Usamos valores grandes (64px - 96px) para dar "aire" entre secciones de una misma página.</p>
+            <ul class="doc-list">
+                <li>Separación entre Hero y Contenido</li>
+                <li>Gaps entre módulos de Dashboard</li>
+                <li>Márgenes laterales de contenedor principal</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- COMPONENT USAGE -->
+    <!-- ================================================================================= -->
+    <section id="components" class="general-section">
+        <h2>Uso en Componentes</h2>
+        <p>El espaciado de componentes (padding y gap) define la densidad de los elementos interactivos.</p>
+
+        <div class="role-section">
+            <h3>Padding Interno</h3>
+            <p>Define cómo respira el contenido dentro de un componente como una card o un botón.</p>
+            <ul class="doc-list">
+                <li><strong>Cards:</strong> suelen usar 24px o 32px de padding.</li>
+                <li><strong>Botones:</strong> usan espaciado asimétrico (ej. 8px vertical, 16px horizontal).</li>
+                <li><strong>Listas:</strong> usan 12px o 16px entre elementos.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <p>Utiliza siempre los tokens de espaciado. Nunca uses valores de píxeles "hardcoded" en tus archivos de estilo.
+        </p>
+
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>Tokens Destacados</h3>
+                <p>Los tokens más utilizados en el día a día.</p>
+            </div>
+            <div class="foundations-implementation__body" style="padding: 0;">
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>Valor</th>
+                                <th>Uso común</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>var(--space-16px)</code></td>
+                                <td>16px</td>
+                                <td>Padding estándar / Gaps pequeños</td>
+                            </tr>
+                            <tr>
+                                <td><code>var(--space-24px)</code></td>
+                                <td>24px</td>
+                                <td>Padding de cards / Gaps medianos</td>
+                            </tr>
+                            <tr>
+                                <td><code>var(--space-80px)</code></td>
+                                <td>80px</td>
+                                <td>Separación entre secciones (Layout)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="foundations-implementation" style="margin-top: 32px;">
+            <div class="foundations-implementation__header">
+                <h3>Ejemplo SCSS</h3>
+                <p>Aplicación de márgenes y paddings con tokens.</p>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-scss">.section-container {
+    padding: var(--space-48px) var(--space-24px);
+    margin-bottom: var(--space-80px);
+}
+
+.card-header {
+    display: flex;
+    gap: var(--space-12px);
+    padding-bottom: var(--space-16px);
+}</code></pre>
             </div>
         </div>
     </section>

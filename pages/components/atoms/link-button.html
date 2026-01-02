@@ -1,0 +1,240 @@
+<div class="hero-banner hero-banner__component">
+    <div class="hero-banner__content hero-banner__content__component">
+        <h1>Link Button</h1>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#states" data-target="states">Propiedades</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#layout" data-target="layout">Layout y Espaciado</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-page page-link-button">
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="general-section">
+        <h2>Anatomía</h2>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="../../../assets/img/propeties/link-buttons/Artwork.svg" alt="Link Button Anatomy">
+            </div>
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">1</span>
+                    <div class="anatomy-item__content">
+                        <h4>button-link</h4>
+                        <ul>
+                            <li>Height: 60px</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">2</span>
+                    <div class="anatomy-item__content">
+                        <h4>Button Link (Text)</h4>
+                        <ul>
+                            <li>Text style: Action/Link 16</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- STATES -->
+    <!-- ================================================================================= -->
+    <section id="states" class="general-section">
+        <h2>Propiedades</h2>
+        <div class="properties-detail-list">
+
+            <!-- DEFAULT -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <button class="link--button">
+                        Button Link
+                    </button>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Default</h4>
+                    <ul>
+                        <li>Text color: #FEFEFE (Neutral White)</li>
+                        <li>Background: Transparent</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HOVER -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <button class="link--button is-hover">
+                        Button Link
+                    </button>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Hover</h4>
+                    <ul>
+                        <li>Text color: #066FEF (Skyview 500)</li>
+                        <li>Border color: #066FEF (Skyview 500)</li>
+                        <li>Border bottom: 4px</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ACTIVE -->
+            <div class="property-group property-group--big">
+                <div class="property-group__visual">
+                    <button class="link--button is-active">
+                        Button Link
+                    </button>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Active</h4>
+                    <ul>
+                        <li>Text color: #066FEF (Skyview 600)</li>
+                        <li>Border color: #066FEF (Skyview 600)</li>
+                        <li>Border bottom: 4px</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FOCUS -->
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <button class="link--button is-focus">
+                        Button Link
+                    </button>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Focus</h4>
+                    <ul>
+                        <li>Text color: #044faa (Skyview 700)</li>
+                        <li>Border color: #044faa (Skyview 700)</li>
+                        <li>Border bottom: 4px</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- LAYOUT & SPACING -->
+    <!-- ================================================================================= -->
+    <section id="layout" class="general-section">
+        <h2>Layout y Espaciado</h2>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="../../../assets/img/propeties/link-buttons/Artwork-1.svg" alt="Link Button Layout">
+            </div>
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <div class="anatomy-item__content">
+                        <h4>button-link</h4>
+                        <ul>
+                            <li>Direction: Horizontal</li>
+                            <li>Alignment: Middle Center</li>
+                            <li>Vertical resizing: Fixed (60px)</li>
+                            <li>Horizontal resizing: Hug</li>
+                            <li>Item spacing: 10px</li>
+                            <li>Padding: 15px</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <p>El Link Button se comporta como un botón pero mantiene el estilo visual de un enlace con estados mejorados.
+        </p>
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__header">
+                <h3>HTML</h3>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-html">&lt;button class="link--button"&gt;
+    Button Link
+&lt;/button&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="foundations-implementation" style="margin-top: 24px;">
+            <div class="foundations-implementation__header">
+                <h3>SCSS (Opcional)</h3>
+                <p>Si deseas aplicar los estilos directamente vía mixin o clase padre.</p>
+            </div>
+            <div class="foundations-implementation__body">
+                <pre><code class="language-scss">// Los estilos base se encuentran en _link-buttons.scss
+.custom-link {
+    @extend .link--button;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="general-section">
+        <h2>Accesibilidad y Buenas Prácticas</h2>
+        <p>Garantizar que los enlaces sean accesibles es fundamental para una navegación clara por teclado y lectores de
+            pantalla.</p>
+
+        <div class="foundations-accessibility">
+            <!-- Best Practices Card -->
+            <article class="a11y-card">
+                <h3>Mejores Prácticas</h3>
+                <ul class="doc-list">
+                    <li><strong>Propósito claro:</strong> El texto del botón debe indicar claramente el destino o la
+                        acción (ej. "Ver catálogo" en lugar de "Más información").</li>
+                    <li><strong>Navegación por teclado:</strong> Mantener un estado de focus visible (border-bottom 4px)
+                        para usuarios que navegan con tabulador.</li>
+                    <li><strong>Verbos de acción:</strong> Preferiblemente usar verbos que inviten a la interacción.
+                    </li>
+                    <li><strong>Contraste:</strong> Asegurar que el cambio a color Skyview en hover sea lo
+                        suficientemente distintivo.</li>
+                </ul>
+            </article>
+
+            <!-- Contrast Card -->
+            <article class="a11y-card">
+                <h3>Contraste</h3>
+                <p>Cumplimiento de ratios de contraste para legibilidad sobre fondo oscuro.</p>
+                <div class="contrast-example">
+                    <div class="contrast-example__card">
+                        <span>Texto White sobre fondo oscuro</span>
+                        <span class="contrast-example__status">Ratio 4.5:1+ ✓</span>
+                    </div>
+                    <div class="contrast-example__card" style="margin-top: 10px;">
+                        <span>Texto Skyview 500 (Hover)</span>
+                        <span class="contrast-example__status">Ratio 4.5:1+ ✓</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</div>

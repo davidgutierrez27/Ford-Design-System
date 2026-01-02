@@ -1,0 +1,166 @@
+@use "../../tokens" as *;
+@use "../../media" as media;
+
+
+/* Navigation Action Icons: Group of utility actions (themes, menu) in the navigation. */
+.nav-section-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--space-16px);
+
+    #menu-button {
+        display: none;
+    }
+
+    .btn--secondary {
+        color: var(--color-text-400);
+        border-color: var(--color-background-100);
+
+        &:hover {
+            color: var(--color-primary-400);
+            border-color: var(--color-primary-400);
+        }
+
+        &:active {
+            color: var(--color-primary-default);
+            border-color: var(--color-primary-default);
+        }
+    }
+}
+
+@include media.lg {
+    .nav-section-icons {
+        gap: var(--space-8px);
+
+        #menu-button {
+            display: flex;
+        }
+
+        #temes-button {
+            display: none;
+        }
+    }
+}
+
+/* Navigation Button: Interactive container for search and other navigation actions. */
+.nav-button {
+    height: 42px;
+    align-items: center;
+    padding: 0 var(--space-12px);
+    border-radius: var(--radius-8);
+    border: 2px solid var(--transp-60);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+
+    &:hover {
+        background: var(--transp-50);
+        border-color: var(--transp-70);
+    }
+
+    &:focus-within {
+        background: var(--transp-20);
+        border-color: var(--transp-70);
+    }
+}
+
+@include media.lg {
+    .nav-button {
+        border: none;
+    }
+}
+
+/* Navigation Icon: Standard visual indicator for navigation actions. */
+.nav-icon {
+    display: grid;
+    place-items: center;
+    color: var(--color-text-500);
+    opacity: 0.9;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+@include media.lg {
+    .nav-icon {
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+/* Search Bar: Primary input molecule for site-wide navigation and discovery. */
+.search {
+    width: 420px;
+    display: flex;
+    align-items: center;
+    gap: var(--space-8px);
+
+    &__input {
+        flex: 1;
+        background: none;
+        border: none;
+        outline: none;
+
+        color: var(--color-text-500);
+        caret-color: var(--color-text-500);
+
+        @include body-14-regular;
+
+        &::placeholder {
+            color: var(--color-text-500);
+            transition: opacity 0.2s ease;
+        }
+
+        &:focus::placeholder {
+            opacity: 0.4;
+        }
+    }
+
+    &__clear {
+        all: unset;
+        cursor: pointer;
+        @include body-14-regular;
+        color: var(--color-text-500);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity 0.15s ease;
+
+        &.is-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .nav-search:focus-within & {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        &:hover {
+            @include body-16-regular;
+            color: var(--color-text-500);
+        }
+    }
+}
+
+@include media.lg {
+    .search {
+        width: auto;
+
+        &__input {
+            display: none;
+        }
+
+        &__clear {
+            display: none;
+        }
+    }
+}

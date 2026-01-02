@@ -1,0 +1,205 @@
+<div class="hero-banner hero-banner__component">
+    <div class="hero-banner__content hero-banner__content__component">
+        <h1>Navigation Dots</h1>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#variantes" data-target="variantes">Variantes</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#best-practices" data-target="best-practices">Buenas Prácticas</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-page page-nav-dots">
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="general-section">
+        <h2>Anatomía</h2>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual">
+                <img src="../../../assets/img/propeties/nav-dots/Artwork.svg" alt="Navigation Dots Anatomy">
+            </div>
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">1</span>
+                    <div class="anatomy-item__content">
+                        <h4>Navigation-Dots</h4>
+                        <ul>
+                            <li>Height: 10px</li>
+                            <li>Width: 110px</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">2</span>
+                    <div class="anatomy-item__content">
+                        <h4>Inactive Dots 2</h4>
+                        <ul>
+                            <li>Height: 10px</li>
+                            <li>Width: 20px</li>
+                            <li>Background color: #FEFEFE</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">3</span>
+                    <div class="anatomy-item__content">
+                        <h4>Inactive Dots 1</h4>
+                        <ul>
+                            <li>Height: 10px</li>
+                            <li>Width: 20px</li>
+                            <li>Background color: #FEFEFE</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">4</span>
+                    <div class="anatomy-item__content">
+                        <h4>Active Dot</h4>
+                        <ul>
+                            <li>Height: 10px</li>
+                            <li>Width: 50px</li>
+                            <li>Background color: #066FEF</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- VARIANTES -->
+    <!-- ================================================================================= -->
+    <section id="variantes" class="general-section">
+        <h2>Variantes</h2>
+        <div class="properties-detail-list">
+
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="nav--dots">
+                        <div class="pill blue"></div>
+                        <div class="pill white"></div>
+                        <div class="pill white"></div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>navigation-Dots1</h4>
+                    <p>Primera opción activa.</p>
+                </div>
+            </div>
+
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="nav--dots">
+                        <div class="pill white"></div>
+                        <div class="pill blue"></div>
+                        <div class="pill white"></div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>navigation-Dots2</h4>
+                    <p>Segunda opción activa.</p>
+                </div>
+            </div>
+
+            <div class="property-group">
+                <div class="property-group__visual">
+                    <div class="nav--dots">
+                        <div class="pill white"></div>
+                        <div class="pill white"></div>
+                        <div class="pill blue"></div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>navigation-Dots3</h4>
+                    <p>Tercera opción activa.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="general-section">
+        <h2>Accesibilidad</h2>
+        <div class="foundations-principles">
+            <article class="principle-card">
+                <h3>Indicación Visual</h3>
+                <p>La diferencia entre el punto activo e inactivo debe ser clara no solo por el color, sino también por
+                    el tamaño del elemento.</p>
+            </article>
+            <article class="principle-card">
+                <h3>Lectores de Pantalla</h3>
+                <p>Uso de etiquetas `aria-current="step"` o similares para indicar la posición relativa al total de
+                    pasos.</p>
+            </article>
+            <article class="principle-card">
+                <h3>Navegación</h3>
+                <p>Si los puntos son interactivos, deben ser accesibles vía teclado (Tab) y tener un estado de foco
+                    claro.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- BEST PRACTICES -->
+    <!-- ================================================================================= -->
+    <section id="best-practices" class="general-section">
+        <h2>Buenas Prácticas</h2>
+        <div class="foundations-principles foundations-principles--2cols">
+            <article class="principle-card" style="border-left: 4px solid #10b981;">
+                <h3>Qué hacer</h3>
+                <ul>
+                    <li>Usar para grupos pequeños de contenido (3-7 ítems).</li>
+                    <li>Mantener una distancia constante entre los puntos.</li>
+                    <li>Asegurar que el punto activo contraste fuertemente.</li>
+                </ul>
+            </article>
+            <article class="principle-card" style="border-left: 4px solid #ef4444;">
+                <h3>Qué evitar</h3>
+                <ul>
+                    <li>Evitar usar para series de contenido superiores a 10 elementos.</li>
+                    <li>No usarlos en contenido que no sea lineal.</li>
+                    <li>Evitar esconder los dots en fondos que comprometan su visibilidad.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__body">
+                <pre><code class="language-html">&lt;div class="nav--dots"&gt;
+    &lt;div class="pill blue"&gt;&lt;/div&gt;   &lt;!-- Active --&gt;
+    &lt;div class="pill white"&gt;&lt;/div&gt;  &lt;!-- Inactive --&gt;
+    &lt;div class="pill white"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+</div>

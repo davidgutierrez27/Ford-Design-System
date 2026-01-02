@@ -1,0 +1,215 @@
+@use "../../media" as media;
+@use "../../tokens" as *;
+
+.nav-bar {
+    width: 100%;
+    height: 60px;
+    padding: 0 160px; // Default XL/LG (> 768px)
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+    --nav-content-color: #{$white};
+    color: var(--nav-content-color);
+
+    // Modifier for fixed positioning (used in real pages)
+    &--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    &--scrolled {
+        background-color: var(--color-neutral-50);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        --nav-content-color: #{$neutral-900};
+    }
+
+    &--theme-light {
+        --nav-content-color: #{$white};
+    }
+
+    &--theme-dark {
+        --nav-content-color: #{$neutral-900};
+    }
+
+    &:hover,
+    &.is-hover,
+    &.active {
+        background-color: var(--color-neutral-50);
+        --nav-content-color: #{$neutral-500};
+    }
+
+    // ---------------------------------------------------------
+    // RESPONSIVE PADDING
+    // ---------------------------------------------------------
+    @include media.lg {
+        padding: 0 var(--space-24px);
+    }
+
+    @include media.sm {
+        padding: 0 var(--space-16px);
+    }
+
+    // ---------------------------------------------------------
+    // INTERNAL COMPONENTS
+    // ---------------------------------------------------------
+    .link--button,
+    .btn__icon,
+    .nav--icon--button--logo,
+    .nav-bar__menu {
+        color: var(--nav-content-color);
+        fill: var(--nav-content-color);
+
+        svg {
+            color: inherit;
+            fill: inherit;
+        }
+
+        path {
+            stroke: currentcolor;
+        }
+
+        &:hover,
+        &.is-hover {
+            color: var(--color-primary-hover);
+            fill: var(--color-primary-hover);
+            border-bottom-color: var(--color-primary-hover);
+        }
+
+        &:active,
+        &.is-active {
+            color: var(--color-primary-active);
+            fill: var(--color-primary-active);
+            border-bottom-color: var(--color-primary-active);
+        }
+    }
+
+    // Burger Menu
+    &__menu {
+        display: none; // Hidden on Desktop (> 768px)
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        @include media.xl {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        height: 100%;
+
+        // properties
+
+        @include media.xl {
+
+            &-3,
+            &-5 {
+                display: none;
+            }
+        }
+
+        @include media.lg {
+            display: none;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        height: 100%;
+
+        @include media.sm {
+            gap: 16px;
+
+            // Hide everything except the burger in actions at SM
+            >*:not(.nav-bar__menu) {
+                display: none;
+            }
+        }
+    }
+
+    // ---------------------------------------------------------
+    // SEARCH VARIANT
+    // ---------------------------------------------------------
+    &__search {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        @include media.sm {
+            display: none;
+        }
+    }
+
+    &__search-input-wrapper {
+        display: none;
+        align-items: center;
+        background: var(--transp-10);
+        border: 1px solid var(--nav-content-color); // Border reacts to nav color
+        border-radius: var(--radius-8);
+        padding: 0 14px;
+        height: 44px;
+        width: 100%;
+        color: var(--nav-content-color);
+        opacity: 0.8;
+        transition: border-color 0.3s ease;
+
+        .search-field {
+            flex: 1;
+            background: none;
+            border: none;
+            outline: none;
+            color: inherit;
+            @include body-16-regular;
+            padding: 0 10px;
+
+            &::placeholder {
+                color: var(--nav-content-color);
+                opacity: 0.6;
+            }
+        }
+
+        .search-icon-sm {
+            width: 20px;
+            height: 20px;
+            fill: currentcolor;
+        }
+    }
+}
+
+// Search Activation logic
+.nav-bar--search-active {
+    .nav-bar__links {
+        display: none;
+    }
+
+    .nav-bar__search {
+        flex: 1;
+        margin-left: 40px;
+        margin-right: 40px;
+
+        @include media.md {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
+
+    .nav-bar__search-input-wrapper {
+        display: flex;
+    }
+}

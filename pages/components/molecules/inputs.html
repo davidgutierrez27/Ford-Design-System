@@ -1,0 +1,407 @@
+<div class="hero-banner hero-banner__component">
+    <div class="hero-banner__content hero-banner__content__component">
+        <h1>Inputs</h1>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <ul class="main-nav__list">
+        <li class="main-nav__item">
+            <a href="#anatomy" data-target="anatomy">Anatomía</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#states" data-target="states">Estados</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#variantes" data-target="variantes">Variantes</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#accessibility" data-target="accessibility">Accesibilidad</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#best-practices" data-target="best-practices">Buenas Prácticas</a>
+        </li>
+        <li class="main-nav__item">
+            <a href="#implementation" data-target="implementation">Implementación</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-page page-inputs">
+
+    <!-- ================================================================================= -->
+    <!-- ANATOMY -->
+    <!-- ================================================================================= -->
+    <section id="anatomy" class="general-section">
+        <h2>Anatomía</h2>
+        <p style="text-wrap: nowrap;">El input es un campo de entrada que permite al usuario introducir texto, números o
+            valores.</p>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                <img src="../../../assets/img/propeties/inputs/Artwork.png" alt="Input Anatomy">
+            </div>
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">1</span>
+                    <div class="anatomy-item__content">
+                        <h4>Input</h4>
+                        <ul>
+                            <li>Height: 44px</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">2</span>
+                    <div class="anatomy-item__content">
+                        <h4>Field</h4>
+                        <ul>
+                            <li>Width: 375px</li>
+                            <li>Border color: #000000 20%</li>
+                            <li>Border radius: 8px</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="anatomy-item">
+                    <span class="anatomy-item__badge">3</span>
+                    <div class="anatomy-item__content">
+                        <h4>Email address</h4>
+                        <ul>
+                            <li>Text color: #000000 60%</li>
+                            <li>Text style: Body</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- LAYOUT -->
+    <!-- ================================================================================= -->
+    <section id="layout" class="general-section">
+        <h2>Layout and spacing</h2>
+        <p>El layout define la disposición visual de los elementos en la pantalla.</p>
+        <div class="anatomy-layout">
+            <div class="anatomy-layout__visual anatomy-layout__visual--big">
+                <img src="../../../assets/img/propeties/inputs/Artwork-1.png" alt="Layout Spacing">
+            </div>
+            <div class="anatomy-layout__details">
+                <div class="anatomy-item">
+                    <div class="anatomy-item__content">
+                        <h4>Selected node</h4>
+                        <ul>
+                            <li><span>Direction:</span> <span>Horizontal</span></li>
+                            <li><span>Alignment:</span> <span>Middle left</span></li>
+                            <li><span>Vertical resizing:</span> <span>Fixed</span></li>
+                            <li><span>Horizontal resizing:</span> <span>Fixed</span></li>
+                            <li><span>Padding top:</span> <span>10px</span></li>
+                            <li><span>Padding bottom:</span> <span>10px</span></li>
+                            <li><span>Padding left:</span> <span>14px</span></li>
+                            <li><span>Padding right:</span> <span>14px</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- STATES -->
+    <!-- ================================================================================= -->
+    <section id="states" class="general-section">
+        <h2>Estados</h2>
+        <div class="properties-detail-list">
+
+            <!-- Default -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Email address</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field" placeholder="Email address">
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Default</h4>
+                    <p>Estado inicial del campo.</p>
+                </div>
+            </div>
+
+            <!-- Active -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Email address</label>
+                        <div class="input-container" style="border-color: var(--color-neutral-400);">
+                            <input type="text" class="input-field" value="Email address">
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Active</h4>
+                    <p>Campo activo con interacción.</p>
+                </div>
+            </div>
+
+            <!-- Typing -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Email address</label>
+                        <div class="input-container"
+                            style="border-color: var(--color-primary-default); box-shadow: 0 0 0 4px var(--transp-10);">
+                            <input type="text" class="input-field" value="david" autofocus>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Typing</h4>
+                    <p>El usuario está ingresando datos.</p>
+                </div>
+            </div>
+
+            <!-- Filled -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Email address</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field" value="david@design.com">
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Filled</h4>
+                    <p>El campo contiene datos válidos.</p>
+                </div>
+            </div>
+
+            <!-- Disabled -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group input-group--disabled">
+                        <label class="input-label">Email address</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field" value="Email address" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Disabled</h4>
+                    <p>Campo no editable.</p>
+                </div>
+            </div>
+
+            <!-- Error -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group input-group--error">
+                        <label class="input-label">Email address</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field" value="Email address">
+                        </div>
+                        <span class="input-helper">Message</span>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Error</h4>
+                    <p>Indica un error en la validación.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- VARIANTES -->
+    <!-- ================================================================================= -->
+    <section id="variantes" class="general-section">
+        <h2>Variantes</h2>
+        <div class="properties-detail-list">
+
+            <!-- Sin Icono -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Simple Input</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field" placeholder="No icon here">
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Sin icono</h4>
+                    <p>Variante estándar para entradas de datos simples.</p>
+                </div>
+            </div>
+
+            <!-- Icono Izquierda -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Email address</label>
+                        <div class="input-container">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M3 8L10.8906 13.2604C11.5624 13.7083 12.4376 13.7083 13.1094 13.2604L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <input type="text" class="input-field" placeholder="Icon on the left">
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Icono a la izquierda</h4>
+                    <p>Ideal para identificar el tipo de dato como un email.</p>
+                </div>
+            </div>
+
+            <!-- Icono Derecha -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Select Option</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field" placeholder="Icon on the right">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 16 16" fill="none">
+                                    <g transform="rotate(90 8 8)">
+                                        <path d="M6 3.33317L10.6667 7.99984L6 12.6665" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Icono a la derecha</h4>
+                    <p>Utilizado frecuentemente para selectores o menús.</p>
+                </div>
+            </div>
+
+            <!-- Con Mensaje -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Username</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field" placeholder="Enter your username">
+                        </div>
+                        <span class="input-helper">Utiliza letras, números y puntos.</span>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Con mensaje</h4>
+                    <p>Incluye texto de ayuda para guiar al usuario en el ingreso de datos.</p>
+                </div>
+            </div>
+
+            <!-- Sin Mensaje -->
+            <div class="property-group">
+                <div class="property-group__visual property-group__visual--big">
+                    <div class="input-group">
+                        <label class="input-label">Username</label>
+                        <div class="input-container">
+                            <input type="text" class="input-field" placeholder="Enter your username">
+                        </div>
+                    </div>
+                </div>
+                <div class="property-group__specs">
+                    <h4>Sin mensaje</h4>
+                    <p>Variante compacta cuando no se requiere información adicional.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- ACCESSIBILITY -->
+    <!-- ================================================================================= -->
+    <section id="accessibility" class="general-section">
+        <h2>Accesibilidad</h2>
+        <div class="foundations-principles">
+            <article class="principle-card">
+                <h3>Etiquetado</h3>
+                <p>Cada campo debe tener una etiqueta descriptiva asociada mediante el atributo `for` o
+                    `aria-labelledby`.</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Contraste</h3>
+                <p>Garantizar que el texto y los bordes tengan suficiente contraste con el fondo (mínimo 4.5:1).</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Navegación</h3>
+                <p>El orden del foco debe ser lógico y predecible. Todos los estados de foco deben ser visibles.</p>
+            </article>
+
+            <article class="principle-card">
+                <h3>Lectores de pantalla</h3>
+                <p>Utilizar `aria-invalid` y `aria-describedby` para comunicar errores y mensajes de ayuda.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- BEST PRACTICES -->
+    <!-- ================================================================================= -->
+    <section id="best-practices" class="general-section">
+        <h2>Buenas Prácticas</h2>
+        <div class="foundations-principles foundations-principles--2cols">
+            <article class="principle-card" style="border-left: 4px solid #10b981;">
+                <h3>Qué hacer</h3>
+                <ul>
+                    <li>Usar placeholders solo como guía, no como reemplazo de etiquetas.</li>
+                    <li>Agrupar campos relacionados de manera lógica.</li>
+                    <li>Utilizar máscaras de entrada para datos con formato específico.</li>
+                </ul>
+            </article>
+
+            <article class="principle-card" style="border-left: 4px solid #ef4444;">
+                <h3>Qué evitar</h3>
+                <ul>
+                    <li>Evitar el uso de demasiados campos requeridos innecesarios.</li>
+                    <li>No ocultar información crítica dentro de tooltips.</li>
+                    <li>Evitar el autocompletado en campos de seguridad si no es necesario.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- IMPLEMENTATION -->
+    <!-- ================================================================================= -->
+    <section id="implementation" class="general-section">
+        <h2>Implementación</h2>
+        <div class="foundations-implementation">
+            <div class="foundations-implementation__body">
+                <pre><code class="language-html">&lt;div class="input-group"&gt;
+    &lt;label class="input-label"&gt;Label&lt;/label&gt;
+    &lt;div class="input-container"&gt;
+        &lt;!-- Optional Icon --&gt;
+        &lt;span class="input-icon"&gt;...&lt;/span&gt;
+        
+        &lt;input type="text" class="input-field" placeholder="..."&gt;
+    &lt;/div&gt;
+    &lt;span class="input-helper"&gt;Helper text&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Error State --&gt;
+&lt;div class="input-group input-group--error"&gt;
+    ...
+    &lt;span class="input-helper"&gt;ErrorMessage&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+</div>

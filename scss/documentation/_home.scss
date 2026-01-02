@@ -1,0 +1,240 @@
+@use "../tokens" as *;
+@use "../media" as media;
+
+.home-presentation {
+    padding-bottom: 80px;
+    container-name: "home-hero";
+
+    // HERO SECTION
+    .home-hero {
+        padding: 120px max(24px, calc((100% - 1312px) / 2));
+        text-align: left;
+        width: 100%;
+        min-height: 95vh;
+        background-image: url('../../assets/Cover.png');
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0;
+
+        @include media.cq-lg {
+            background-image: none;
+        }
+
+        &__title {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            max-width: 700px;
+            line-height: 1.1;
+            background: linear-gradient(135deg, var(--color-text-900) 0%, var(--color-primary-default) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            span {
+                display: block;
+                font-size: 24px;
+                font-weight: 400;
+                margin-top: 16px;
+                color: var(--color-text-500);
+                -webkit-text-fill-color: var(--color-text-500);
+            }
+        }
+
+        &__description {
+            font-size: 20px;
+            color: var(--color-text-500);
+            max-width: 600px;
+            margin: 0 0 48px;
+            line-height: 1.6;
+        }
+    }
+
+    @include media.xl {
+        .home-hero {
+            padding-block: 120px; // Keep padding-block, inline is handled by calc
+        }
+    }
+
+    @include media.md {
+        .home-hero {
+            padding-block: 120px;
+        }
+    }
+
+    // INFO / ABOUT SECTION
+    .home-info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        max-width: 1360px;
+        padding: 0 24px;
+        margin: -300px auto 80px;
+        position: relative;
+        z-index: 10;
+
+        @include media.lg {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media.md {
+            grid-template-columns: 1fr;
+            margin-top: 40px;
+            padding: 0 24px;
+        }
+
+        &__card {
+            padding: 24px;
+            background-color: var(--color-background-200-card);
+            border-radius: var(--radius-12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+                border-color: var(--color-primary-200);
+            }
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                color: var(--color-text-900);
+
+                i {
+                    color: var(--color-primary-default);
+                }
+            }
+
+            p {
+                font-size: 14px;
+                color: var(--color-text-500);
+                line-height: 1.5;
+            }
+        }
+    }
+
+    // TECH STACK SECTION
+    .home-tech {
+        text-align: center;
+        margin-bottom: 100px;
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: var(--color-text-900);
+        }
+
+        &__grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100px;
+
+            i {
+                font-size: 48px;
+                color: var(--color-text-300);
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--color-text-500);
+                opacity: 0;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                i {
+                    transform: scale(1.1);
+
+                    &.fa-html5 {
+                        color: #E34F26;
+                    }
+
+                    &.fa-css3-alt {
+                        color: #1572B6;
+                    }
+
+                    &.fa-sass {
+                        color: #CC6699;
+                    }
+
+                    &.fa-js {
+                        color: #F7DF1E;
+                    }
+
+                    &.fa-figma {
+                        color: #F24E1E;
+                    }
+
+                    // Aprox figma color
+                    &.fa-github {
+                        color: var(--color-text-900);
+                    }
+                }
+
+                span {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    // FOOTER SECTION
+    .home-footer {
+        text-align: center;
+        border-top: 1px solid var(--transp-10);
+        padding-top: 40px;
+        margin-top: 80px;
+
+        p {
+            max-width: none;
+            font-size: 14px;
+            color: var(--color-text-500);
+            margin-bottom: 16px;
+        }
+
+        &__author {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            background-color: var(--transp-30);
+            padding: 8px 16px;
+            border-radius: 100px;
+            border: 1px solid var(--transp-10);
+
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            strong {
+                color: var(--color-text-900);
+                font-weight: 600;
+            }
+        }
+    }
+}

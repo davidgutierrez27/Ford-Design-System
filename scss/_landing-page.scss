@@ -1,0 +1,526 @@
+// =========================================
+// LANDING PAGE STYLES
+// =========================================
+// This file contains all styles specific to the Landing Page
+// Extracted from landingPage.html inline styles
+@use "./media" as media;
+
+// -----------------------------------------
+// Main Container
+// -----------------------------------------
+.landing-main {
+    height: 100vh;
+
+    @include media.md {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+// -----------------------------------------
+// Value Proposition Section
+// -----------------------------------------
+// -----------------------------------------
+// Value Proposition Section
+// -----------------------------------------
+.landing-value-proposition {
+    background-color: white;
+    height: 180px;
+    padding-inline: max(24px, calc((100% - 1440px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap; // Allow wrapping naturally
+
+    @include media.md {
+        height: auto;
+        padding-block: 60px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    @include media.sm {
+        padding-block: 40px;
+        flex-direction: column; // Stack on specifically small screens
+    }
+}
+
+// -----------------------------------------
+// Secondary Hero Carousel (70vh variant)
+// -----------------------------------------
+.landing-secondary-carousel {
+    height: 70vh;
+
+    .section-hero-carousel__slide {
+        padding-bottom: 50px;
+    }
+
+    @include media.md {
+        height: 50vh;
+    }
+}
+
+// -----------------------------------------
+// CTA Section with Vehicle Image
+// -----------------------------------------
+.landing-cta-section {
+    background-color: white;
+    padding-block: 80px;
+    padding-inline: max(24px, calc((100% - 1440px) / 2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    @include media.lg {
+        padding-block: 60px;
+    }
+
+    @include media.md {
+        padding-block: 60px;
+
+        &__heading {
+            font-size: 32px;
+        }
+    }
+
+    @include media.sm {
+        padding-block: 40px;
+
+        &__heading {
+            font-size: 28px;
+        }
+    }
+
+    &__heading {
+        font-family: var(--font-family);
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--color-text-500);
+        margin: 0;
+        text-align: center;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+// -----------------------------------------
+// Dark Card Section (Blue-500 Background)
+// -----------------------------------------
+.landing-dark-cards {
+    background-color: var(--color-secondary-blue-500);
+    padding-block: 100px;
+    padding-inline: max(24px, calc((100% - 1440px) / 2));
+
+    @include media.lg {
+        padding-block: 80px;
+    }
+
+    @include media.md {
+        padding-block: 60px;
+    }
+
+    @include media.sm {
+        padding-block: 40px;
+    }
+
+    &__grid {
+        display: grid;
+        // Fluid grid logic: Auto-fit cards with a min-width of 300px
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: var(--radius-12);
+    }
+
+    &__title {
+        font-family: var(--font-family);
+        font-size: 24px;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+    }
+
+    &__description {
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: white;
+        margin: 0;
+    }
+
+    &__button {
+        align-self: flex-start;
+    }
+}
+
+// -----------------------------------------
+// Light Card Section (White Background)
+// -----------------------------------------
+.landing-light-cards {
+    background-color: white;
+    padding-block: 100px;
+    padding-inline: max(24px, calc((100% - 1440px) / 2));
+
+    @include media.lg {
+        padding-block: 80px;
+    }
+
+    @include media.md {
+        padding-block: 60px;
+    }
+
+    @include media.sm {
+        padding-block: 40px;
+    }
+
+    &__grid {
+        display: grid;
+        // Fluid grid logic: Same as above
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: var(--radius-12);
+    }
+
+    &__title {
+        font-family: var(--font-family);
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--color-text-500);
+        margin: 0;
+    }
+
+    &__description {
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--color-text-500);
+        margin: 0;
+    }
+
+    &__button {
+        align-self: flex-start;
+    }
+}
+
+// -----------------------------------------
+// Newsletter CTA Section
+// -----------------------------------------
+.landing-newsletter {
+    background-color: var(--color-secondary-blue-500);
+    padding-block: 80px;
+    padding-inline: max(24px, calc((100% - 1440px) / 2));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include media.lg {
+        padding-block: 60px;
+    }
+
+    @include media.md {
+        padding-block: 60px;
+
+        &__heading {
+            font-size: 32px;
+        }
+    }
+
+    @include media.sm {
+        padding-block: 40px;
+
+        &__heading {
+            font-size: 28px;
+        }
+    }
+
+    &__heading {
+        font-family: var(--font-family);
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: white;
+        margin: 0;
+    }
+
+    &__description {
+        font-family: var(--font-family);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: white;
+        margin: 0;
+        max-width: 800px;
+    }
+}
+
+// -----------------------------------------
+// Social Media Section
+// -----------------------------------------
+.landing-social {
+    background-color: var(--color-neutral-50);
+    padding-block: 55px;
+    padding-inline: max(24px, calc((100% - 1440px) / 2));
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include media.lg {
+        padding-block: 55px;
+    }
+
+    @include media.md {
+        padding-block: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    @include media.sm {
+        padding-block: 32px;
+    }
+
+    &__heading {
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--color-text-500);
+        margin: 0;
+
+        @include media.sm {
+            font-size: 24px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        flex-wrap: wrap; // Allow wrapping on small screens
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+// -----------------------------------------
+// Footer
+// -----------------------------------------
+.landing-footer {
+    background-color: var(--color-neutral-50);
+    padding-block: 100px;
+    padding-inline: max(24px, calc((100% - 1440px) / 2));
+
+    @include media.lg {
+        padding-block: 80px;
+
+        &__grid {
+            gap: 32px;
+        }
+    }
+
+    @include media.md {
+        padding-block: 60px;
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr); // 2 columns for tablet
+            gap: 40px 24px;
+        }
+    }
+
+    @include media.sm {
+        padding-block: 40px;
+        padding-bottom: 20px;
+
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+
+        // Hide secondary columns on mobile to simplify (user request)
+        // Keep: Vehicles (1) and Customer Service (4)
+        &__column:nth-child(2),
+        // Financing
+        &__column:nth-child(3),
+        // Aftersales
+        &__column:nth-child(5) {
+            // More Ford
+            display: none;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 40px;
+    }
+
+    @include media.lg {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__column-title {
+        font-family: var(--font-family);
+        font-size: 32px;
+        font-weight: 400;
+        color: var(--color-text-500);
+        margin: 0;
+        margin-bottom: 8px; // Add some visual separation
+    }
+
+    &__link {
+        font-family: var(--font-family);
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--color-text-500);
+        text-decoration: none;
+
+        @include media.sm {
+            font-size: 16px; // Smaller text on mobile
+        }
+    }
+}
+
+// -----------------------------------------
+// Copyright & Legal Section
+// -----------------------------------------
+.landing-legal {
+    background-color: var(--color-neutral-50);
+    padding-inline: max(24px, calc((100% - 1440px) / 2));
+    padding-bottom: 50px;
+
+    @include media.lg {
+        padding-bottom: 40px;
+    }
+
+    @include media.md {
+        padding-bottom: 40px;
+
+        &__top {
+            flex-direction: column-reverse; // Logo on top or bottom? Default column stacks. user might generally prefer standard stacking.
+            // Let's keep specific order if needed, but changing to column is key.
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &__logo {
+            margin-left: 0; // Reset margin
+            margin-bottom: 16px;
+        }
+    }
+
+    @include media.sm {
+        padding-bottom: 32px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 24px;
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__text {
+        font-family: var(--font-family);
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--color-text-500);
+        margin: 0 0 16px 0;
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        @include media.sm {
+            display: none; // Hide complex legal links on mobile
+        }
+    }
+
+    &__link {
+        font-family: var(--font-family);
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--color-text-500);
+        text-decoration: none;
+    }
+
+    &__logo {
+        margin-left: 40px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+
+        @include media.sm {
+            display: none; // Hide long disclaimer on mobile
+        }
+    }
+
+    &__disclaimer {
+        font-family: var(--font-family);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--color-text-500);
+        margin: 0;
+        max-width: 95%;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+}

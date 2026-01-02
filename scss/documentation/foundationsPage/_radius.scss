@@ -1,0 +1,57 @@
+@use "../../tokens" as *;
+@use "../../media" as media;
+
+/* =========================================
+   RADIUS PAGE STYLES
+   ========================================= */
+
+/* Radius Grid: Container for displaying different border-radius token examples. */
+.radius-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--space-32px);
+    margin-top: var(--space-24px);
+}
+
+/* Radius Item: Individual container for a radius preview card and its labels. */
+.radius-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-12px);
+    text-align: center;
+
+    &__label {
+        @include body-14-bold;
+        color: var(--color-text-800);
+        margin: 0;
+    }
+
+    &__token {
+        @include body-12-regular;
+        color: var(--color-text-300);
+        font-family: 'Consolas', monospace;
+        margin: 0;
+    }
+}
+
+.radius-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-primary-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-neutral-white);
+    @include body-16-bold;
+    box-shadow: 0 8px 16px rgba(6, 111, 239, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(6, 111, 239, 0.25);
+        background-color: var(--color-primary-600);
+    }
+}
