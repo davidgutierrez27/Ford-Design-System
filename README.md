@@ -1,54 +1,73 @@
-# Ford Design System - Documentation Project
+# Ford Design System - Documentation Project 🚗💨
 
-Este es el repositorio del Sistema de Diseño de Ford, enfocado en documentar los principios de diseño, componentes y fundamentos para asegurar la consistencia en todas las plataformas digitales.
+![Ford Design System Cover](assets/cover.webp)
 
-## 🚀 Estructura del Proyecto
+Bienvenido al repositorio oficial del **Sistema de Diseño de Ford**. Este proyecto es una biblioteca de componentes y guías visuales diseñada para estandarizar la experiencia de usuario en todos nuestros productos digitales, garantizando consistencia, accesibilidad y escalabilidad.
+
+## 🌟 Demo en Vivo
+Puedes ver la documentación interactiva desplegada en GitHub Pages:
+👉 [**Ford Design System Live Demo**](https://davidgutierrez27.github.io/Ford-Design-System/)
+
+## 🚀 Tecnologías y Arquitectura
+El proyecto está construido bajo una filosofía de **"Modern Lean Web"**:
+- **HTML5 Semántico** para la estructura.
+- **Sass (SCSS)** con una arquitectura de **Diseño Atómico**.
+- **JavaScript Vanila** para la lógica de componentes y el sistema de navegación **SPA (Single Page Application)**.
+- **CSS Variables (Design Tokens)** para una gestión dinámica de temas (Light/Dark mode).
+
+## 📂 Estructura del Proyecto
 
 ```text
 /
-├── assets/          # Imágenes e iconos
-├── css/             # CSS compilado (No editar directamente)
-├── js/              # Lógica de navegación, búsqueda y temas
-│   ├── main-nav.js  # Gestión de scrollspy y navegación secundaria
-│   ├── router.js    # Carga dinámica de páginas (SPA)
-│   └── search.js    # Lógica del buscador global
-├── pages/           # Vistas HTML (Home, Fundaciones, Componentes)
-│   ├── foundations/ # Colores, Tipografía, Radius, Spacing, Icons, Grid
-│   └── components/  # Botones, Inputs, etc.
-├── scss/            # Código fuente de estilos (Sass)
-│   ├── base/        # Reset y estilos globales
-│   ├── layout/      # Estructura (Sidebar, Nav, Layout)
-│   ├── atoms/       # Estilos de componentes básicos
-│   ├── pages/       # Estilos específicos por página
-│   └── _tokens.scss # El corazón del sistema: colores y tipografía
-├── index.html       # Punto de entrada principal
-└── package.json     # Configuración de scripts y dependencias
+├── assets/             # Imágenes, iconos y recursos multimedia
+├── css/                # CSS compilado (No editar directamente)
+├── js/                 # Lógica del sistema
+│   ├── core/           # Router (SPA) y lógica central
+│   ├── components/     # Comportamiento de componentes específicos
+│   └── search.js       # Buscador global
+├── pages/              # Fragmentos HTML de las vistas (inyectados por el router)
+│   ├── foundations/    # Colores, Tipografía, Grilla, Espaciado, etc.
+│   └── components/     # Átomos, Moléculas y Organismos
+├── scss/               # Código fuente de estilos
+│   ├── base/           # Resets y estilos globales
+│   ├── components/     # Estilos de componentes (Atoms, Molecules, Organisms)
+│   ├── documentation/  # Estilos específicos del sitio de docs
+│   └── _tokens.scss    # Definición de Design Tokens
+├── index.html          # Shell de la aplicación
+└── package.json        # Dependencias y scripts
 ```
 
-## 🛠️ Comandos Básicos
+## 🛠️ Guía de Desarrollo
 
-El proyecto utiliza **SASS** para la gestión de estilos.
+### Requisitos Previos
+- Node.js instalado.
+- Un servidor local (como "Live Server" en VS Code).
 
-### Desarrollo (Modo Watch)
-Para vigilar los cambios en los archivos `.scss` y compilarlos automáticamente en tiempo real:
-```bash
-npm run sass
-```
-
-### Producción (Compilación única)
-Para generar el archivo CSS final optimizado:
-```bash
-npm run build
-```
-
-## 📖 Guía de Ayuda Rápida
-Puedes encontrar más detalles sobre comandos de SASS y flujo de trabajo con **GitHub** en el archivo:
-`scss/ayuda.scss`
+### Instalación y Compilación
+1. Clona el repositorio.
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Compila los estilos en tiempo real:
+   ```bash
+   npm run sass
+   ```
+4. Para una compilación final de producción:
+   ```bash
+   npm run build
+   ```
 
 ## 🎨 Principios de Diseño
-- **Coherencia**: Uso estricto de tokens definidos en `_tokens.scss`.
-- **Accesibilidad**: Respeto a los contrastes WCAG y legibilidad.
-- **SPA (Single Page Application)**: El sistema carga las páginas dinámicamente sin recargar el navegador, gestionado por `router.js`.
+- **Consistencia:** Uso riguroso de tokens predefinidos.
+- **Accesibilidad:** Cumplimiento de estándares WCAG.
+- **Modularidad:** Componentes independientes y reutilizables.
+- **Performance:** Carga dinámica de vistas sin recargas de página.
+
+## ✍️ Autor
+**David Gutierrez** - *Design System Lead & Front-end Developer*
+- LinkedIn: [Visita mi perfil](https://www.linkedin.com/in/fernando-david-gutierrez-b1a612316/)
+- Sitio Web: [davidgutierrez.design](https://davidgutierrez.design) (Próximamente)
 
 ---
-*Desarrollado para el equipo de diseño y desarrollo de Ford.*
+*Este proyecto es parte de la iniciativa de estandarización digital de Ford Experience.*
