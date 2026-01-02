@@ -1,7 +1,5 @@
 # Ford Design System - Documentation Project 🚗💨
 
-![Ford Design System Cover](assets/cover.webp)
-
 Bienvenido al repositorio oficial del **Sistema de Diseño de Ford**. Este proyecto es una biblioteca de componentes y guías visuales diseñada para estandarizar la experiencia de usuario en todos nuestros productos digitales, garantizando consistencia, accesibilidad y escalabilidad.
 
 ## 🌟 Demo en Vivo
